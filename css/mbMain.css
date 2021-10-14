@@ -1,11 +1,14 @@
-/* navbar */
+body 
+{
+    margin: 0;
+    background: #222;
+}
+/* Navbar */
 .navbar
 {
     background: #55d6aa;
     height: 3.4rem;
 }
- 
-
 .container 
 {
     width: 80%;
@@ -15,7 +18,11 @@
 {
     float: left;
 }
-
+nav 
+{
+    float: right;
+    
+}
 
 nav ul 
 {
@@ -29,6 +36,7 @@ nav li
     display: inline-block;
     margin-left: 70px;
     padding-top: 21px;
+    position: relative;
 }
 
 nav a 
@@ -36,9 +44,26 @@ nav a
    text-decoration: none;
    color: black;  
 }
-/* navbar */
-body 
+nav a:hover 
 {
-    margin: 0;
-    background: #222;
+    color: black;
 }
+
+nav a::after
+{
+    content: '';
+    display: block;
+    height: 3px;
+    background-color: black;
+
+    width: 0%;
+    position: absolute;
+    bottom: -15px;
+    transition: all ease-in-out 300ms;
+}
+
+nav a:hover::after
+{
+    width: 100%;
+}
+/* Navbar */
