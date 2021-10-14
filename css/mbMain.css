@@ -1,13 +1,18 @@
 body 
 {
     margin: 0;
-    background: #222;
+    background: #232e33;
 }
-/* Navbar */
+ /* Navbar */
 .navbar
 {
     background: #55d6aa;
-    height: 3.4rem;
+}
+.navbar::after
+{
+    content: '';
+    display: table;
+    clear: both;
 }
 .container 
 {
@@ -21,7 +26,6 @@ body
 nav 
 {
     float: right;
-    
 }
 
 nav ul 
