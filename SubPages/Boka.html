@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mana Bar restaurant/Bokning</title>
+</head>
+<body>
+    <header>
+        <nav> <!--to add a navigation to our site-->
+            <ul>
+                <li>Home</li>
+                <li>Boka</li>
+                <li>Öppettider</li>
+                <li>Hitta oss</li>
+                <li>Om oss</li>
+            </ul>
+        </nav>
+        <hr> <!--this is called a horizental rule, and just to add a line under the nav, and it is an empty element-->
+        <h1>Boka bord/dator</h1> 
+        </header>
+    <section>
+        <h2>Välj typ av bokning</h2>
+        <div> <!--this is to specify that this should be in a block that
+        is not inline with the others-->
+            <form action="Bokningapproval.html" method="get">
+                <div>
+                    <label for="bord">Boka bord</label>
+                    <input type="radio" name="gender" id="bord">
+                </div>
+                <div>
+                    <label for="bordndata">Boka bord och dator</label>
+                    <input type="radio" name="gender" id="bordndata">
+                </div>
+                <div>
+                    <label for="dator">Boka dator</label>
+                    <input type="radio" name="gender" id="dator">                    
+                </div>
+                
+                <!--or we can use a dropdown menu-->
+
+                <div>
+                    <label for="bokningtyp">Välj bokning typ</label>
+                    <select name="bokningtyp" id="bokningtyp">
+                        <option value="bokabord">Boka ett bord</option>
+                        <option value="bordndator">Boka ett bord och dator</option>
+                        <option value="bokadator">Boka dator</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="name">Name:</label> <!--for here is to make the cursor to go automatically to the feild so the user can enter info-->
+                    <input type="text" id="name" required>
+                </div>
+                <div>
+                    <label for="date">Datum:</label>
+                    <input type="date" id="date" required>
+                </div>
+                <div>
+                    <label for="number">Mobilnummer:</label>
+                    <input type="tel" id="number" required>
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+                </div>
+                
+                <button type="submit">Submit</button>
+                <button>Avbryt</button>
+                <button type="reset">Reset</button>
+            </form>
+        </div>
+    </section>
+</body>
+<footer>
+    <nav>
+        <ul>
+            <li>Öppettider</li>
+            <li>Hitta oss</li>
+            <li>Om oss</li>
+            <li>kontaktuppgifter</li>
+        </ul>
+    </nav>
+</footer>
+</html>
