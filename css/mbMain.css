@@ -3,6 +3,96 @@ body
     margin: 0;
     background: #232e33;
 }
+
+h3{
+    margin: 0;
+}
+/* Grid System    
+    With 10 columns = 10% each col
+    fr: size is 10% but fr handles borders and margins in a good way.
+*/
+
+
+.grid_container{
+    display: grid;
+    grid-template-columns: repeat(10, 1 fr); 
+    grid-template-rows: auto; /* Dont need it, but tring to clarify, standard is auto*/
+    background-color: white;
+
+}
+/* Use this grid-col-nr or namne to great the rows 
+  Use justify-self to place were u want the items/containers.  
+*/
+
+.grid-col-1{ /*  full width*/
+    grid-column-start: 1;
+    grid-column-end: 11;
+    justify-self: center; 
+    background-color: tomato;
+
+}
+.grid-col-test{ /*  full width placement center*/
+    grid-column-start: 1;
+    grid-column-end: 11;
+    justify-self: end; 
+    background-color: green;
+
+}
+.grid-col-2{ /* middle*/
+    grid-column-start: 4;
+    grid-column-end: 8;
+    justify-self: stretch; 
+    background-color: purple;
+
+}
+
+/* Grid 3, 4, 5 space the site in 3 every grid is 30% of the screen  */
+.grid-col-3
+{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    justify-self: start; 
+    background-color: yellow;
+
+}
+
+.grid-col-4
+{
+    grid-column-start: 4;
+    grid-column-end: 7;
+    justify-self: center; 
+    background-color: blue;
+
+}
+
+.grid-col-5
+{
+    grid-column-start: 7;
+    grid-column-end: 10;
+    justify-self: end; 
+    background-color: green;    
+
+}
+/* ---------------  */
+
+
+
+/* Qabas  footer*/
+
+
+
+
+
+/*  */ 
+.test{
+    width: 100%;
+    height: 50vh;
+    background-color: pink;
+    text-align: left;
+
+
+}
+
  /* Navbar */
 .navbar
 {
@@ -16,7 +106,7 @@ body
 }
 .container 
 {
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
 }
 .logo
@@ -25,7 +115,9 @@ body
 }
 nav 
 {
-    float: right;
+text-align: center;    
+vertical-align: top;
+
 }
 
 nav ul 
