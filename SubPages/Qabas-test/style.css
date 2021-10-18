@@ -1,0 +1,126 @@
+* { /* a general rule to the whole page*/
+    box-sizing: border-box;
+    font-family: Releway;
+    color: gray;
+}
+
+html, body { /* to remove the gaps on top and sides*/
+    margin: 0;
+    padding: 0;
+}
+
+.nav ul { /* to remove the gaps on top and sides*/
+    margin: 0;
+}
+
+.nav li{ /*to show the list in one line*/
+    display: inline;
+}
+
+.nav a{ /*to style the links themselves and remove the default decorations*/
+    display: inline-block; /*add a space on top of the list*/
+    padding: .5em; /*to add a space between the links or the names*/
+    color: white;
+    text-decoration: none;
+}
+
+.main-nav { /*to center and underline the list with light color*/
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: lighter;
+    border-bottom: 1px solid rgba(225, 225, 225, .3);
+}
+
+.main-nav li { /*space out our elements*/
+    padding: 0 5%;
+}
+
+.nav a:hover{
+    background-color: rgba(225, 225, 225, .3)
+}
+
+.main-header{
+    background-color: rgba(78, 30, 122, 0.568);
+    background-size: cover;
+}
+
+.bar-name {
+    text-align: center;
+    margin: 0;
+    font-size: 4em;
+    font-weight: bold;
+    color: white;
+}
+
+.bar-name-large {
+    font-size: 4em;
+}
+
+.content { /*add space around the text*/
+    margin: 1em;
+}
+
+.container { /*when increasing the size of the screen, this is let the text to stay at a certain size*/
+    max-width: 900px;
+    margin: 0 auto; /*center text and auto margin will do left and right */
+    padding: 0 1.5; /*0 is for top and bottom .. 1.5 is for left and right*/
+}
+
+.section-header {
+    font-weight: bold;
+    text-align: center;
+    font-size: 2.5em;
+}
+
+.main-footer {
+    background-color: rgba(77, 25, 146, 0.5);
+    color: white;
+    padding: .25em 0;
+    text-align: center;
+    margin: 0;
+}
+
+
+
+.main-footer ul {
+    padding: 0;
+    list-style: none;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+
+.main-footer ul a{
+text-decoration: none;
+padding: .5em; 
+color: white;
+}
+
+.main-footer a:hover{
+    background-color: rgba(225, 225, 225, .3)
+}
+
+.row .footer-left, .footer-mid, .footer-right {
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+    width: 30%;
+}
+
+.icons {
+    text-align: right;
+    list-style: none;
+    margin-bottom: 0;
+    
+}
+
+.icons li {
+    display: inline-block;
+    
+} 
+
+.icons img{
+    width: 30px;
+    height: 30px;
+}
