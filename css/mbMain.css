@@ -79,7 +79,22 @@ h3{
 
 /* Qabas  footer*/
 
-
+/* Menyns stylesheet */
+.headmenu{
+    text-align: center;    
+    text-decoration: underline;
+    font: bold;
+}
+.submenu{
+    text-align: center;
+    text-decoration: underline;    
+}
+.dish{
+    text-align: center;    
+}
+.dishdisc{
+    text-align: center;    
+}
 
 
 
