@@ -73,8 +73,6 @@ html, body { /* to remove the gaps on top and sides*/
 }
 
 .main-footer {
-    background-color: rgba(77, 25, 146, 0.5);
-    color: white;
     padding: .25em 0;
     text-align: center;
     margin: 0;
@@ -91,7 +89,7 @@ html, body { /* to remove the gaps on top and sides*/
 }
 
 
-.main-footer ul a{
+.main-footer ul a, ul li{
 text-decoration: none;
 padding: .5em; 
 color: white;
@@ -100,16 +98,25 @@ color: white;
 .main-footer a:hover{
     background-color: rgba(225, 225, 225, .3)
 }
+.row{
+    position: absolute;
+    width: 100%;
+    min-height: 20vh;
+    background-color: rgba(77, 25, 146, 0.5);
 
-.row .footer-left, .footer-mid, .footer-right {
-    display: inline-block;
+
+}
+.footer-left, .footer-mid, .footer-right {
+    float: left;
     text-align: center;
     vertical-align: top;
     width: 30%;
+    height: 100%;
+
 }
 
 .icons {
-    text-align: right;
+    text-align: center;  
     list-style: none;
     margin-bottom: 0;
     
