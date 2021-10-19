@@ -79,6 +79,15 @@ h3{
 
 /* Qabas  footer*/
 
+.button {
+    text-align: center;
+    vertical-align: middle;
+    color: black;
+    background-color: yellow;
+    font-size: large;
+    padding: 10px;
+    display: block;
+    }
 
 .icons {
     text-align: center;  
