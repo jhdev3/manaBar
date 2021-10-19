@@ -34,7 +34,7 @@ h3{
 .grid-col-test{ /*  full width placement center*/
     grid-column-start: 1;
     grid-column-end: 11;
-    justify-self: end; 
+    justify-self: center; 
     background-color: green;
 
 }
