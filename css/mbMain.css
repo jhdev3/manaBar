@@ -21,7 +21,7 @@ h3{
 
 }
 /* Use this grid-col-nr or namne to great the rows 
-  Use justify-self to place were u want the items/containers.  
+  Use justify-self to place were u want the grid-col to be placed/start.  
 */
 
 .grid-col-1{ /*  full width*/
@@ -47,16 +47,16 @@ h3{
 }
 
 /* Grid 3, 4, 5 space the site in 3 every grid is 30% of the screen  */
-.grid-col-3
+.grid-col-footer-1
 {
     grid-column-start: 1;
     grid-column-end: 4;
-    justify-self: start; 
-    background-color: yellow;
+    justify-self: end; 
+    background-color: green;
 
 }
 
-.grid-col-4
+.grid-col-footer-2
 {
     grid-column-start: 4;
     grid-column-end: 7;
@@ -65,12 +65,12 @@ h3{
 
 }
 
-.grid-col-5
+.grid-col-footer-3
 {
     grid-column-start: 7;
     grid-column-end: 10;
-    justify-self: end; 
-    background-color: green;    
+    justify-self: start; 
+    background-color: yellow;    
 
 }
 /* ---------------  */
