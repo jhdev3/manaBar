@@ -140,6 +140,7 @@ h3{
 {
     background: #55d6aa;
 }
+
 .navbar::after
 {
     content: '';
@@ -149,7 +150,7 @@ h3{
 .container 
 {
     width: 100%;
-    margin: 0 auto;
+    margin-bottom: 2em;
 }
 .logo
 {
