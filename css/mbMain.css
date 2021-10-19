@@ -79,6 +79,24 @@ h3{
 
 /* Qabas  footer*/
 
+
+.icons {
+    text-align: center;  
+    list-style: none;
+    margin-bottom: 0;
+    
+}
+
+.icons li {
+    display: inline-block;
+    
+} 
+
+.icons img{
+    width: 30px;
+    height: 30px;
+}
+
 /* Menyns stylesheet */
 .headmenu{
     text-align: center;    
