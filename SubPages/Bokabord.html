@@ -5,57 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mana Bar restaurant/Bokning</title>
-     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../css/mbMain.css">
 </head>
 <body>
     <header class="main-header">
         <nav class="nav main-nav"> <!--to add a navigation to our site-->
         <!--add logo here-->   
-            <ul>
-                <li><a href="meny.html">Meny</a></li>
-                <li><a href="bokabord.html">Boka bord</a></li>
-                <li><a href="bokadator.html">Boka dator</a></li>
-                <li><a href="kontakt.html">Kontakta oss</a></li>
-            </ul>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="meny.html">Meny</a></li>
+            <li><a href="bokabord.html">Boka Bord</a></li>
+            <li><a href="bokadator.html">Boka Dator</a></li>
+            <li><a href="kontaktaoss.html">Kontakta oss</a></li>
+        </ul>
         </nav>
-        <h1 class="bar-name bar-name-large">Mana Bar</h1> 
     </header>
+
     <section>
         <h2>Boka ett bord</h2>
         <div> 
-            <form action="Bokningapproval.html" method="get">
-                <!--
+            <form class="form" action="SubPages/Bokningapproval.html" method="get">
                 <div>
-                    <label for="bord">Boka bord</label>
-                    <input type="radio" name="gender" id="bord">
-                </div>
-                <div>
-                    <label for="bordndata">Boka bord och dator</label>
-                    <input type="radio" name="gender" id="bordndata">
-                </div>
-                <div>
-                    <label for="dator">Boka dator</label>
-                    <input type="radio" name="gender" id="dator">                    
-                </div>
-                
-                <!--or we can use a dropdown menu
-                <div>
-                    <label for="bokningtyp">Välj bokning typ</label>
-                    <select name="bokningtyp" id="bokningtyp">
-                        <option value="bokabord">Boka ett bord</option>
-                        <option value="bordndator">Boka ett bord och dator</option>
-                        <option value="bokadator">Boka dator</option>
-                    </select>
-                </div>
-            -->
-
-                <div>
-                    <label for="name">Name:</label> <!--for here is to make the cursor to go automatically to the feild so the user can enter info-->
+                    <label for="name">Name:</label> <!--(for) here is to make the cursor to go automatically to the feild so the user can enter info-->
                     <input type="text" id="name" required>
                 </div>
                 <div>
                     <label for="date">Datum:</label>
                     <input type="date" id="date" required>
+                </div>
+                <div>
+                    <label for="time">Tid:</label>
+                    <input type="time" id="time" required>
                 </div>
                 <div>
                     <label for="number">Mobilnummer:</label>
@@ -74,7 +54,7 @@
     </section>
 </body>
 <footer class="main-footer">
-    <div class="row">
+    <div class= "row">
         <div class="footer-left">
             <ul>
                 <li>Kontaktuppgifter<br>Skolgatan 177 <br>602 22, Norrköping</li>
@@ -92,17 +72,15 @@
                 <li><a href="hittaoss.html">Hitta oss</a></li>
                 <li><a href="jobba.html">Jobba</a></li>
             </ul>
-        </div>
-        <hr>
-       <div class="media">
-           <ul class="icons">
+            <ul class="icons">
                 <p>Follow us</p>
-                <li><a href="https://www.facebook.com/"><img src="Images/facebook.png"></a></li>
-                <li><a href="https://www.twitter.com/"><img src="Images/twitter.png"></a></li>
-                <li><a href="https://www.instagram.com/"><img src="Images/instagram.png"></a></li>
+                <li><a href="https://www.facebook.com/"><img src="../images/facebook.png"></a></li>
+                <li><a href="https://www.twitter.com/"><img src="../images/twitter.png"></a></li>
+                <li><a href="https://www.instagram.com/"><img src="../images/instagram.png"></a></li>
                 <p class="copyright">Mana Bar © 2021</p>
             </ul>
         </div>
     </div>
 </footer>
+
 </html>
