@@ -46,15 +46,17 @@ h3{
 }
 .booking-img {
     height: 400px;
-    width: 600px;
+    width: 650px;
     border-radius: 20%;
     padding-top: 30px;
 }
 .grid_container-boka {
+    
     max-width: 600px;
     width: 100%;
     padding: 20px 25px;
     border-radius: 15px;
+    background-color: rgba(95, 43, 190, 0.692);
 }
 
 .grid_container-form .title {
@@ -78,7 +80,7 @@ form .button{
     margin: 10px;
     text-align: center;
     color: black;
-    background-color: palevioletred;
+    background-color: white;
     font-size: large;
     padding: 10px;
     display: block;
