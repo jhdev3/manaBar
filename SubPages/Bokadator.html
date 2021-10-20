@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../css/mbMain.css">
 </head>
 <body>
-    <header class="main-header">
+    <header class="navbar">
         <nav class="nav main-nav"> <!--to add a navigation to our site-->
         <!--add logo here-->   
         <ul>
@@ -21,36 +21,39 @@
         </nav>
     </header>
 
-        <div class="grid_container">
-            <div class="grid-col-test"> 
-            <h1>Boka dator</h1>
-                <form action="Bokningapproval.html" method="get">
-                    <div>
-                        <label for="name">Name:</label> <!--for here is to make the cursor to go automatically to the feild so the user can enter info-->
-                        <input type="text" id="name" required>
-                    </div>
-                    <div>
-                        <label for="date">Datum:</label>
-                        <input type="date" id="date" required>
-                    </div>
-                    <div>
-                        <label for="time">Tid:</label>
-                        <input type="time" id="time" required>
-                    </div>
-                    <div>
-                        <label for="number">Mobilnummer:</label>
-                        <input type="tel" id="number" required>
-                    </div>
-                    <div>
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" required>
-                    </div>
-                    <br>
-                    <button class="button" type="submit">Submit</button>
-                    <button class="button" type="reset">Reset</button>
-                </form>
+    <div class="grid_container">
+        <div class="grid-col-test2">
+            <img class="booking-img" src="../images/pc.jpeg">
+               <div class="grid_container-boka">
+                    <div class="title">Boka en dator</div>
+                    <form action="Bokningapproval.html" method="get">
+                        <div class="user-details">
+                            <div class="input-box">
+                                <span class="details">Namn</span>
+                                <input type="text" required>
+                            </div>
+                            <div class="input-box">
+                                <span class="details">Email</span>
+                                <input type="email" required>
+                            </div>
+                            <div class="input-box">
+                                <span class="details">Mobilnummer</span>
+                                <input type="number" required>
+                            </div>
+                            <div class="input-box">
+                                <span class="details">Datum</span>
+                                <input type="date" required>
+                            </div>
+                            <div class="input-box">
+                                <span class="details">Tid</span>
+                                <input type="time" required>
+                            </div>
+                        </div>
+                        <button class="button" type="submit">Submit</button>
+                        <button class="button" type="reset">Reset</button>
+                    </form>
+                </div>
             </div>
-        </div>
     
 </body>
 
