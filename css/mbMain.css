@@ -58,10 +58,13 @@ h3{
     border-radius: 15px;
     background-color: rgba(95, 43, 190, 0.692);
 }
-
+.title{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
 .grid_container-form .title {
     padding-bottom: 10px;
-    font-size: 25px;
+    font-size: 35px;
     font-weight: bold;
 }
 
