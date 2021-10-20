@@ -21,7 +21,7 @@ h3{
 
 }
 /* Use this grid-col-nr or namne to great the rows 
-  Use justify-self to place were u want the grid-col to be placed/start.  
+  Use justify-self to place were u want the items/containers.  
 */
 
 .grid-col-1{ /*  full width*/
@@ -36,8 +36,55 @@ h3{
     grid-column-end: 11;
     justify-self: center; 
     background-color: green;
-
 }
+
+
+.grid-col-test2{ 
+    grid-column-start: 1;
+    grid-column-end: 11;
+    justify-self: center; 
+}
+.booking-img {
+    height: 400px;
+    width: 600px;
+    border-radius: 20%;
+    padding-top: 30px;
+}
+.grid_container-form {
+    max-width: 600px;
+    width: 100%;
+    background: rgb(53, 62, 148);
+    padding: 20px 25px;
+    border-radius: 15px;
+}
+.grid_container-form .title {
+    padding-bottom: 10px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+form .user-details .input-box{
+    font-size: 20px;
+    padding-bottom: 10px;
+    width: 100px;
+}
+.user-details .input-box input{
+    height: 30px;
+    width: 300%;
+    outline: none;
+    border: 1px solid;
+}
+form .button{
+    margin: 10px;
+    text-align: center;
+    color: black;
+    background-color: palevioletred;
+    font-size: large;
+    padding: 10px;
+    display: block;
+}
+
+
 .grid-col-2{ /* middle*/
     grid-column-start: 4;
     grid-column-end: 8;
@@ -47,16 +94,16 @@ h3{
 }
 
 /* Grid 3, 4, 5 space the site in 3 every grid is 30% of the screen  */
-.grid-col-footer-1
+.grid-col-3
 {
     grid-column-start: 1;
     grid-column-end: 4;
-    justify-self: end; 
-    background-color: green;
+    justify-self: start; 
+    background-color: yellow;
 
 }
 
-.grid-col-footer-2
+.grid-col-4
 {
     grid-column-start: 4;
     grid-column-end: 7;
@@ -65,28 +112,22 @@ h3{
 
 }
 
-.grid-col-footer-3
+.grid-col-5
 {
     grid-column-start: 7;
     grid-column-end: 10;
-    justify-self: start; 
-    background-color: yellow;    
+    justify-self: end; 
+    background-color: green;    
 
 }
+
+
+
+
 /* ---------------  */
-
-
-
+ 
 /* Qabas  footer*/
 
-.button {
-    text-align: center;
-    color: black;
-    background-color: yellow;
-    font-size: large;
-    padding: 10px;
-    display: block;
-    }
 
 .icons {
     text-align: center;  
