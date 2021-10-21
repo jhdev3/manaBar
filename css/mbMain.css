@@ -40,30 +40,38 @@ h3{
 
 
 .grid-col-meny{ /*  full width placement center*/
-    grid-column-start: 4;
-    grid-column-end: 7;
-    justify-self: start; 
-    background-color: green;
+    grid-column-start: 1;
+    grid-column-end: 11;
+    justify-self: stretch;       
+    line-height: 10px;
+    color: rgb(255, 255, 255);
+    background-image: url(../images/bakgrund_meny.jpg);
 }
-
 .grid-col-meny h1{
     text-align: center;
     text-decoration: underline;
     font: bold;
-    font-size: 5em;
-    margin: 0;
-}   
-
-
+    font-size: 4em;
+}
 .grid-col-meny h2{
-    text-align: right;
-
+    text-align: center;
+    text-decoration: underline;
 }
-
 .grid-col-meny h3{
-    text-align: right;
-
+    text-align: center;
 }
+.grid-col-meny p{
+    text-align: center;
+}
+.bastion, .ardenweald, .revendreth, .maldraxxus{
+    height: 250px;
+    width: 250px;
+    border-radius: 20%;
+    padding-top: 30px;   
+}
+
+
+
 
 /*Split page in 2 */
 .grid-col-table-left{ 
