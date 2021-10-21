@@ -85,12 +85,10 @@ h3{
     padding-left: 1em;
 }
 .booking-img {
-    display: inline-block;
     height: 400px;
     width: 650px;
     border-radius: 20%;
     padding-top: 30px;
-    display: inline-block;
 }
  .grid_container-boka {
     max-width: 800px;
