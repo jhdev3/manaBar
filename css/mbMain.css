@@ -30,10 +30,8 @@ h3{
 .grid-col-1{ /*  full width*/
     grid-column-start: 1;
     grid-column-end: 11;
-
     justify-self: center; 
     background-color: tomato;
-    
 
 }
 
@@ -93,6 +91,7 @@ h3{
 }
 
 .booking-img {
+    display: inline-block;
     height: 400px;
     width: 650px;
     border-radius: 20%;
@@ -168,7 +167,6 @@ form .button{
     background-color: green;
 }
 
-
 .box-footer-2
 {
     display:inline-block;
@@ -195,16 +193,6 @@ form .button{
 /* Qabas  footer*/
 
 
-.icons {
-    list-style: none;
-
-    
-}
-
-.icons li {
-    display: inline-block;
-    
-} 
 
 .icons img{
     margin: 5px;
@@ -241,6 +229,7 @@ form .button{
 
 }
 
+
  /* Navbar */
 .navbar
 {
@@ -263,7 +252,7 @@ form .button{
     float: left;
 }
 
-nav 
+nav
 {
 text-align: center;    
 vertical-align: top;
