@@ -127,51 +127,50 @@ form .button{
 
 
 
-/*Footer*/
+/*Footer     padding: 0 1em 0 1em;
+    margin: 4rem 0 0 0;   padding: 1rem 0;
+    margin: 0;*/
 
 .footer {
     background-color: #55d6aa;
-    color: #000;
-    padding: 1rem 0;
-    margin: 0;
+   
     font-size: 85%;
 }
 
-.grid_container_footer{
+.block_container_footer{
     display: block;
     width: 100%;
-    padding: 0 1em 0 1em;
-    margin: 4rem 0 0 0;
+ 
     
     
 }
-.grid-col-footer-1
-{
-    grid-column-start: 1;
-    grid-column-end: 2;
-    justify-self: end;  
+.box-footer-1
+{   
+    text-align: center;
+    display:inline-block;
+    vertical-align:top;
+    width: 30%;
+    height: 20vh;
     background-color: green;
-    align-self:stretch;
 }
 
 
-.grid-col-4
+.box-footer-2
 {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    justify-self: start; 
+    display:inline-block;
+    vertical-align:top;
+    width: 30%;
+    height: 20vh;
     background-color: blue;
-    align-self:stretch;
-
 }
 
-.grid-col-5
+.box-footer-3 /*kontaktuppgifter */
 {
-    grid-column-start: 4;
-    grid-column-end: 5;
-    justify-self: start; 
-    background-color: yellow;    
-    align-self:stretch;
+    display:inline-block;
+    vertical-align:top;
+    width: 30%;
+    height: 20vh;
+    background-color: violet;
 
 }
 
