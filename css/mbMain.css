@@ -302,3 +302,308 @@ nav a:hover::after
     width: 100%;
 }
 /* Navbar */
+
+ body 
+{
+    margin: 0;
+    background: #232e33;
+}
+
+h3{
+    margin: 0;
+}
+/* Grid System    
+    With 10 columns = 10% each col
+    fr: size is 10% but fr handles borders and margins in a good way.
+*/
+
+/* main*/
+
+.grid_container{
+    display: grid;
+    grid-template-columns: repeat(10, 1 fr); 
+    grid-template-rows: auto; /* Dont need it, but tring to clarify, standard is auto*/
+    background-color: white;
+}
+
+
+/* Use this grid-col-nr or namne to great the rows
+   Choose the sieze of the row by how many columns you use
+  Use justify-self to place were u want the items/containers.  
+*/
+
+.grid-col-1{ /*  full width*/
+    grid-column-start: 1;
+    grid-column-end: 11;
+    justify-self: center; 
+    background-color: tomato;
+
+}
+
+
+
+.grid-col-meny{ /*  full width placement center*/
+    grid-column-start: 1;
+    grid-column-end: 11;
+    justify-self: center; 
+    background-color: green;
+}
+
+.grid-col-meny h1{
+    text-align: left;
+    text-decoration: underline;
+    font: bold;
+    font-size: 5em;
+    margin: 0;
+}   
+
+
+.grid-col-meny h2{
+    text-align: right;
+
+}
+
+.grid-col-meny h3{
+    text-align: right;
+
+}
+
+
+
+.grid-col-table-left{ 
+    grid-column-start: 5;
+    grid-column-end: 9;
+    justify-self: center;
+}    
+.grid-col-table-right{ 
+    grid-column-start: 1;
+    grid-column-end: 5;
+    justify-self: stretch;
+    background-color: rgba(38, 117, 14, 0.692); 
+    padding-right: 1em;
+}
+.grid-col-picture-right{ 
+    grid-column-start: 1;
+    grid-column-end: 6;
+    justify-self: center;  
+}
+.grid-col-form-left{ 
+    grid-column-start: 6;
+    grid-column-end: 9;
+    justify-self: stretch;
+    background-color: rgba(95, 43, 190, 0.692);
+    padding-left: 1em;
+}
+
+.booking-img {
+    display: inline-block;
+    height: 400px;
+    width: 650px;
+    border-radius: 20%;
+    padding-top: 30px;
+    display: inline-block;
+}
+.title{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.grid_container-form .title {
+    padding-bottom: 10px;
+    font-size: 35px;
+    font-weight: bold;
+}
+form .user-details .input-box{
+    font-size: 20px;
+    padding-bottom: 10px;
+    width: 100px;
+}
+.user-details .input-box input{
+    height: 30px;
+    width: 300%;
+    outline: none;
+    border: 1px solid;
+}
+form .button{
+    margin: 10px;
+    text-align: center;
+    color: black;
+    background-color: white;
+    font-size: large;
+    padding: 10px;
+    display: block;
+    width: 30%;
+    border-radius: 50%;
+    
+}
+
+
+.grid-col-2{ /* middle*/
+    grid-column-start: 4;
+    grid-column-end: 8;
+    justify-self: stretch; 
+    background-color: purple;
+
+}
+
+
+/*Footer     padding: 0 1em 0 1em;
+    margin: 4rem 0 0 0;   padding: 1rem 0;
+    margin: 0;*/
+
+.footer {
+    background-color: #55d6aa;
+   
+    font-size: 100%;
+}
+
+.block_container_footer{
+    display: block;
+    width: 100%;
+ 
+    
+    
+}
+.box-footer-1
+{   
+    display:inline-block;
+    vertical-align:top;
+    width: 30%;
+    height: 20vh;
+    background-color: green;
+}
+
+.box-footer-2
+{
+    display:inline-block;
+    text-align: center;
+    vertical-align:top;
+    width: 30%;
+    height: 20vh;
+    background-color: blue;
+}
+
+.box-footer-3 /*kontaktuppgifter */
+{
+    display:inline-block;
+    vertical-align:top;
+
+    width: 30%;
+    height: 20vh;
+    background-color: violet;
+
+}
+
+/* ---------------  */
+ 
+/* Qabas  footer*/
+
+
+
+.icons img{
+    margin: 5px;
+    width: 50px;
+    height: 50px;
+}
+
+/* Menyns stylesheet */
+.headmenu{
+    text-align: center;    
+    text-decoration: underline;
+    font: bold;
+}
+.submenu{
+    text-align: center;
+    text-decoration: underline;    
+}
+.dish{
+    text-align: center;    
+}
+.dishdisc{
+    text-align: center;    
+}
+
+
+
+/*  */ 
+.test{
+    width: 100%;
+    height: 50vh;
+    background-color: pink;
+    text-align: left;
+
+
+}
+
+
+ /* Navbar */
+.navbar
+{
+    background: #55d6aa;
+}
+
+.navbar::after
+{
+    content: '';
+    display: table;
+    clear: both;
+}
+.container 
+{
+    width: 100%;
+    margin-bottom: 2em;
+}
+.logo
+{
+    float: left;
+}
+
+nav
+{
+text-align: center;    
+vertical-align: top;
+
+}
+
+nav ul 
+{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li 
+{
+    display: inline-block;
+    margin-left: 70px;
+    padding-top: 21px;
+    position: relative;
+}
+
+nav a 
+{
+   text-decoration: none;
+   color: black;  
+}
+nav a:hover 
+{
+    color: black;
+}
+
+nav a::after
+{
+    content: '';
+    display: block;
+    height: 3px;
+    background-color: black;
+
+    width: 0%;
+    position: absolute;
+    bottom: -15px;
+    transition: all ease-in-out 300ms;
+}
+
+nav a:hover::after
+{
+    width: 100%;
+}
+/* Navbar */
