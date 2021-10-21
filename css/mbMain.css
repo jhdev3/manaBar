@@ -37,18 +37,7 @@ h3{
 
 }
 
-.grid-col-form-left{ 
-    grid-column-start: 1;
-    grid-column-end: 6;
-    justify-self: start; 
-    ;   
-}
 
-.grid-col-picture-right{ 
-    grid-column-start: 6;
-    grid-column-end: 11;
-    justify-self: end;    
-}
 
 .grid-col-meny{ /*  full width placement center*/
     grid-column-start: 1;
@@ -83,14 +72,26 @@ h3{
     grid-column-end: 11;
     justify-self: center; 
 }
+.grid-col-picture-right{ 
+    grid-column-start: 1;
+    grid-column-end: 6;
+    justify-self: center;  
+}
+.grid-col-form-left{ 
+    grid-column-start: 6;
+    grid-column-end: 9;
+    justify-self: stretch;
+    background-color: rgba(95, 43, 190, 0.692);
+    padding-left: 1em;
+}
 .booking-img {
     height: 400px;
     width: 650px;
     border-radius: 20%;
     padding-top: 30px;
+    display: inline-block;
 }
  .grid_container-boka {
-    
     max-width: 800px;
     width: 100%;
     padding: 20px 25px;
@@ -106,7 +107,6 @@ h3{
     font-size: 35px;
     font-weight: bold;
 }
-
 form .user-details .input-box{
     font-size: 20px;
     padding-bottom: 10px;
