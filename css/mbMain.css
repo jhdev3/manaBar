@@ -38,19 +38,15 @@ h3{
 }
 
 .grid-col-form-left{ 
-    
-    grid-column-start: 3;
+    grid-column-start: 1;
     grid-column-end: 6;
     justify-self: start; 
-    background-color: tomato;   
+    ;   
 }
 .grid-col-picture-right{ 
     grid-column-start: 6;
     grid-column-end: 11;
-
-    justify-self: start; 
-    background-color: tomato;
-    
+    justify-self: end;    
 }
 
 .grid-col-test{ /*  full width placement center*/
@@ -72,9 +68,9 @@ h3{
     border-radius: 20%;
     padding-top: 30px;
 }
-.grid_container-boka {
+ .grid_container-boka {
     
-    max-width: 600px;
+    max-width: 800px;
     width: 100%;
     padding: 20px 25px;
     border-radius: 15px;
