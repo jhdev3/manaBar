@@ -40,14 +40,14 @@ h3{
 
 
 .grid-col-meny{ /*  full width placement center*/
-    grid-column-start: 1;
-    grid-column-end: 11;
-    justify-self: center; 
+    grid-column-start: 4;
+    grid-column-end: 7;
+    justify-self: start; 
     background-color: green;
 }
 
 .grid-col-meny h1{
-    text-align: left;
+    text-align: center;
     text-decoration: underline;
     font: bold;
     font-size: 5em;
