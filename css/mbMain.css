@@ -42,7 +42,7 @@ h3{
 .grid-col-meny{ /*  full width placement center*/
     grid-column-start: 1;
     grid-column-end: 11;
-    justify-self: center;       
+    justify-self: stretch;       
     line-height: 10px;
     color: rgb(255, 255, 255);
     background-image: url(../images/bakgrund_meny.jpg);
@@ -63,7 +63,13 @@ h3{
 .grid-col-meny p{
     text-align: center;
 }
-/*<img class="meny-img" src="../images/bakgrund_meny.jpg">*/
+.bastion, .ardenweald, .revendreth, .maldraxxus{
+    height: 250px;
+    width: 250px;
+    border-radius: 20%;
+    padding-top: 30px;   
+}
+
 
 
 
