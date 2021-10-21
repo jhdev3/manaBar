@@ -30,10 +30,8 @@ h3{
 .grid-col-1{ /*  full width*/
     grid-column-start: 1;
     grid-column-end: 11;
-
     justify-self: center; 
     background-color: tomato;
-    
 
 }
 
@@ -171,7 +169,6 @@ form .button{
     background-color: green;
 }
 
-
 .box-footer-2
 {
     display:inline-block;
@@ -193,24 +190,20 @@ form .button{
 
 }
 
+.icons, .textlist{
+    list-style: none;
 
+} 
 
+.icons li{
+    display: inline-block;
 
+}
 /* ---------------  */
  
 /* Qabas  footer*/
 
 
-.icons {
-    list-style: none;
-
-    
-}
-
-.icons li {
-    display: inline-block;
-    
-} 
 
 .icons img{
     margin: 5px;
