@@ -87,6 +87,7 @@ h3{
     justify-self: center; 
 }
 .booking-img {
+    display: inline-block;
     height: 400px;
     width: 650px;
     border-radius: 20%;
@@ -249,6 +250,7 @@ form .button{
 
 }
 
+
  /* Navbar */
 .navbar
 {
@@ -271,7 +273,7 @@ form .button{
     float: left;
 }
 
-nav 
+nav
 {
 text-align: center;    
 vertical-align: top;
