@@ -14,7 +14,7 @@ h3{
     fr: size is 10% but fr handles borders and margins in a good way.
 */
 
-/* main*/
+/* main change the <header> then just postion the grid container after easy :)*/
 
 .grid_container{
     display: grid;
