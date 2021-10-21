@@ -66,55 +66,47 @@ h3{
 }
 
 
-
-.grid-col-test2{ 
-    grid-column-start: 1;
-    grid-column-end: 11;
-    justify-self: center; 
-}
-.grid-col-picture-right{ 
+.grid-col-table-left{ 
     grid-column-start: 1;
     grid-column-end: 6;
-    justify-self: center;  
+
+    justify-self: end;
+    padding-right: 1em;
+    
 }
-.grid-col-form-left{ 
+
+.grid-col-table-right{ 
     grid-column-start: 6;
     grid-column-end: 9;
-    justify-self: stretch;
-    background-color: rgba(95, 43, 190, 0.692);
-    padding-left: 1em;
+    justify-self: start;  
 }
+
+
 .booking-img {
     height: 400px;
     width: 650px;
     border-radius: 20%;
     padding-top: 30px;
 }
- .grid_container-boka {
-    max-width: 800px;
+
+input{
+    display: block;
     width: 100%;
-    padding: 20px 25px;
-    border-radius: 15px;
-    background-color: rgba(95, 43, 190, 0.692);
+
 }
-.title{
-    font-size: 30px;
-    margin-bottom: 10px;
-}
-.grid_container-form .title {
-    padding-bottom: 10px;
-    font-size: 35px;
-    font-weight: bold;
-}
+
+
+
 form .user-details .input-box{
     font-size: 20px;
     padding-bottom: 10px;
     width: 100px;
+
 }
 .user-details .input-box input{
-    height: 30px;
-    width: 300%;
     outline: none;
+    height: 30px; /* Height of input boxes*/
+
     border: 1px solid;
 }
 form .button{
@@ -125,7 +117,7 @@ form .button{
     font-size: large;
     padding: 10px;
     display: block;
-    width: 30%;
+    width: 100%;
     border-radius: 50%;
     
 }
