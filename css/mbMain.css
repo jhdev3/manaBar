@@ -97,18 +97,7 @@ input{
 
 
 
-form .user-details .input-box{
-    font-size: 20px;
-    padding-bottom: 10px;
-    width: 100px;
 
-}
-.user-details .input-box input{
-    outline: none;
-    height: 30px; /* Height of input boxes*/
-
-    border: 1px solid;
-}
 form .button{
     margin: 10px;
     text-align: center;
