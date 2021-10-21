@@ -20,7 +20,9 @@ h3{
     display: grid;
     grid-template-columns: repeat(10, 1 fr); 
     grid-template-rows: auto; /* Dont need it, but tring to clarify, standard is auto*/
-    background-color: white;
+    background-color: #55d6aa;
+    justify-content: space-between;
+
 }
 .grid_container2{
     display: grid;
@@ -36,20 +38,71 @@ h3{
 */
 /*start-page */
 
-.grid-col-1{ /*  full width*/
+.grid-col-xxl{ /*  full width*/
     grid-column-start: 1;
     grid-column-end: 11;
-    justify-self: start; 
-    width: 100%;
-    background-color: tomato;
-    height: 100vh;
+    justify-self: center;    
+    border: 1px solid;
+    background-color: white;
+
 }
 
+.grid-col-text-quiz{
+    grid-column-start: 4;
+    grid-column-end: 5;
+    justify-self: end;  
+   border: 1px solid;
+   padding: 10px;
+   box-shadow: 5px 10px #888888;  
+   background-color: white;
 
+}
+.grid-col-text-vr{
+    grid-column-start: 5;
+    grid-column-end: 6;
+    justify-self: center;  
+   border: 1px solid;
+   padding: 10px;
+   box-shadow: 5px 10px #888888;  
+   background-color: white;
 
+   
+}
+.grid-col-text-event{
+    grid-column-start: 6;
+    grid-column-end: 7;
+    justify-self: start;  
+   border: 1px solid;
+   padding: 10px;
+   box-shadow: 5px 10px #888888; 
+   background-color: white;
 
+}
 
+.grid-col-four-to-seven{
+    margin-top:10px;
+    grid-column-start: 4;
+    grid-column-end: 7;
+    padding: 1em 20% 1em 1em;
+    justify-self: stretch;  
+   border: 1px solid;
+   background-color: white;
+}
 
+.texalignCenter{
+    text-align: center;
+}
+.image_size2{
+    width: 250px;
+    height: 250px;
+    float:right;
+}
+
+.image_size{
+    width: 100%;
+    height: 60vh;
+    margin: 0;
+}
 
 
 .grid-col-meny{ /*  full width placement center*/
@@ -92,6 +145,9 @@ h3{
 #alignstart{
     justify-self: start;       
 
+}
+#floatleft{
+    float: left;
 }
 .grid-col-meny h1{
     text-align: center;
@@ -186,10 +242,7 @@ form .button{
    
 }
 
-.block_container_footer{
-    display: block;
-    width: 100%; /*Set some pixels maybe */    
-}
+
 .box-footer-1
 {   
     display:inline-block;
