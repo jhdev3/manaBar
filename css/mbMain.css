@@ -65,7 +65,7 @@ h3{
 
 }
 
-
+/*Split page in 2 */
 .grid-col-table-left{ 
     grid-column-start: 4;
     grid-column-end: 6;
