@@ -42,28 +42,30 @@ h3{
 .grid-col-meny{ /*  full width placement center*/
     grid-column-start: 1;
     grid-column-end: 11;
-    justify-self: center; 
-    background-color: green;
+    justify-self: center;       
+    line-height: 10px;
+    color: rgb(255, 255, 255);
+    background-image: url(../images/bakgrund_meny.jpg);
 }
-
 .grid-col-meny h1{
-    text-align: left;
+    text-align: center;
     text-decoration: underline;
     font: bold;
-    font-size: 5em;
-    margin: 0;
-}   
-
-
+    font-size: 4em;
+}
 .grid-col-meny h2{
-    text-align: right;
-
+    text-align: center;
+    text-decoration: underline;
 }
-
 .grid-col-meny h3{
-    text-align: right;
-
+    text-align: center;
 }
+.grid-col-meny p{
+    text-align: center;
+}
+/*<img class="meny-img" src="../images/bakgrund_meny.jpg">*/
+
+
 
 
 .grid-col-table-left{ 
