@@ -20,7 +20,8 @@ h3{
     display: grid;
     grid-template-columns: repeat(10, 1 fr); 
     grid-template-rows: auto; /* Dont need it, but tring to clarify, standard is auto*/
-    background-color: white;
+    background-image: url(../images/bakgrund_meny.jpg);
+
 }
 
 
@@ -45,7 +46,6 @@ h3{
     justify-self: stretch;       
     line-height: 10px;
     color: rgb(255, 255, 255);
-    background-image: url(../images/bakgrund_meny.jpg);
 }
 .grid-col-meny h1{
     text-align: center;
