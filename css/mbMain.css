@@ -34,14 +34,21 @@ h3{
    Choose the sieze of the row by how many columns you use
   Use justify-self to place were u want the items/containers.  
 */
+/*start-page */
 
 .grid-col-1{ /*  full width*/
     grid-column-start: 1;
     grid-column-end: 11;
-    justify-self: center; 
+    justify-self: start; 
+    width: 100%;
     background-color: tomato;
-
+    height: 100vh;
 }
+
+
+
+
+
 
 
 
@@ -56,7 +63,7 @@ h3{
     color: rgb(255, 255, 255);
 }
 
-.grid-col-meny-right{ /*  full width placement center*/
+.grid-col-meny-right{  
     grid-column-start: 4;
     grid-column-end: 7;
     justify-self: start;       
@@ -65,7 +72,7 @@ h3{
     color: rgb(255, 255, 255);
 }
 
-.grid-col-meny-left-pic{ /*  full width placement center*/
+.grid-col-meny-left-pic{ 
     grid-column-start: 3;
     grid-column-end: 4;
     justify-self: stretch;
@@ -74,7 +81,7 @@ h3{
     background-color: black;
     color: rgb(255, 255, 255);
 }
-.grid-col-meny-left{ /*  full width placement center*/
+.grid-col-meny-left{ 
     grid-column-start: 1;
     grid-column-end: 4;
     justify-self: end;       
@@ -172,31 +179,31 @@ form .button{
 
 
 
-/*Footer     padding: 0 1em 0 1em;
-    margin: 4rem 0 0 0;   padding: 1rem 0;
-    margin: 0;*/
+/*Footer  */
 
 .footer {
     background-color: #55d6aa;
    
-    font-size: 100%;
 }
 
 .block_container_footer{
     display: block;
-    width: 120%;
- 
-    
-    
+    width: 100%; /*Set some pixels maybe */    
 }
 .box-footer-1
 {   
     display:inline-block;
+    text-align: end;
     vertical-align:top;
     width: 30%;
+    min-width:30%;
     height: 20vh;
 }
 
+.box-footer-1 h4{
+    text-align: center;
+    margin:0;
+}
 .box-footer-2
 {
     display:inline-block;
@@ -206,14 +213,29 @@ form .button{
     height: 20vh;
 }
 
-.textlist2{
-    list-style: none;
-    text-align: end;
+.box-footer-3
+{   
+    display:inline-block;
+    vertical-align:top;
+    width: 30%;
+    height: 20vh;
 }
+
+
+.logofooter{
+    margin: 1em 0 0 1em;
+    width: 50%;
+    height: 10vh;
+    float:left;
+
+}
+
+
+
+
 
 .icons, .textlist{
     list-style: none;
-
 } 
 
 .icons li{
