@@ -44,21 +44,41 @@ h3{
     justify-self: start; 
     background-color: tomato;   
 }
+
 .grid-col-picture-right{ 
     grid-column-start: 6;
     grid-column-end: 11;
-
     justify-self: start; 
     background-color: tomato;
     
 }
 
-.grid-col-test{ /*  full width placement center*/
+.grid-col-meny{ /*  full width placement center*/
     grid-column-start: 1;
     grid-column-end: 11;
     justify-self: center; 
     background-color: green;
 }
+
+.grid-col-meny h1{
+    text-align: left;
+    text-decoration: underline;
+    font: bold;
+    font-size: 5em;
+    margin: 0;
+}   
+
+
+.grid-col-meny h2{
+    text-align: right;
+
+}
+
+.grid-col-meny h3{
+    text-align: right;
+
+}
+
 
 
 .grid-col-test2{ 
@@ -134,7 +154,7 @@ form .button{
 .footer {
     background-color: #55d6aa;
    
-    font-size: 85%;
+    font-size: 100%;
 }
 
 .block_container_footer{
@@ -146,7 +166,6 @@ form .button{
 }
 .box-footer-1
 {   
-    text-align: center;
     display:inline-block;
     vertical-align:top;
     width: 30%;
@@ -158,6 +177,7 @@ form .button{
 .box-footer-2
 {
     display:inline-block;
+    text-align: center;
     vertical-align:top;
     width: 30%;
     height: 20vh;
@@ -168,6 +188,7 @@ form .button{
 {
     display:inline-block;
     vertical-align:top;
+
     width: 30%;
     height: 20vh;
     background-color: violet;
@@ -183,9 +204,8 @@ form .button{
 
 
 .icons {
-    text-align: center;  
     list-style: none;
-    margin-bottom: 0;
+
     
 }
 
@@ -195,6 +215,7 @@ form .button{
 } 
 
 .icons img{
+    margin: 5px;
     width: 50px;
     height: 50px;
 }
