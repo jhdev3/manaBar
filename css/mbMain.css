@@ -176,6 +176,7 @@ form .button{
     vertical-align:top;
     width: 30%;
     height: 20vh;
+    background-color: blue;
 }
 
 .box-footer-3 /*kontaktuppgifter */
@@ -188,6 +189,7 @@ form .button{
     background-color: violet;
 
 }
+
 .icons, .textlist{
     list-style: none;
 
