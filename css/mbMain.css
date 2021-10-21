@@ -2,7 +2,6 @@
 {
     margin: 0;
     background: #232e33;
-    font-size: 1.2em;
 }
 
 h3{
@@ -149,36 +148,44 @@ form .button{
     margin: 0;*/
 
 .footer {
-   background-color: #55d6aa;
-   color: black;
-   font-size: 120%;
+    background-color: #55d6aa;
+   
+    font-size: 100%;
 }
 
 .block_container_footer{
     display: block;
     width: 100%;
  
+    
+    
 }
-.box-footer-1 /*kontaktuppgifter, öppettideer*/
+.box-footer-1
 {   
-    display: inline-block;
+    display:inline-block;
     vertical-align:top;
     width: 30%;
     height: 20vh;
+    background-color: green;
 }
 
 .box-footer-2
 {
-    display: inline-block;
+    display:inline-block;
     text-align: center;
     vertical-align:top;
     width: 30%;
     height: 20vh;
 }
 
-.textlist2{
-    list-style: none;
-    text-align: right;
+.box-footer-3 /*kontaktuppgifter */
+{
+    display:inline-block;
+    vertical-align:top;
+
+    width: 30%;
+    height: 20vh;
+    background-color: violet;
 
 }
 .icons, .textlist{
@@ -190,6 +197,10 @@ form .button{
     display: inline-block;
 
 }
+/* ---------------  */
+ 
+/* Qabas  footer*/
+
 
 
 .icons img{
@@ -197,8 +208,6 @@ form .button{
     width: 50px;
     height: 50px;
 }
-
-/* Footer end*/
 
 /* Menyns stylesheet */
 .headmenu{
