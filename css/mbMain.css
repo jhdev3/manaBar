@@ -65,6 +65,15 @@ h3{
     color: rgb(255, 255, 255);
 }
 
+.grid-col-meny-left-pic{ /*  full width placement center*/
+    grid-column-start: 3;
+    grid-column-end: 4;
+    justify-self: stretch;
+    text-align: center;       
+    line-height: 10px;
+    background-color: black;
+    color: rgb(255, 255, 255);
+}
 .grid-col-meny-left{ /*  full width placement center*/
     grid-column-start: 1;
     grid-column-end: 4;
@@ -73,7 +82,10 @@ h3{
     background-color: black;
     color: rgb(255, 255, 255);
 }
+#alignstart{
+    justify-self: start;       
 
+}
 .grid-col-meny h1{
     text-align: center;
     text-decoration: underline;
@@ -91,7 +103,7 @@ h3{
 .grid-col-meny p{
     text-align: center;
 }
-.bastion, .ardenweald, .revendreth, .maldraxxus{
+.bastion {
     height: 250px;
     width: 250px;
     border-radius: 20%;
