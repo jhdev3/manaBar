@@ -67,10 +67,17 @@ h3{
 
 
 
-.grid-col-test2{ 
+.grid-col-table-left{ 
+    grid-column-start: 5;
+    grid-column-end: 9;
+    justify-self: center;
+}    
+.grid-col-table-right{ 
     grid-column-start: 1;
-    grid-column-end: 11;
-    justify-self: center; 
+    grid-column-end: 5;
+    justify-self: stretch;
+    background-color: rgba(38, 117, 14, 0.692); 
+    padding-right: 1em;
 }
 .grid-col-picture-right{ 
     grid-column-start: 1;
@@ -84,19 +91,13 @@ h3{
     background-color: rgba(95, 43, 190, 0.692);
     padding-left: 1em;
 }
+
 .booking-img {
     height: 400px;
     width: 650px;
     border-radius: 20%;
     padding-top: 30px;
     display: inline-block;
-}
- .grid_container-boka {
-    max-width: 800px;
-    width: 100%;
-    padding: 20px 25px;
-    border-radius: 15px;
-    background-color: rgba(95, 43, 190, 0.692);
 }
 .title{
     font-size: 30px;
@@ -139,9 +140,6 @@ form .button{
     background-color: purple;
 
 }
-
-
-
 
 
 /*Footer     padding: 0 1em 0 1em;
@@ -191,9 +189,6 @@ form .button{
     background-color: violet;
 
 }
-
-
-
 
 /* ---------------  */
  
