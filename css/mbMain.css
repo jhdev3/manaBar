@@ -20,10 +20,15 @@ h3{
     display: grid;
     grid-template-columns: repeat(10, 1 fr); 
     grid-template-rows: auto; /* Dont need it, but tring to clarify, standard is auto*/
+    background-color: white;
+}
+.grid_container2{
+    display: grid;
+    grid-template-columns: repeat(10, 1 fr); 
+    grid-template-rows: auto; /* Dont need it, but tring to clarify, standard is auto*/
     background-image: url(../images/bakgrund_meny.jpg);
 
 }
-
 
 /* Use this grid-col-nr or namne to great the rows
    Choose the sieze of the row by how many columns you use
@@ -43,16 +48,39 @@ h3{
 .grid-col-meny{ /*  full width placement center*/
     grid-column-start: 1;
     grid-column-end: 11;
-    justify-self: stretch;       
+    justify-self: center;   
+    text-align: center;
     line-height: 10px;
+    background-color: black;
+
     color: rgb(255, 255, 255);
 }
+
+.grid-col-meny-right{ /*  full width placement center*/
+    grid-column-start: 4;
+    grid-column-end: 7;
+    justify-self: start;       
+    line-height: 10px;
+    background-color: black;
+    color: rgb(255, 255, 255);
+}
+
+.grid-col-meny-left{ /*  full width placement center*/
+    grid-column-start: 1;
+    grid-column-end: 4;
+    justify-self: end;       
+    line-height: 10px;
+    background-color: black;
+    color: rgb(255, 255, 255);
+}
+
 .grid-col-meny h1{
     text-align: center;
     text-decoration: underline;
     font: bold;
     font-size: 4em;
 }
+
 .grid-col-meny h2{
     text-align: center;
     text-decoration: underline;
