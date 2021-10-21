@@ -2,6 +2,8 @@
 {
     margin: 0;
     background: #232e33;
+    font-size: 1.2em;
+
 }
 
 h3{
@@ -65,17 +67,10 @@ h3{
 
 
 
-.grid-col-table-left{ 
-    grid-column-start: 5;
-    grid-column-end: 9;
-    justify-self: center;
-}    
-.grid-col-table-right{ 
+.grid-col-test2{ 
     grid-column-start: 1;
-    grid-column-end: 5;
-    justify-self: stretch;
-    background-color: rgba(38, 117, 14, 0.692); 
-    padding-right: 1em;
+    grid-column-end: 11;
+    justify-self: center; 
 }
 .grid-col-picture-right{ 
     grid-column-start: 1;
@@ -89,7 +84,6 @@ h3{
     background-color: rgba(95, 43, 190, 0.692);
     padding-left: 1em;
 }
-
 .booking-img {
     display: inline-block;
     height: 400px;
@@ -97,6 +91,13 @@ h3{
     border-radius: 20%;
     padding-top: 30px;
     display: inline-block;
+}
+ .grid_container-boka {
+    max-width: 800px;
+    width: 100%;
+    padding: 20px 25px;
+    border-radius: 15px;
+    background-color: rgba(95, 43, 190, 0.692);
 }
 .title{
     font-size: 30px;
@@ -141,6 +142,9 @@ form .button{
 }
 
 
+
+
+
 /*Footer     padding: 0 1em 0 1em;
     margin: 4rem 0 0 0;   padding: 1rem 0;
     margin: 0;*/
@@ -153,7 +157,7 @@ form .button{
 
 .block_container_footer{
     display: block;
-    width: 100%;
+    width: 120%;
  
     
     
@@ -164,7 +168,6 @@ form .button{
     vertical-align:top;
     width: 30%;
     height: 20vh;
-    background-color: green;
 }
 
 .box-footer-2
@@ -174,20 +177,22 @@ form .button{
     vertical-align:top;
     width: 30%;
     height: 20vh;
-    background-color: blue;
 }
 
-.box-footer-3 /*kontaktuppgifter */
-{
-    display:inline-block;
-    vertical-align:top;
-
-    width: 30%;
-    height: 20vh;
-    background-color: violet;
-
+.textlist2{
+    list-style: none;
+    text-align: end;
 }
 
+.icons, .textlist{
+    list-style: none;
+
+} 
+
+.icons li{
+    display: inline-block;
+
+}
 /* ---------------  */
  
 /* Qabas  footer*/
