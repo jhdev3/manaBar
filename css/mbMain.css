@@ -342,7 +342,6 @@ form .button{
 {
     background: #55d6aa;
 }
-
 .navbar::after
 {
     content: '';
@@ -351,29 +350,27 @@ form .button{
 }
 .container 
 {
-    width: 100%;
-    margin-bottom: 2em;
+    width: 70%;
+    margin: 0 auto;
 }
 .logo
+
 {
     float: left;
 }
-
-nav
+#nav 
 {
-text-align: center;    
-vertical-align: top;
-
+    float: right;
 }
 
-nav ul 
+#nav ul 
 {
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
-nav li 
+#nav li 
 {
     display: inline-block;
     margin-left: 70px;
@@ -381,31 +378,30 @@ nav li
     position: relative;
 }
 
-nav a 
+#nav a 
 {
    text-decoration: none;
    color: black;  
 }
-nav a:hover 
+#nav a:hover 
 {
     color: black;
 }
 
-nav a::after
+#nav a::before 
 {
     content: '';
     display: block;
     height: 3px;
-    background-color: black;
-
     width: 0%;
+    background-color: black;
     position: absolute;
-    bottom: -15px;
     transition: all ease-in-out 300ms;
+    bottom: -15px;
 }
-
-nav a:hover::after
+#nav a:hover::before 
 {
     width: 100%;
 }
 /* Navbar */
+
