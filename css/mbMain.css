@@ -1,4 +1,4 @@
- body 
+body 
 {
     margin: 0;
     background: #232e33;
@@ -44,7 +44,8 @@ h3{
     justify-self: center;    
     border: 1px solid;
     background-color: white;
-
+    margin-top: 10px;
+    
 }
 
 .grid-col-text-quiz{
@@ -203,7 +204,6 @@ h3{
 input{
     display: block;
     width: 100%;
-
 }
 
 
@@ -232,14 +232,11 @@ form .button{
 }
 
 
-
-
-
 /*Footer  */
 
 .footer {
     background-color: #55d6aa;
-   
+    
 }
 
 
@@ -247,10 +244,11 @@ form .button{
 {   
     display:inline-block;
     text-align: end;
-    vertical-align:top;
+    vertical-align: top;
     width: 30%;
     min-width:30%;
     height: 20vh;
+    
 }
 
 .box-footer-1 h4{
@@ -282,8 +280,6 @@ form .button{
     float:left;
 
 }
-
-
 
 
 
@@ -340,7 +336,7 @@ form .button{
  /* Navbar */
 .navbar
 {
-    background: #55d6aa;
+    background-color: #222;
 }
 .navbar::after
 {
@@ -357,24 +353,27 @@ form .button{
 
 {
     float: left;
+    margin-top: 10px;
 }
 #nav 
 {
     float: right;
+    
 }
 
 #nav ul 
 {
     margin: 0;
-    padding: 0;
+    padding: 0px;
     list-style: none;
+    padding-bottom: 10px;
 }
 
 #nav li 
 {
     display: inline-block;
     margin-left: 70px;
-    padding-top: 21px;
+    padding-top: 10px;
     position: relative;
 }
 
@@ -382,6 +381,7 @@ form .button{
 {
    text-decoration: none;
    color: black;  
+   margin-top: 10px;
 }
 #nav a:hover 
 {
@@ -397,7 +397,8 @@ form .button{
     background-color: black;
     position: absolute;
     transition: all ease-in-out 300ms;
-    bottom: -15px;
+    position: absolute;
+    bottom: -8px;
 }
 #nav a:hover::before 
 {
