@@ -194,8 +194,8 @@ h3{
 
 
 .booking-img {
-    height: 400px;
-    width: 650px;
+    height: 300px;
+    width: 500px;
     border-radius: 20%;
     padding-top: 30px;
 }
@@ -217,7 +217,7 @@ form .button{
     font-size: large;
     padding: 10px;
     display: block;
-    width: 100%;
+    width: 50%;
     border-radius: 50%;
     
 }
