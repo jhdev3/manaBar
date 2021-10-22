@@ -59,6 +59,7 @@ h3{
    background-color: white;
 
 }
+
 .grid-col-text-vr{
     grid-column-start: 5;
     grid-column-end: 6;
@@ -144,6 +145,7 @@ h3{
     background-color: black;
     color: rgb(255, 255, 255);
 }
+
 #alignstart{
     justify-self: start;       
 
@@ -180,9 +182,9 @@ h3{
 
 /*Split page in 2 */
 .grid-col-table-left{ 
-    grid-column-start: 4;
+    grid-column-start: 1;
     grid-column-end: 6;
-
+    height: 60vh;
     justify-self: end;
     padding-right: 1em;
     
@@ -190,7 +192,9 @@ h3{
 
 .grid-col-table-right{ 
     grid-column-start: 6;
-    grid-column-end: 9;
+    grid-column-end: 11;
+    height: 60vh;
+
     justify-self: start;  
 }
 
@@ -247,8 +251,8 @@ form .button{
     vertical-align: top;
     width: 30%;
     min-width:30%;
-    height: 20vh;
-    
+    min-height: 20vh;
+    height: 100%;
 }
 
 .box-footer-1 h4{
@@ -261,15 +265,16 @@ form .button{
     text-align: center;
     vertical-align:top;
     width: 30%;
-    height: 20vh;
+    min-height: 20vh;
+    height: 100%;
 }
-
 .box-footer-3
 {   
     display:inline-block;
     vertical-align:top;
     width: 30%;
-    height: 20vh;
+    min-height: 20vh;
+    height: 100%;
 }
 
 
