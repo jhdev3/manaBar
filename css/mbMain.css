@@ -43,11 +43,31 @@ h3{
 */
 /*start-page */
 
-.grid-col-xxl{ /*  full width*/
+/* Hard to make works in a nice way can use abouslt to overlay maybe
+.grid-col-xxl-title-pic{ 
     grid-column-start: 1;
     grid-column-end: 11;
-    
+    background-image: url("../images/titlebild.jpg");
+    max-width: 1600px;
+    height: auto;
+    background-size: cover;
+    background-position:fill;
+    position: relative;
 }
+  */
+
+.grid-col-xxl{ /*  full width*/
+    grid-column-start: 1;
+    grid-column-end: 11; /*Can do -1 to get to end */
+}
+
+/* Need to set that on both the grids in html*/ 
+.grid-overlap{
+
+    grid-row: 1/2 !important; /*Dont know if important is need but why not*/
+
+}
+
 /* 50% width*/ 
 .grid-col-1-to-6{ 
     grid-column-start: 1;
@@ -70,7 +90,7 @@ h3{
    border: 1px solid;
    padding: 10px;
    box-shadow: 5px 10px #888888;  
-   background-color: white;
+   background-color: rgba(255, 255, 255, 0.26);
 
 }
 
@@ -80,7 +100,7 @@ h3{
    border: 1px solid;
    padding: 10px;
    box-shadow: 5px 10px #888888;  
-   background-color: white;
+   background-color: rgba(255, 255, 255, 0.26);
 
    
 }
@@ -90,7 +110,7 @@ h3{
    border: 1px solid;
    padding: 10px;
    box-shadow: 5px 10px #888888; 
-   background-color: white;
+   background-color: rgba(255, 255, 255, 0.26);
 
 }
 
@@ -100,7 +120,7 @@ h3{
     grid-column-end: 7;
     padding: 1em 20% 1em 1em;
     border: 1px solid;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.26);
 }
 /* Justify container in on the grid*/
 .justify-stretch{
@@ -115,7 +135,16 @@ h3{
 .justify-end{
     justify-self: end;  
 }
+.align-self-center{
+    align-self: center;
+}
 /* --------------------------------*/ 
+.big-text{
+    color:rgb(14, 10, 252);
+    font-size: 5rem;
+    background-color: rgba(245, 245, 245, 0.356);
+}
+
 .img-dont-scale-up {
     width: 100%;
     max-width: 1600px;
@@ -130,7 +159,7 @@ h3{
 
 }
 .border-round{
-    border-radius: 20%;
+    border-radius: 5%;
 }
 
 
