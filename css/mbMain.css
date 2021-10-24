@@ -46,14 +46,24 @@ h3{
 .grid-col-xxl{ /*  full width*/
     grid-column-start: 1;
     grid-column-end: 11;
-    justify-self: center;    
-    border: 1px solid;
-    background-color: white;
-    margin-top: 10px;
+    
+}
+/* 50% width*/ 
+.grid-col-1-to-6{ 
+    grid-column-start: 1;
+    grid-column-end: 6;
+   
     
 }
 
-.grid-col-text-quiz{
+.grid-col-6-to-11{ 
+    grid-column-start: 6;
+    grid-column-end: 11;
+    
+}
+
+/*10% width */
+.grid-col-4-to-5{
     grid-column-start: 4;
     grid-column-end: 5;
     justify-self: end;  
@@ -64,10 +74,9 @@ h3{
 
 }
 
-.grid-col-text-vr{
+.grid-col-5-to-6{
     grid-column-start: 5;
     grid-column-end: 6;
-    justify-self: center;  
    border: 1px solid;
    padding: 10px;
    box-shadow: 5px 10px #888888;  
@@ -75,10 +84,9 @@ h3{
 
    
 }
-.grid-col-text-event{
-    grid-column-start: 6;
+.grid-col-6-to-7{
+  grid-column-start: 6;
     grid-column-end: 7;
-    justify-self: start;  
    border: 1px solid;
    padding: 10px;
    box-shadow: 5px 10px #888888; 
@@ -86,14 +94,48 @@ h3{
 
 }
 
-.grid-col-four-to-seven{
+.grid-col-4-to-7{
     margin-top:10px;
     grid-column-start: 4;
     grid-column-end: 7;
     padding: 1em 20% 1em 1em;
+    border: 1px solid;
+    background-color: white;
+}
+/* Justify container in on the grid*/
+.justify-stretch{
     justify-self: stretch;  
+}
+.justify-start{
+    justify-self: start;  
+}
+.justify-center{
+    justify-self: center;  
+}
+.justify-end{
+    justify-self: end;  
+}
+/* --------------------------------*/ 
+.img-dont-scale-up {
+    width: 100%;
+    max-width: 1600px;
+    height: auto;
+}
+
+
+.border-color-blue{
+
    border: 1px solid;
-   background-color: white;
+   color: rgb(91, 91, 248);
+
+}
+.border-round{
+    border-radius: 20%;
+}
+
+
+.display-inline{
+    display: inline-block;
 }
 
 .texalignCenter{
@@ -244,7 +286,7 @@ form .button{
 /*Footer  */
 
 .footer {
-    background-color: #55d6aa;
+    background-color: #3c3d3d;
 }
 
 
