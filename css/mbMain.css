@@ -20,7 +20,7 @@ h3{
     display: grid;
     grid-template-columns: repeat(10, 1 fr); 
     grid-template-rows: auto; /* Dont need it, but tring to clarify, standard is auto*/
-    justify-content: space-between;
+    justify-content: space-between; /* Prolly not working coz of margin 0 in body*/ 
     background-image: url("../images/bg1920.jpg");
     background-position: center;
     background-repeat: no-repeat;
@@ -71,9 +71,7 @@ h3{
 /* 50% width*/ 
 .grid-col-1-to-6{ 
     grid-column-start: 1;
-    grid-column-end: 6;
-   
-    
+    grid-column-end: 6;  
 }
 
 .grid-col-6-to-11{ 
