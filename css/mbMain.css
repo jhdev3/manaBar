@@ -2,7 +2,6 @@
 body 
 {
     margin: 0;
-    background: #232e33;
     font-size: 1.2em;
 
 }
@@ -21,8 +20,13 @@ h3{
     display: grid;
     grid-template-columns: repeat(10, 1 fr); 
     grid-template-rows: auto; /* Dont need it, but tring to clarify, standard is auto*/
-    background-color: #55d6aa;
     justify-content: space-between;
+    background-image: url("../images/bg1920.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: auto;
+
 
 }
 .grid_container2{
