@@ -292,21 +292,21 @@ form{
 .grid-col-pc-left{ 
     grid-column-start: 1;
     grid-column-end: 6;
-    height: 60vh;
     justify-self: end;
     padding-right: 1em;
+    margin-top: 10%;
     
 }
-
 .grid-col-pc-right{ 
     grid-column-start: 6;
     grid-column-end: 11;
-    height: 60vh;
-
-    justify-self: start;  
+    justify-self: start;
+    min-height: 100vh;
+    margin-top: 10%; 
 }
 .pc-text{
     text-align: center;
+
 }
 
 .booking-table{
@@ -317,8 +317,8 @@ form{
     padding-top: 30px;
 }
 .booking-img {
-    height: 300px;
-    width: 500px;
+    height: 500px;
+    width: 700px;
     border-radius: 20%;
     padding-top: 30px;
 }
