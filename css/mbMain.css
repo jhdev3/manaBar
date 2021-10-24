@@ -21,6 +21,8 @@ h3{
     grid-template-columns: repeat(10, 1 fr); 
     grid-template-rows: auto; /* Dont need it, but tring to clarify, standard is auto*/
     justify-content: space-between; /* Prolly not working coz of margin 0 in body*/ 
+    margin-right: auto;
+    justify-content: center; /*center the grid items in continer :)*/
     background-image: url("../images/bg1920.jpg");
     background-position: center;
     background-repeat: no-repeat;
