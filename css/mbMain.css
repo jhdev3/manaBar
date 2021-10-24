@@ -88,8 +88,7 @@ h3{
     grid-column-end: 5;
     justify-self: end;  
    border: 1px solid;
-   padding: 10px;
-   box-shadow: 5px 10px #888888;  
+    
    background-color: rgba(255, 255, 255, 0.26);
 
 }
@@ -98,8 +97,7 @@ h3{
     grid-column-start: 5;
     grid-column-end: 6;
    border: 1px solid;
-   padding: 10px;
-   box-shadow: 5px 10px #888888;  
+   
    background-color: rgba(255, 255, 255, 0.26);
 
    
@@ -108,20 +106,25 @@ h3{
   grid-column-start: 6;
     grid-column-end: 7;
    border: 1px solid;
-   padding: 10px;
-   box-shadow: 5px 10px #888888; 
+ 
    background-color: rgba(255, 255, 255, 0.26);
 
 }
 
 .grid-col-4-to-7{
-    margin-top:10px;
     grid-column-start: 4;
     grid-column-end: 7;
     padding: 1em 20% 1em 1em;
     border: 1px solid;
     background-color: rgba(255, 255, 255, 0.26);
 }
+
+.shadow-border{
+  padding: 10px;
+   box-shadow: 5px 10px #6a6cdf65;  
+
+}
+
 /* Justify container in on the grid*/
 .justify-stretch{
     justify-self: stretch;  
@@ -144,10 +147,17 @@ h3{
     font-size: 5rem;
     background-color: rgba(245, 245, 245, 0.356);
 }
+.max-width-image{
+    max-width: 1600px; /*making title look good */
 
+}
+.max-width-image-small{
+    max-width: 530px;
+    display: block;
+
+}
 .img-dont-scale-up {
     width: 100%;
-    max-width: 1600px;
     height: auto;
 }
 
