@@ -264,6 +264,48 @@ h3{
 
 
 
+.new-table {
+    position: relative;
+    text-align: center;
+    color: white;    
+}
+
+.centered{
+    position: absolute;
+    top: 35%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+}
+
+.bord-title{
+    font-size: 60px;
+    text-align: center;
+
+}
+form{
+    display: inline-block;
+}
+ 
+.grid-col-nytable{
+    grid-column-start: 1;
+    grid-column-end: 11;
+    justify-self: center;
+}
+
+.grid-col-nytable-form{
+    grid-column-start: 1;
+    grid-column-end: 11;
+    justify-self: center;
+    padding-top: 40px;
+    
+}
+/*.grid-col-nybord{
+    grid-column-start: 2;
+    grid-column-end: 6;
+    height: 500px;
+    width: 700px;
+}*/ 
+
 /*Split page in 2 */
 .grid-col-table-left{ 
     grid-column-start: 1;
@@ -282,7 +324,12 @@ h3{
     justify-self: start;  
 }
 
-
+.booking-bg{
+    height: 500px;
+    width: 800px;
+    border-radius: 15%;
+    padding-top: 30px;
+}
 .booking-img {
     height: 300px;
     width: 500px;
@@ -292,12 +339,10 @@ h3{
 
 input{
     display: block;
-    width: 100%;
+    width: 400px;
+    height: 30px;
+    
 }
-
-
-
-
 form .button{
     margin: 10px;
     text-align: center;
