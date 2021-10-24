@@ -283,7 +283,7 @@ h3{
 
 }
 form{
-    display: inline-block;
+    display: block;
 }
  
 .grid-col-nytable{
@@ -325,7 +325,8 @@ form{
     justify-self: start;  
 }
 
-.booking-bg{
+.booking-table{
+    display: block;
     height: 500px;
     width: 800px;
     border-radius: 15%;
