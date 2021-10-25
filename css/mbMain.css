@@ -21,7 +21,7 @@ h3{
 
 /* main change the <header> then just postion the grid container after easy :)*/
 
-/* grid-template-columns: repeat(10, 1 fr)); Got warning when inspekting*/
+/* grid-template-columns: repeat(10, 1fr)); Got warning when inspekting in chrome*/
 .grid_container{
     display: grid;
      
@@ -35,7 +35,7 @@ h3{
 }
 .grid_container2{
     display: grid;
-    grid-template-columns: repeat(10, 1 fr); 
+    grid-template-columns: repeat(10, 1fr); 
     grid-template-rows: auto; /* Dont need it, but tring to clarify, standard is auto*/
     background-image: url(../images/bakgrund_meny.jpg);
 
