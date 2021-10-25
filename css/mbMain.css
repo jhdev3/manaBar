@@ -458,7 +458,7 @@ form .button{
 .box-footer-3
 {   
     display:inline-block;
-    vertical-align:top;
+    vertical-align:text-top;
     width: 30%;
     min-height: 20vh;
     height: 100%;
@@ -468,21 +468,16 @@ form .button{
         width: 100%;
         display: block;
         text-align: left;
-        height: 10vh;
         border: black solid 1px;
     }
     .box-footer-2 {
         width: 100%;
         display: block;
-        text-align: center;
-
-        height: 10vh;
         border: black solid 1px;
     }
     .box-footer-3 {
         width: 100%;
         display: block;
-        height: 10vh;
         border: black solid 1px;
     }
 }
