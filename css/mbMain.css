@@ -157,20 +157,59 @@ h3{
     background-color: rgba(255, 255, 255, 0.26);
 
 }
-/* --------------------------------*/ 
-/* around 1000px the boxes stops looking good */ 
-@media screen and (max-width: 900px) {
-    .grid-col-2-to-10{ /*width 100%*/
-        grid-column-start: 1;
-        grid-column-end: 11; 
-    }
-  }
 
 .big-text{
     color:rgb(14, 10, 252);
     font-size: 1em;
     background-color: rgba(245, 245, 245, 0.356);
 }
+/* --------------------------------*/ 
+/* around 1000px the boxes stops looking good */ 
+@media screen and (max-width: 1000px) {
+    .grid-col-2-to-10{ /*width 100%*/
+        grid-column-start: 1;
+        grid-column-end: 11; 
+    }
+    .grid-col-7-to-9{
+        grid-column-start: 6;
+        grid-column-end: 9;     
+    }
+    .grid-col-5-to-7{
+        grid-column-start: 5;
+        grid-column-end: 9;     
+    }
+  }
+/*Keeping some margin right  */
+  @media screen and (max-width: 500px) {
+        .grid-col-3-to-5{ /*width 100%*/
+            grid-column-start: 1;
+            grid-column-end: 11; 
+        }
+        .grid-col-7-to-9{
+            grid-column-start: 1;
+            grid-column-end: 10;     
+        }
+        .grid-col-5-to-7{
+            grid-column-start: 1;
+            grid-column-end: 10;     
+        }
+        .grid-col-3-to-5{
+            grid-column-start: 1;
+            grid-column-end: 10;     
+        }
+        .grid-col-3-to-9{
+            grid-column-start: 1;
+            grid-column-end: 10;     
+        }
+        .big-text{
+            font-size: 0.5em;
+        }
+
+}
+  
+
+
+
 /* Bra för sätta storlek på saker*/
 .max-width-image{
     max-width: 1600px; /*making title look good */
@@ -392,7 +431,6 @@ form .button{
     text-align: end;
     vertical-align: top;
     width: 30%;
-    min-width:30%;
     min-height: 20vh;
     height: 100%;
 }
@@ -415,7 +453,29 @@ form .button{
     min-height: 20vh;
     height: 100%;
 }
+@media screen and (max-width: 500px) {
+    .box-footer-1 {
+        width: 100%;
+        display: block;
+        text-align: left;
+        height: 10vh;
+        border: black solid 1px;
+    }
+    .box-footer-2 {
+        width: 100%;
+        display: block;
+        text-align: left;
 
+        height: 10vh;
+        border: black solid 1px;
+    }
+    .box-footer-3 {
+        width: 100%;
+        display: block;
+        height: 10vh;
+        border: black solid 1px;
+    }
+}
 
 .logofooter{
     margin: 1em 0 0 1em;
