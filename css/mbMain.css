@@ -370,6 +370,8 @@ form{
     min-height: 100vh;
     margin-top: 10%; 
 }
+
+
 .pc-text{
     text-align: center;
 
@@ -387,6 +389,16 @@ form{
     width: 700px;
     border-radius: 20%;
     padding-top: 30px;
+}
+select{
+    font-size: 15px;
+}
+.user-details{
+    padding-top: 30px;
+}
+
+.input-box{
+    margin-top: 10px;
 }
 
 input{
