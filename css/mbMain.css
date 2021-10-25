@@ -464,7 +464,7 @@ form .button{
     .box-footer-2 {
         width: 100%;
         display: block;
-        text-align: left;
+        text-align: center;
 
         height: 10vh;
         border: black solid 1px;
