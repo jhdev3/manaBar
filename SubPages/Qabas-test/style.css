@@ -131,3 +131,18 @@ color: white;
     width: 30px;
     height: 30px;
 }
+
+
+/* test thing for main */
+/* Hard to make works in a nice way can use abouslt to overlay maybe
+.grid-col-xxl-title-pic{ 
+    grid-column-start: 1;
+    grid-column-end: 11;
+    background-image: url("../images/titlebild.jpg");
+    max-width: 1600px;
+    height: auto;
+    background-size: cover;
+    background-position:fill;
+    position: relative;
+}
+  */

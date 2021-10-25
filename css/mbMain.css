@@ -3,6 +3,10 @@ body
 {
     margin: 0;
     font-size: 1.2em;
+    background-image: url("../images/bg1920.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 
 }
 
@@ -12,21 +16,21 @@ h3{
 /* Grid System    
     With 10 columns = 10% each col
     fr: size is 10% but fr handles borders and margins in a good way.
-*/
+    just remeber if u use pictures they will define that col space.
+    */
 
 /* main change the <header> then just postion the grid container after easy :)*/
 
+/* grid-template-columns: repeat(10, 1 fr)); Got warning when inspekting*/
 .grid_container{
     display: grid;
-    grid-template-columns: repeat(10, 1 fr); 
+     
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
+
     grid-template-rows: auto; /* Dont need it, but tring to clarify, standard is auto*/
     justify-content: space-between; /* Prolly not working coz of margin 0 in body*/ 
-    background-image: url("../images/bg1920.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: auto;
-
+    
+  
 
 }
 .grid_container2{
@@ -43,24 +47,21 @@ h3{
 */
 /*start-page */
 
-/* Hard to make works in a nice way can use abouslt to overlay maybe
-.grid-col-xxl-title-pic{ 
-    grid-column-start: 1;
-    grid-column-end: 11;
-    background-image: url("../images/titlebild.jpg");
-    max-width: 1600px;
-    height: auto;
-    background-size: cover;
-    background-position:fill;
-    position: relative;
-}
-  */
 
 .grid-col-xxl{ /*  full width*/
     grid-column-start: 1;
     grid-column-end: 11; /*Can do -1 to get to end */
 }
-
+.grid-col-2-to-10{ /*not full width nice for spaceing and the title pic that sets the width*/
+    grid-column-start: 2;
+    grid-column-end: 10; /*Can do -1 to get to end */
+    justify-self: center;
+}
+.grid-col-1-to-11{ /*not full width nice for spaceing and the title pic that sets the width*/
+    grid-column-start: 1;
+    grid-column-end: 11; /*Can do -1 to get to end */
+    justify-self: center;
+}
 /* Need to set that on both the grids in html*/ 
 .grid-overlap{
 
@@ -86,44 +87,46 @@ h3{
     grid-column-end: 5;
     justify-self: end;  
     border: 1px solid;
-    
+    margin-right: 1em;
    background-color: rgba(255, 255, 255, 0.26);
 
 }
 
-.grid-col-5-to-6{
+/*20% width */
+.grid-col-3-to-5{
+    grid-column-start: 3;
+    grid-column-end: 5;
+    margin-right: 1em;
+
+}
+
+.grid-col-5-to-7{
     grid-column-start: 5;
-    grid-column-end: 6;
-    border: 1px solid;
-   
-   background-color: rgba(255, 255, 255, 0.26);
-
-   
-}
-.grid-col-6-to-7{
-    grid-column-start: 6;
     grid-column-end: 7;
-    border: 1px solid;
  
-   background-color: rgba(255, 255, 255, 0.26);
+}
+.grid-col-7-to-9{
+    grid-column-start: 7;
+    grid-column-end: 9;
+    margin-left: 1em;
 
 }
 
-.grid-col-4-to-7{
-    grid-column-start: 4;
-    grid-column-end: 7;
-    padding: 1em 20% 1em 1em;
-    border: 1px solid;
-    background-color: rgba(255, 255, 255, 0.26);
+/*Around 50% */
+
+.grid-col-3-to-9{
+    grid-column-start: 3;
+    grid-column-end: 9;
 }
 
 .shadow-border{
     padding: 10px;
     box-shadow: 5px 10px #6a6cdf65;  
+    margin-bottom: 10px;
 
 }
 
-/* Justify container in on the grid*/
+/* Justify container in on the grid for testing*/
 .justify-stretch{
     justify-self: stretch;  
 }
@@ -139,12 +142,75 @@ h3{
 .align-self-center{
     align-self: center;
 }
-/* --------------------------------*/ 
+
+.content_center{
+    justify-content: center;
+}
+
+/* Backgrounds for nice text */ 
+.text-background-box{
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.26);
+
+}
+.text-background{
+    background-color: rgba(255, 255, 255, 0.26);
+
+}
+
 .big-text{
     color:rgb(14, 10, 252);
-    font-size: 5rem;
+    font-size: 1em;
     background-color: rgba(245, 245, 245, 0.356);
 }
+/* --------------------------------*/ 
+/* around 1000px the boxes stops looking good */ 
+@media screen and (max-width: 1000px) {
+    .grid-col-2-to-10{ /*width 100%*/
+        grid-column-start: 1;
+        grid-column-end: 11; 
+    }
+    .grid-col-7-to-9{
+        grid-column-start: 6;
+        grid-column-end: 9;     
+    }
+    .grid-col-5-to-7{
+        grid-column-start: 5;
+        grid-column-end: 9;     
+    }
+  }
+/*Keeping some margin right  */
+  @media screen and (max-width: 500px) {
+        .grid-col-3-to-5{ /*width 100%*/
+            grid-column-start: 1;
+            grid-column-end: 11; 
+        }
+        .grid-col-7-to-9{
+            grid-column-start: 1;
+            grid-column-end: 10;     
+        }
+        .grid-col-5-to-7{
+            grid-column-start: 1;
+            grid-column-end: 10;     
+        }
+        .grid-col-3-to-5{
+            grid-column-start: 1;
+            grid-column-end: 10;     
+        }
+        .grid-col-3-to-9{
+            grid-column-start: 1;
+            grid-column-end: 10;     
+        }
+        .big-text{
+            font-size: 0.5em;
+        }
+
+}
+  
+
+
+
+/* Bra för sätta storlek på saker*/
 .max-width-image{
     max-width: 1600px; /*making title look good */
 
@@ -174,7 +240,7 @@ h3{
     display: inline-block;
 }
 
-.texalignCenter{
+.textAlignCenter{
     text-align: center;
 }
 .image_size2{
@@ -365,7 +431,6 @@ form .button{
     text-align: end;
     vertical-align: top;
     width: 30%;
-    min-width:30%;
     min-height: 20vh;
     height: 100%;
 }
@@ -388,7 +453,29 @@ form .button{
     min-height: 20vh;
     height: 100%;
 }
+@media screen and (max-width: 500px) {
+    .box-footer-1 {
+        width: 100%;
+        display: block;
+        text-align: left;
+        height: 10vh;
+        border: black solid 1px;
+    }
+    .box-footer-2 {
+        width: 100%;
+        display: block;
+        text-align: center;
 
+        height: 10vh;
+        border: black solid 1px;
+    }
+    .box-footer-3 {
+        width: 100%;
+        display: block;
+        height: 10vh;
+        border: black solid 1px;
+    }
+}
 
 .logofooter{
     margin: 1em 0 0 1em;
@@ -403,6 +490,9 @@ form .button{
 .icons, .textlist{
     list-style: none;
 } 
+.textlist li{
+    font-weight:bold;
+}
 
 .icons li{
     display: inline-block;
