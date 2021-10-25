@@ -44,18 +44,6 @@ h3{
 */
 /*start-page */
 
-/* Hard to make works in a nice way can use abouslt to overlay maybe
-.grid-col-xxl-title-pic{ 
-    grid-column-start: 1;
-    grid-column-end: 11;
-    background-image: url("../images/titlebild.jpg");
-    max-width: 1600px;
-    height: auto;
-    background-size: cover;
-    background-position:fill;
-    position: relative;
-}
-  */
 
 .grid-col-xxl{ /*  full width*/
     grid-column-start: 1;
