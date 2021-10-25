@@ -24,8 +24,8 @@ h3{
 /* grid-template-columns: repeat(10, 1 fr)); Got warning when inspekting*/
 .grid_container{
     display: grid;
-    max-width: 1600px; 
-
+     
+    justify-content: center;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
 
     grid-template-rows: auto; /* Dont need it, but tring to clarify, standard is auto*/
@@ -118,7 +118,6 @@ h3{
 .grid-col-3-to-9{
     grid-column-start: 3;
     grid-column-end: 9;
-    padding: 1em 20% 1em 1em;
 }
 
 .shadow-border{
@@ -128,7 +127,7 @@ h3{
 
 }
 
-/* Justify container in on the grid*/
+/* Justify container in on the grid for testing*/
 .justify-stretch{
     justify-self: stretch;  
 }
@@ -147,6 +146,13 @@ h3{
 
 .content_center{
     justify-content: center;
+}
+
+/* Backgrounds for nice text */ 
+.text-background-box{
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.26);
+
 }
 .text-background{
     background-color: rgba(255, 255, 255, 0.26);
@@ -203,7 +209,7 @@ h3{
     display: inline-block;
 }
 
-.texalignCenter{
+.textAlignCenter{
     text-align: center;
 }
 .image_size2{
