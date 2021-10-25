@@ -158,24 +158,17 @@ h3{
 
 }
 /* --------------------------------*/ 
-/* -- */ 
+/* around 1000px the boxes stops looking good */ 
 @media screen and (max-width: 900px) {
     .grid-col-2-to-10{ /*width 100%*/
         grid-column-start: 1;
         grid-column-end: 11; 
-        justify-self: start;  
-    }
-
-    .big-text{
-        color:rgb(14, 10, 252);
-        font-size: 2rem;
-        background-color: rgba(245, 245, 245, 0.356);
     }
   }
 
 .big-text{
     color:rgb(14, 10, 252);
-    font-size: 4rem;
+    font-size: 1em;
     background-color: rgba(245, 245, 245, 0.356);
 }
 /* Bra för sätta storlek på saker*/
