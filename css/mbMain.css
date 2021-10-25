@@ -65,10 +65,12 @@ h3{
 /* Need to set that on both the grids in html*/ 
 .grid-overlap{
 
-    grid-row: 1/2 !important; /*Dont know if important is need but why not*/
+    grid-row: 1/2; /*Dont know if important is need but why not*/
 
 }
-
+.grid-overlap-row2{
+ grid-row: 2/3;
+}
 /* 50% width*/ 
 .grid-col-1-to-6{ 
     grid-column-start: 1;
@@ -122,7 +124,7 @@ h3{
 .shadow-border{
     padding: 10px;
     box-shadow: 5px 10px #6a6cdf65;  
-    margin-bottom: 10px;
+    margin-bottom: 10px; /* Såg inte bra ut på img tag */
 
 }
 
@@ -147,12 +149,8 @@ h3{
     justify-content: center;
 }
 
-/* Backgrounds for nice text */ 
-.text-background-box{
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0.26);
+/* Backgrounds for tydligare text */ 
 
-}
 .text-background{
     background-color: rgba(255, 255, 255, 0.26);
 
