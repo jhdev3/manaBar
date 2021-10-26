@@ -375,11 +375,14 @@ input{
     margin-top: 10px;
     
 }
-form .button{
+form{
+    color: white;
+}
+.button{
     margin: 10px;
     text-align: center;
     color: black;
-    background-color: white;
+    background-color: rgb(226, 192, 224);
     display: block;
     font-size: large;
     padding: 10px;
