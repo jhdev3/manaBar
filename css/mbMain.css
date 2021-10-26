@@ -565,7 +565,7 @@ form .button{
     color: black;
 }
 
-#nav a::before 
+#nav a::after 
 {
     content: '';
     display: block;
@@ -577,7 +577,7 @@ form .button{
     position: absolute;
     bottom: -8px;
 }
-#nav a:hover::before
+#nav a:hover::after
 {
     width: 100%;
 }
