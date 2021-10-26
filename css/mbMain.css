@@ -7,7 +7,6 @@ body
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
 }
 
 h3{
@@ -29,9 +28,6 @@ h3{
 
     grid-template-rows: auto; /* Dont need it, but tring to clarify, standard is auto*/
     justify-content: space-between; /* Prolly not working coz of margin 0 in body*/ 
-    
-  
-
 }
 .grid_container2{
     display: grid;
@@ -531,8 +527,6 @@ form .button{
 .dishdisc{
     text-align: center;    
 }
-
-
 
 /*  */ 
 .test{
