@@ -376,6 +376,7 @@ för att sätta max-width ihop med scale up.
 }
 select{
     font-size: 15px;
+    margin-bottom: 20px;
 }
 
 input{
