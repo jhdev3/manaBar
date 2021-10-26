@@ -43,11 +43,16 @@ h3{
 */
 /*start-page */
 
-
 .grid-col-xxl{ /*  full width*/
     grid-column-start: 1;
     grid-column-end: 11; /*Can do -1 to get to end */
 }
+
+/*Fylla ut sidan om man tycker footer känns konstig */ 
+.grid-height{
+    height: 90vh;
+}
+
 .grid-col-2-to-10{ /*not full width nice for spaceing and the title pic that sets the width*/
     grid-column-start: 2;
     grid-column-end: 10; /*Can do -1 to get to end */
