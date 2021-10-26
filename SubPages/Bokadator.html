@@ -38,48 +38,38 @@
         </div> 
         -->
         <div class="grid-col-pc-left">
-            <img class="booking-img" src="../images/pc.jpeg" alt="computer image">
+            <img class="booking-pc-img" src="../images/pc.jpeg" alt="computer image">
         </div>
            
             <div class="grid-col-pc-right">
                <h2> Boka en dator</h2><br><br> 
                <form action="Bokningapproval.html" method="get">
                 <div>
-                    
                     <label for="bokningtyp">Välj bokning typ</label>
                     <select name="bokningtyp" id="bokningtyp">
                         <option value="bokadator">Boka dator</option>
                         <option value="boka-vr">Boka VR rum</option>
                     </select>
                 </div>
-                        <div class="user-details">
-                            <div class="input-box">
-                                <span class="details">Namn</span>
-                                <input type="text" required>
-                            </div>
-                            <div class="input-box">
-                                <span class="details">Email</span>
-                                <input type="email" required>
-                            </div>
-                            <div class="input-box">
-                                <span class="details">Mobilnummer</span>
-                                <input type="number" required>
-                            </div>
-                            <div class="input-box">
-                                <span class="details">Datum</span>
-                                <input type="date" required>
-                            </div>
-                            <div class="input-box">
-                                <span class="details">Tid</span>
-                                <input type="time" required>
-                            </div>
-                        </div>
-                        <button class="button" type="submit">Submit</button>
-                        <button class="button" type="reset">Reset</button>
+                    <label for="namn">Namn:</label>
+                    <input type="text" required id="namn">
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" required id="email">
+
+                    <label for="mnumer">Mobilnummer:</label>
+                    <input type="number" required id="mnumer">    
+                                
+                    <label for="datum">Datum:</label>
+                    <input type="date" required id="datum">  
+                        
+                    <label for="tid">Tid:</label>
+                    <input type="time" required id="tid">     
+
+                    <button class="button" type="submit">Submit</button>
+                    <button class="button" type="reset">Reset</button>
                     </form>
-                </div>
-                
-            
+                </div>           
             </div>
     <!-- Footer-->
 

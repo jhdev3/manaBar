@@ -29,7 +29,8 @@
     <div class="grid_container">
         
         <div class="grid-col-nytable grid-overlap">
-                <img class="booking-table" src="../images/bord2.jpg" alt="table image"> </div>
+                <img class="booking-table-img" src="../images/bord2.jpg" alt="table image"> 
+        </div>
                  
                
         <div class="grid-col-nytable grid-overlap align-self-center"> <!-- overlap the text and the pic, and it will place the text center-->
@@ -48,30 +49,23 @@
             <div class="grid-col-nytable-form">
                
                 <form action="Bokningapproval.html" method="get">
-                    <div>
-                        <label for="bord">Boka bord</label>
-                        <input type="radio" name="gender" id="bord">
-                    </div>
-                    <div>
-                        <label for="bordndata">Boka bord och dator</label>
-                        <input type="radio" name="gender" id="bordndata">
-                    </div>
+                    <label for="namn">Namn:</label>
+                    <input type="text" required id="namn">
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" required id="email">
     
-                        <label for="namn">Namn:</label>
-                                <input type="text" required id="namn">
-                         <label for="email">Email:</label>
-                                <input type="email" required id="email">
-    
-                        <label for="mnumer">Mobilnummer:</label>
-                                <input type="number" required id="mnumer">    
+                    <label for="mnumer">Mobilnummer:</label>
+                    <input type="number" required id="mnumer">    
                                 
-                        <label for="datum">Datum:</label>
-                                <input type="date" required id="datum">  
-                        <label for="tid">Tid:</label>
-                                <input type="time" required id="tid">     
+                    <label for="datum">Datum:</label>
+                    <input type="date" required id="datum">  
+                        
+                    <label for="tid">Tid:</label>
+                    <input type="time" required id="tid">     
     
-                        <button class="button" type="submit">Submit</button>
-                        <button class="button" type="reset">Reset</button>
+                    <button class="button" type="submit">Submit</button>
+                    <button class="button" type="reset">Reset</button>
                     </form>
                 </div>
          

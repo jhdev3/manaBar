@@ -319,18 +319,6 @@ h3{
     padding-top: 30px;    
 }
 
-
-.centered{
-    position: absolute;
-    top: 35%;
-    left: 40%;
-    transform: translate(-50%, -50%);
-}
-
-form{
-    display: block;
-}
- 
 .grid-col-nytable{
     grid-column-start: 1;
     grid-column-end: 11;
@@ -338,7 +326,6 @@ form{
     color: white;
     font-size: 2rem;
     text-align: center;
-
 }
 
 .grid-col-nytable-form{
@@ -354,8 +341,7 @@ form{
     grid-column-end: 6;
     justify-self: end;
     padding-right: 1em;
-    margin-top: 10%;
-    
+    margin-top: 10%;  
 }
 .grid-col-pc-right{ 
     grid-column-start: 6;
@@ -365,20 +351,14 @@ form{
     margin-top: 10%; 
 }
 
-
-.pc-text{
-    text-align: center;
-
-}
-
-.booking-table{
+.booking-table-img{
     display: block;
     height: 500px;
     width: 800px;
     border-radius: 15%;
     padding-top: 30px;
 }
-.booking-img {
+.booking-pc-img {
     height: 500px;
     width: 700px;
     border-radius: 20%;
@@ -387,18 +367,12 @@ form{
 select{
     font-size: 15px;
 }
-.user-details{
-    padding-top: 30px;
-}
-
-.input-box{
-    margin-top: 10px;
-}
 
 input{
     display: block;
     width: 400px;
     height: 30px;
+    margin-top: 10px;
     
 }
 form .button{
@@ -406,14 +380,13 @@ form .button{
     text-align: center;
     color: black;
     background-color: white;
+    display: block;
     font-size: large;
     padding: 10px;
     display: block;
     width: 50%;
     border-radius: 50%;
-    
 }
-
 
 .grid-col-2{ /* middle*/
     grid-column-start: 4;
