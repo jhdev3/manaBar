@@ -371,8 +371,28 @@ för att sätta max-width ihop med scale up.
     grid-column-start: 6;
     grid-column-end: 11;
     justify-self: start;
-    min-height: 100vh;
+    
     margin-top: 10%; 
+}
+
+.grid-col-pc-images{
+    grid-column-start: 4;
+    grid-column-end: 8;
+    justify-self: center;
+    margin-top: 60px;   
+}
+
+.booking-images{
+    display: block;
+    height: auto;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.text-pc{
+    color:rgb(255, 255, 255);
+    font-size: 1,5em;
+    text-align: center;
 }
 
 .booking-table-img{
