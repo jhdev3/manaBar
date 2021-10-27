@@ -563,6 +563,7 @@ form{
     color: black;
     font-size: 2rem;
 }
+/* Bad name on id same as element nav not good*/ 
 #nav 
 {
     text-align: center;
