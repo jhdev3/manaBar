@@ -376,8 +376,8 @@ för att sätta max-width ihop med scale up.
     padding-top: 30px;
 }
 .booking-pc-img {
-    height: 500px;
-    width: 700px;
+    height: auto; /* to make the picture strechable*/
+    width: 100%;
     border-radius: 20%;
     padding-top: 30px;
 }
