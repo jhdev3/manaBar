@@ -183,7 +183,7 @@ h3{
     }
   }
 /*Keeping some margin right mobil  */
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 700px) {
         .grid-col-3-to-5{ /*width 90%*/
             grid-column-start: 1;
             grid-column-end: 11; 
@@ -462,7 +462,7 @@ form{
     min-height: 20vh;
     height: 100%;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 700px) {
     .box-footer-1 {
         width: 100%;
         display: block;
