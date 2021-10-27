@@ -50,10 +50,6 @@ h3{
 {
     height: 53vh;
 }
-.hidden
-{
-    overflow-y: hidden;
-}
 
 .grid-col-2-to-10{ /*not full width nice for spaceing and the title pic that sets the width*/
     grid-column-start: 2;
@@ -579,17 +575,11 @@ form{
     
     background-color: white;
 }
-.navbar::after
-{
-    content: '';
-    display: table;
-    clear: both;
-}
+
 .container 
 {
     width: 70%;
     margin: 0 auto;
-    
 }
 .logo
 {
@@ -623,13 +613,9 @@ form{
 #nav a 
 {
    text-decoration: none;
-   color: black;  
-   margin-top: 10px;
+   color: black;
 }
-#nav a:hover 
-{
-    color: black;
-}
+
 
 #nav a::after 
 {
