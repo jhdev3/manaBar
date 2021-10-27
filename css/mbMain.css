@@ -154,7 +154,7 @@ h3{
 }
 
 .big-text{
-    color:rgb(14, 10, 252);
+    color:rgb(255, 255, 255);
     font-size: 1em;
     background-color: rgba(245, 245, 245, 0.356);
 }
@@ -344,8 +344,8 @@ för att sätta max-width ihop med scale up.
 /*-------------End meny */
 
 .grid-col-nytable{
-    grid-column-start: 1;
-    grid-column-end: 11;
+    grid-column-start: 2;
+    grid-column-end: 9;
     justify-self: center;
     color: white;
     font-size: 2rem;
@@ -353,8 +353,8 @@ för att sätta max-width ihop med scale up.
 }
 
 .grid-col-nytable-form{
-    grid-column-start: 1;
-    grid-column-end: 11;
+    grid-column-start: 3;
+    grid-column-end: 7;
     justify-self: center;
     padding-top: 40px;   
 }
@@ -377,8 +377,8 @@ för att sätta max-width ihop med scale up.
 
 .booking-table-img{
     display: block;
-    height: 500px;
-    width: 800px;
+    height: auto;
+    width: 100%;
     border-radius: 15%;
     padding-top: 30px;
 }
