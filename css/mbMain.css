@@ -261,7 +261,7 @@ för att sätta max-width ihop med scale up.
 }
 .sticky-link-meny{
     position: sticky;
-    top:0.5em; /* Effekt when scrolling, nice with 1 em */ 
+    top:0; 
 }
 
 .grid-col-meny{ /*  full width placement center*/
@@ -275,15 +275,17 @@ för att sätta max-width ihop med scale up.
 .grid-col-meny-link{  
     grid-column-start: 2;
     grid-column-end: 4;
-    justify-self: center;       
+    justify-self: center;      
+ 
 }
 
-.responsiv-sticky{
+.list-style{
     list-style: none;
-
+    background-color: rgba(255, 255, 255, 0.568)
 }
-.responsiv-sticky li{
+.list-style li{
     display:block;
+
 }
 .bastion {
     height: 250px;
@@ -308,10 +310,14 @@ för att sätta max-width ihop med scale up.
     .grid-col-meny p{
         font-size: 1em;
     }
-    .responsiv-sticky li{
+    .list-style{
+        margin: 0;
+        background-color: white;
+
+    }
+    .list-style li{
         display:inline-block;
     }
-
 }
 
 
