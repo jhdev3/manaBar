@@ -259,11 +259,12 @@ för att sätta max-width ihop med scale up.
     height: 60vh;
     margin: 0;
 }
+
+/*Meny Sidans Css */
 .sticky-link-meny{
     position: sticky;
     top:0; 
 }
-
 .grid-col-meny{ /*  full width placement center*/
     grid-column-start: 4;
     grid-column-end: 8;
@@ -340,7 +341,7 @@ för att sätta max-width ihop med scale up.
 
 }
 
-
+/*-------------End meny */
 
 .grid-col-nytable{
     grid-column-start: 1;
