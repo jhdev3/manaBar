@@ -9,8 +9,7 @@
     <!--Script för att kunna hämta iconen-->
     <script src="https://kit.fontawesome.com/a9a37b16d4.js" crossorigin="anonymous"></script>
 </head>
-
-<body>
+<body class="hidden">
     <header class="navbar">
         <div class="container">
                 <!--i class="fas" är för att referera till iconen-->
@@ -26,19 +25,34 @@
             </nav>
         </div>
     </header>
-
-    <!--Main comes-->
     <div  class="grid_container" >
-   
         <div class = "grid-col-xxl grid-height">
-            <h3> Kontakta oss </h3>
         </div> 
-        
     </div>
-    <p>f</p>
-
+    <div class="grid_container">
+        <div class="grid-col-3-to-5 contact-height">
+            <ul class="contactList">
+                <h4 style="color:#FFFFFF;">Kontakta Oss</h4>
+                <li>E-mail: <a href="mailto:support@manabar.fun">support@manabar.fun</a></li>
+                <li>Telefonnummer: 010-12 34 56</li>
+                <li>Adress: Skolgatan 177</li>
+                <li>602 22 Norrköping</li>
+                <br>
+                <div>
+                <li>Öppettider:</li>
+                <li>Mån-Fri: 12:00 - 23:30</li>
+                <li>Lör: 10:00 - 01:00</li>
+                <li>Sön: 10:00 - 23:30</li>
+                </div>
+            </ul>
+        </div>
+        <div class="grid-col-7-to-9 contact-height textAlignCenter">
+            <!--Embedded google maps-->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d4158.672398452906!2d16.191925!3d58.589864000000006!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46593a4cc0eb0abd%3A0xf3738fcb98f6b0fe!2sSkolgatan%2C%20Norrk%C3%B6ping%2C%20Sweden!5e0!3m2!1sen!2sde!4v1635360104060!5m2!1sen!2sde" 
+            width="600" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe> 
+        </div>
+    </div>
     <footer class="footer">
-
         <div class ="box-footer-1">
             <!-- Bild borta ser inte snyggt ut, krävs lite bättre bild+placering
              <img class= "logofooter" src="images/logotransperent.png" alt="manabar logo" > 
@@ -49,9 +63,7 @@
                     <li>Lör: 10:00 - 01:00</li>
                      <li>Sön: 10:00 - 23:30</li>  
                 </ul> 
-            
         </div>
-    
         <div class = "box-footer-2">
             <h4>Follow us</h4>
             <ul class="icons">
@@ -61,9 +73,7 @@
                 <li><a href="https://www.tripadvisor.com/"><img src="../images/trip.png" alt="logo tripadvisor"></a></li>
             </ul> 
             <h5 class="copyright">Mana Bar © 2021</h5>
-    
         </div>
-        
         <div class = "box-footer-3">
             <ul class="textlist">
                 <li>E-mail: <a href="mailto:support@manabar.fun">support@manabar.fun</a></li>
@@ -71,12 +81,7 @@
                 <li>Adress: Skolgatan 177</li>
                 <li>602 22 Norrköping</li>
             </ul> 
-    
         </div> 
     </footer>
 </body>
-
-
-
-
 </html>

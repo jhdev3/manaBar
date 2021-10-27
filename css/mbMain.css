@@ -44,7 +44,15 @@ h3{
 
 /*Fylla ut sidan om man tycker footer känns konstig */ 
 .grid-height{
-    height: 90vh;
+    height: 20vh;
+}
+.contact-height 
+{
+    height: 53vh;
+}
+.hidden
+{
+    overflow-y: hidden;
 }
 
 .grid-col-2-to-10{ /*not full width nice for spaceing and the title pic that sets the width*/
@@ -108,7 +116,6 @@ h3{
     grid-column-start: 7;
     grid-column-end: 9;
     margin-left: 1em;
-
 }
 
 /*Around 50% */
@@ -462,7 +469,6 @@ form{
     width: 30%;
     min-height: 20vh;
     height: 100%;
- 
 }
 
 
@@ -518,7 +524,15 @@ form{
 .textlist li{
     font-weight:bold;
 }
-
+.contactList li
+{
+    list-style: none;
+    color: #BFBFBF;
+}
+.contactList a 
+{
+    color: #949494;
+}
 .icons li{
     display: inline-block;
 
