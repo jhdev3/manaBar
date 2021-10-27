@@ -3,6 +3,7 @@ body
 {
     margin: 0;
     font-size: 1.2em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-image: url("../images/bg1920.jpg");
     background-position: center;
     background-repeat: no-repeat;
@@ -28,13 +29,6 @@ h3{
 
     grid-template-rows: auto; /* Dont need it, but tring to clarify, standard is auto*/
     justify-content: space-between; /* Prolly not working coz of margin 0 in body*/ 
-}
-.grid_container2{
-    display: grid;
-    grid-template-columns: repeat(10, 1fr); 
-    grid-template-rows: auto; /* Dont need it, but tring to clarify, standard is auto*/
-    background-image: url(../images/bakgrund_meny.jpg);
-
 }
 
 /* Use this grid-col-nr or namne to great the rows
@@ -63,11 +57,14 @@ h3{
     grid-column-end: 11; /*Can do -1 to get to end */
     justify-self: center;
 }
-/* Need to set that on both the grids in html*/ 
+/* Need to set that on both the grids in html
+    grid-row-start: 1;
+    grid-row-end: 2; samma som grid-row
+*/ 
 .grid-overlap{
 
     grid-row: 1/2; /*Dont know if important is need but why not*/
-
+    
 }
 .grid-overlap-row2{
  grid-row: 2/3;
@@ -185,7 +182,7 @@ h3{
         grid-column-end: 9; 
     }
   }
-/*Keeping some margin right  */
+/*Keeping some margin right mobil  */
   @media screen and (max-width: 500px) {
         .grid-col-3-to-5{ /*width 90%*/
             grid-column-start: 1;
@@ -211,7 +208,6 @@ h3{
         .big-text{
             font-size: 0.5em;
         }
-
 }
   
 
@@ -263,69 +259,31 @@ för att sätta max-width ihop med scale up.
     height: 60vh;
     margin: 0;
 }
-
+.sticky-link-meny{
+    position: sticky;
+    top:0.5em; /* Effekt when scrolling, nice with 1 em */ 
+}
 
 .grid-col-meny{ /*  full width placement center*/
-    grid-column-start: 1;
-    grid-column-end: 11;
+    grid-column-start: 4;
+    grid-column-end: 8;
     justify-self: center;   
     text-align: center;
-    line-height: 10px;
-    background-color: black;
-
     color: rgb(255, 255, 255);
 }
 
-.grid-col-meny-right{  
-    grid-column-start: 4;
-    grid-column-end: 7;
-    justify-self: start;       
-    line-height: 10px;
-    background-color: black;
-    color: rgb(255, 255, 255);
-}
-
-.grid-col-meny-left-pic{ 
-    grid-column-start: 3;
+.grid-col-meny-link{  
+    grid-column-start: 2;
     grid-column-end: 4;
-    justify-self: stretch;
-    text-align: center;       
-    line-height: 10px;
-    background-color: black;
-    color: rgb(255, 255, 255);
-}
-.grid-col-meny-left{ 
-    grid-column-start: 1;
-    grid-column-end: 4;
-    justify-self: end;       
-    line-height: 10px;
-    background-color: black;
-    color: rgb(255, 255, 255);
+    justify-self: center;       
 }
 
-#alignstart{
-    justify-self: start;       
+.responsiv-sticky{
+    list-style: none;
 
 }
-#floatleft{
-    float: left;
-}
-.grid-col-meny h1{
-    text-align: center;
-    text-decoration: underline;
-    font: bold;
-    font-size: 4em;
-}
-
-.grid-col-meny h2{
-    text-align: center;
-    text-decoration: underline;
-}
-.grid-col-meny h3{
-    text-align: center;
-}
-.grid-col-meny p{
-    text-align: center;
+.responsiv-sticky li{
+    display:block;
 }
 .bastion {
     height: 250px;
@@ -333,6 +291,50 @@ för att sätta max-width ihop med scale up.
     border-radius: 20%;
     padding-top: 30px;    
 }
+@media screen and (max-width: 700px) {
+
+    .grid-col-meny{ /*  full width placement center*/
+        grid-column-start: 2;
+        grid-column-end: 10;
+        justify-self: center;  
+        text-align: center;
+        color: rgb(255, 255, 255);
+    }
+    
+    .grid-col-meny-link{  
+        grid-column-start: 2;
+        grid-column-end: 10;
+    }
+    .grid-col-meny p{
+        font-size: 1em;
+    }
+    .responsiv-sticky li{
+        display:inline-block;
+    }
+
+}
+
+
+
+.grid-col-meny h1{
+    text-decoration: underline;
+    font: bold;
+    font-size: 4em;
+}
+
+.grid-col-meny h2{
+    margin-bottom: 0.1em;
+    text-decoration: underline;
+}
+.grid-col-meny h3{
+    text-align: center;
+}
+.grid-col-meny p{
+    text-align: center;
+
+}
+
+
 
 .grid-col-nytable{
     grid-column-start: 1;
@@ -414,14 +416,17 @@ form{
 
 }
 
-
+.fotterdiv{
+    position: absolute;
+    bottom: 0;
+    background-color: white; /*Lite Wcag */
+    width: 100%;
+}
 /*Footer  */
 
 .footer {
     background-color: white; /*Lite Wcag */
 }
-
-
 .box-footer-1
 {   
     display:inline-block;
@@ -430,6 +435,7 @@ form{
     width: 30%;
     min-height: 20vh;
     height: 100%;
+ 
 }
 
 
