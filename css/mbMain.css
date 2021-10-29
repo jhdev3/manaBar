@@ -444,7 +444,7 @@ form{
 }
 
 .fotterdiv{
-    position: absolute;
+    position: relative;
     bottom: 0;
     background-color: white; /*Lite Wcag */
     width: 100%;
@@ -565,15 +565,10 @@ form{
     
     background-color: white;
 }
-.navbar::after
-{
-    content: '';
-    display: table;
-    clear: both;
-}
+
 .container 
 {
-    width: 70%;
+    width: 100%;
     margin: 0 auto;
     
 }
