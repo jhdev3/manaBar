@@ -3,29 +3,35 @@
 
 const express = require('express');
 const app = express();
+
 const http = require('http');
 const server = http.createServer(app);
 
-const adminPassword = "P@ssword123"; //adminPassword Kolla med namn + regexp om man känner för det. 
+const adminPassword = "Password123"; //adminPassword Kolla med namn + regexp om man känner för det. 
 const adminUser ="Admin";
 
+app.use(express.json()); //så att .body och och kan parse som JSON. i post :)
+//app.use(express.urlencoded());  samma som express.json gissar jag för body och post
+
+//post req.body."name" fungerar i post inte i get xD
 app.get('/admin/password', (req, res) => {
     let userAray = {name: adminUser, password: adminPassword};
     //req.params;
     //console.log(req.params);
-    console.dir(req.params.name);
-    console.dir(req.params[0]);
-    console.dir(req.originalUrl);
-    console.dir(req.route);
+    console.log(req.query.userAdmin); 
+    console.log(req.query.password);
+    //console.dir(req.originalUrl);
+    //console.dir(req.route);
 
-    res.send("Hejsan");
-    /*
-    if(req.name == adminUser && req.password == adminPassword){
+   // res.send("Hejsan");
+    
+    if(req.query.userAdmin == adminUser && req.query.password == adminPassword){
         res.send('Grattis du kan logga in'); //Inte svenska bokstäver med res.end men med res.send kmr köra express resten av kursen
     }
     else{
-        res.send("Felaktigt bla bla");
-    }*/
+        console.log("Felaktigt lössenord eller användare: " + req.query.userAdmin  + " " + "  " + req.query.password);
+        res.status(403); //Kan kolla status när den försöker läsa får inte komma dit typ error 403 frobbiden acces //Det där funkar :)
+    }
 });
 
 app.post('/api/booking/', (req, res) => {
@@ -52,3 +58,6 @@ server.listen(4000, () => {
   console.log('listening on *:4000');
 });
 console.log("Hejsan");
+
+
+
