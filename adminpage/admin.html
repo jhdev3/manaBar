@@ -11,16 +11,16 @@
 <body>
 
     <div id="loggin_cont"> 
-        <form action="" id="adminLoggin">    
+        <form action="http://localhost:4000/admin/password" id="adminLoggin" method="get">    
             <div class="inputBox">
                 <span class="inputText">Admin namn:</span>
                 <br>
-                <input type="text" id="AdminUserName" name="adminName">   
+                <input type="text" id="AdminUserName" name="name">   
             </div>
             <div class="inputBox">
                 <span class="inputText">Password:</span>
                 <br>
-                <input type="password" id="adminPassword" name="password">   
+                <input type="password" id="adminPassword" required name="password">   
             </div>
             <div style="text-align: right;">            
                 <input class="buttom" type="submit" value="Logga in">
