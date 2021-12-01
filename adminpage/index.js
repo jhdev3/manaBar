@@ -14,8 +14,12 @@ app.use(express.json()); //så att .body och och kan parse som JSON. i post :)
 //app.use(express.urlencoded());  samma som express.json gissar jag för body och post
 
 //post req.body."name" fungerar i post inte i get xD
-app.get('/admin/password', (req, res) => {
+
+
+app.get('/admin/login', (req, res) => {
     let userAray = {name: adminUser, password: adminPassword};
+    let bokaBord = ['item1', 'item2', 'osv'];
+    let bokaDator = ['boakdatorobjek1', 'boakdatorobjek1', 'osv'];
     //req.params;
     //console.log(req.params);
     console.log(req.query.userAdmin); 
@@ -26,7 +30,11 @@ app.get('/admin/password', (req, res) => {
    // res.send("Hejsan");
     
     if(req.query.userAdmin == adminUser && req.query.password == adminPassword){
-        res.send('Grattis du kan logga in'); //Inte svenska bokstäver med res.end men med res.send kmr köra express resten av kursen
+        res.send(bokaBord + ' <---Bokabord   Bokadator---> ' + bokaDator);
+        console.log("Inlogg succesfull");
+        console.log(bokaBord);
+        console.log(bokaDator);
+
     }
     else{
         console.log("Felaktigt lössenord eller användare: " + req.query.userAdmin  + " " + "  " + req.query.password);
