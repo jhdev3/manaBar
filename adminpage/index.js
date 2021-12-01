@@ -6,6 +6,13 @@ const app = express();
 const http = require('http');
 const server = http.createServer(app);
 
+const adminPassword = "P@ssword123"; //adminPassword Kolla med namn + regexp om man känner för det. 
+
+
+app.get('/admin/password', (req, res) => {
+  res.send('<h1>HEj Hej Express</h1>'); //Inte svenska bokstäver med res.end men med res.send kmr köra express resten av kursen
+
+});
 
 /* Routing refers to determining how an application responds to a client request to a particular endpoint, 
 which is a URI (or path) and a specific HTTP request method (GET, POST, and so on).
