@@ -1,0 +1,631 @@
+
+body 
+{
+    margin: 0;
+    font-size: 1.2em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-image: url("../images/bg1920.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h3{
+    margin: 0;
+}
+/* Grid System    
+    With 10 columns = 10% each col
+    fr: size is 10% but fr handles borders and margins in a good way.
+    just remeber if u use pictures they will define that col space.
+    */
+
+/* main change the <header> then just postion the grid container after easy :)*/
+
+/* grid-template-columns: repeat(10, 1fr)); Got warning when inspekting in chrome*/
+.grid_container{
+    display: grid;
+     
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
+
+    grid-template-rows: auto; /* Dont need it, but tring to clarify, standard is auto*/
+    justify-content: space-between; /* Prolly not working coz of margin 0 in body*/ 
+}
+
+/* Use this grid-col-nr or namne to great the rows
+   Choose the sieze of the row by how many columns you use
+  Use justify-self to place were u want the items/containers.  
+*/
+/*start-page */
+
+.grid-col-xxl{ /*  full width*/
+    grid-column-start: 1;
+    grid-column-end: 11; /*Can do -1 to get to end */
+}
+
+/*Fylla ut sidan om man tycker footer känns konstig */ 
+.grid-height{
+    height: 90vh;
+}
+
+.grid-col-2-to-10{ /*not full width nice for spaceing and the title pic that sets the width*/
+    grid-column-start: 2;
+    grid-column-end: 10; /*Can do -1 to get to end */
+    justify-self: center;
+}
+.grid-col-1-to-11{ /*not full width nice for spaceing and the title pic that sets the width*/
+    grid-column-start: 1;
+    grid-column-end: 11; /*Can do -1 to get to end */
+    justify-self: center;
+}
+/* Need to set that on both the grids in html
+    grid-row-start: 1;
+    grid-row-end: 2; samma som grid-row
+*/ 
+.grid-overlap{
+
+    grid-row: 1/2; /*Dont know if important is need but why not*/
+    
+}
+.grid-overlap-row2{
+ grid-row: 2/3;
+}
+/* 50% width*/ 
+.grid-col-1-to-6{ 
+    grid-column-start: 1;
+    grid-column-end: 6;  
+}
+
+.grid-col-6-to-11{ 
+    grid-column-start: 6;
+    grid-column-end: 11;
+    
+}
+
+/*10% width */
+.grid-col-4-to-5{
+    grid-column-start: 4;
+    grid-column-end: 5;
+    justify-self: end;  
+    border: 1px solid;
+    margin-right: 1em;
+   background-color: rgba(255, 255, 255, 0.26);
+
+}
+
+/*20% width */
+.grid-col-3-to-5{
+    grid-column-start: 3;
+    grid-column-end: 5;
+    margin-right: 1em;
+}
+
+.grid-col-5-to-7{
+    grid-column-start: 5;
+    grid-column-end: 7;
+ 
+}
+.grid-col-7-to-9{
+    grid-column-start: 7;
+    grid-column-end: 9;
+    margin-left: 1em;
+
+}
+
+/*Around 50% */
+
+.grid-col-3-to-9{
+    grid-column-start: 3;
+    grid-column-end: 9;
+}
+
+.shadow-border{
+    padding: 10px;
+    box-shadow: 5px 10px #6a6cdf65;  
+    margin-bottom: 10px; /* Såg inte bra ut på img tag */
+
+}
+
+/* Justify container in on the grid for testing*/
+.justify-stretch{
+    justify-self: stretch;  
+}
+.justify-start{
+    justify-self: start;  
+}
+.justify-center{
+    justify-self: center;  
+}
+.justify-end{
+    justify-self: end;  
+}
+.align-self-center{
+    align-self: center;
+}
+
+.content_center{
+    justify-content: center;
+}
+
+/* Backgrounds for tydligare text */ 
+
+.text-background{
+    background-color: rgba(255, 255, 255, 0.26);
+
+}
+
+.big-text{
+    color:rgb(255, 255, 255);
+    font-size: 1em;
+    background-color: rgba(245, 245, 245, 0.356);
+}
+/* --------------------------------*/ 
+/* around 1000px the boxes stops looking good */ 
+@media screen and (max-width: 1000px) {
+    .grid-col-2-to-10{ /*width 100%*/
+        grid-column-start: 1;
+        grid-column-end: 11; 
+    }
+    .grid-col-3-to-5{
+        grid-column-start: 2;
+        grid-column-end: 6;
+    }
+    .grid-col-5-to-7{
+        grid-column-start: 6;
+        grid-column-end: 9;     
+    }
+    .grid-col-7-to-9{
+        grid-column-start: 6;
+        grid-column-end: 9;     
+    }
+    .grid-col-3-to-9{
+        grid-column-start: 2;
+        grid-column-end: 9; 
+    }
+  }
+/*Keeping some margin right mobil  */
+  @media screen and (max-width: 700px) {
+        .grid-col-3-to-5{ /*width 90%*/
+            grid-column-start: 1;
+            grid-column-end: 11; 
+        }
+        .grid-col-5-to-7{
+            grid-column-start: 1;
+            grid-column-end: 10;   
+        }
+
+        .grid-col-7-to-9{
+            grid-column-start: 1;
+            grid-column-end: 10;     
+        }
+     
+        .grid-col-3-to-9{
+            grid-column-start: 1;
+            grid-column-end: 10;     
+        }
+        .grid-overlap-row2{
+            grid-row: 3/4;
+           }
+        .big-text{
+            font-size: 0.5em;
+        }
+}
+  
+
+
+
+/* Bra för sätta storlek på saker går att använda 
+för att sätta max-width ihop med scale up.
+.max-width-image{
+    max-width: 1600px; /
+
+}
+.max-width-image-small{
+    max-width: 530px;
+
+}
+*/
+.img-dont-scale-up {
+    width: 100%;
+    height: auto;
+}
+
+
+.border-color-blue{
+
+   border: 1px solid;
+   color: rgb(91, 91, 248);
+
+}
+.border-round{
+    border-radius: 5%;
+}
+
+
+.display-inline{
+    display: inline-block;
+}
+
+.textAlignCenter{
+    text-align: center;
+}
+.image_size2{
+    width: 250px;
+    height: 250px;
+    float:right;
+}
+
+.image_size{
+    width: 100%;
+    height: 60vh;
+    margin: 0;
+}
+
+/*Meny Sidans Css */
+.sticky-link-meny{
+    position: sticky;
+    top:0; 
+}
+.grid-col-meny{ 
+    grid-column-start: 4;
+    grid-column-end: 8;
+    justify-self: center;   
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+.grid-col-meny-link{  
+    grid-column-start: 2;
+    grid-column-end: 4;
+    justify-self: center;      
+ 
+}
+
+.list-style{
+    list-style: none;
+    background-color: rgba(255, 255, 255, 0.568);
+}
+.list-style li{
+    display:block;
+    margin-right:1em;
+
+}
+.bastion {
+    height: 250px;
+    width: 250px;
+    border-radius: 20%;
+    padding-top: 30px;    
+}
+@media screen and (max-width: 700px) {
+
+    .grid-col-meny{ 
+        grid-column-start: 2;
+        grid-column-end: 10;
+        justify-self: center;  
+        text-align: center;
+        color: rgb(255, 255, 255);
+    }
+    
+    .grid-col-meny-link{  
+        grid-column-start: 2;
+        grid-column-end: 10;
+    }
+    .grid-col-meny p{
+        font-size: 1em;
+    }
+    .list-style{
+        background-color: white;
+
+    }
+    .list-style li{
+        display:inline-block;
+    }
+}
+
+
+
+.grid-col-meny h1{
+    text-decoration: underline;
+    font: bold;
+    font-size: 4em;
+}
+
+.grid-col-meny h2{
+    margin-bottom: 0.1em;
+    text-decoration: underline;
+}
+.grid-col-meny h3{
+    text-align: center;
+}
+.grid-col-meny p{
+    text-align: center;
+
+}
+
+/*-------------End meny */
+
+.grid-col-nytable{
+    grid-column-start: 2;
+    grid-column-end: 9;
+    justify-self: center;
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.grid-col-nytable-form{
+    grid-column-start: 3;
+    grid-column-end: 7;
+    justify-self: center;
+    padding-top: 40px;   
+}
+
+/*Split page in 2 */
+.grid-col-pc-left{ 
+    grid-column-start: 1;
+    grid-column-end: 6;
+    justify-self: end;
+    padding-right: 1em;
+    margin-top: 10%;  
+}
+.grid-col-pc-right{ 
+    grid-column-start: 6;
+    grid-column-end: 11;
+    justify-self: start;
+    
+    margin-top: 10%; 
+}
+
+.grid-col-pc-images{
+    grid-column-start: 4;
+    grid-column-end: 8;
+    justify-self: center;
+    margin-top: 60px;   
+}
+
+.booking-images{
+    display: block;
+    height: auto;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.text-pc{
+    color:rgb(255, 255, 255);
+    font-size: 1,5em;
+    text-align: center;
+}
+
+.booking-table-img{
+    display: block;
+    height: auto;
+    width: 100%;
+    border-radius: 15%;
+    padding-top: 30px;
+}
+.booking-pc-img {
+    height: auto; /* to make the picture strechable*/
+    width: 100%;
+    border-radius: 20%;
+    padding-top: 30px;
+}
+select{
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+input{
+    display: block;
+    width: 400px;
+    height: 30px;
+    margin-top: 10px;
+    
+}
+form{
+    color: white;
+}
+.button{
+    margin: 10px;
+    text-align: center;
+    color: black;
+    background-color: rgb(226, 192, 224);
+    display: block;
+    font-size: large;
+    padding: 10px;
+    width: 50%;
+    border-radius: 50%;
+}
+
+.grid-col-2{ /* middle*/
+    grid-column-start: 4;
+    grid-column-end: 8;
+    justify-self: stretch; 
+    background-color: purple;
+
+}
+
+.fotterdiv{
+    position: relative;
+    bottom: 0;
+    background-color: white; /*Lite Wcag */
+    width: 100%;
+}
+/*Footer  */
+
+.footer {
+    background-color: white; /*Lite Wcag */
+}
+.box-footer-1
+{   
+    display:inline-block;
+    text-align: end;
+    vertical-align: top;
+    width: 30%;
+    min-height: 20vh;
+    height: 100%;
+ 
+}
+
+
+.box-footer-2
+{
+    display:inline-block;
+    text-align: center;
+    vertical-align:top;
+    width: 30%;
+    min-height: 20vh;
+    height: 100%;
+}
+.box-footer-3
+{   
+    display:inline-block;
+    vertical-align:text-top;
+    width: 30%;
+    min-height: 20vh;
+    height: 100%;
+}
+@media screen and (max-width: 700px) {
+    .box-footer-1 {
+        width: 100%;
+        display: block;
+        text-align: left;
+        border: black solid 1px;
+    }
+    .box-footer-2 {
+        width: 100%;
+        display: block;
+        border: black solid 1px;
+    }
+    .box-footer-3 {
+        width: 100%;
+        display: block;
+        border: black solid 1px;
+    }
+}
+
+.logofooter{
+    margin: 1em 0 0 1em;
+    width: 50%;
+    height: 10vh;
+    float:left;
+
+}
+
+
+
+.icons, .textlist{
+    list-style: none;
+} 
+.textlist li{
+    font-weight:bold;
+}
+
+.icons li{
+    display: inline-block;
+
+}
+/* ---------------  */
+ 
+/* Qabas  footer*/
+
+
+
+.icons img{
+    margin: 5px;
+    width: 50px;
+    height: 50px;
+}
+
+/* Menyns stylesheet */
+.headmenu{
+    text-align: center;    
+    text-decoration: underline;
+    font: bold;
+}
+.submenu{
+    text-align: center;
+    text-decoration: underline;    
+}
+.dish{
+    text-align: center;    
+}
+.dishdisc{
+    text-align: center;    
+}
+
+/*  */ 
+.test{
+    width: 100%;
+    height: 50vh;
+    background-color: pink;
+    text-align: left;
+}
+ /* Navbar revert  */
+.navbar
+{
+    
+    background-color: white;
+}
+
+.container 
+{
+    width: 100%;
+    margin: 0 auto;
+    
+}
+.logo
+{
+    float: left;
+    margin-top: 5px;
+    color: black;
+    font-size: 2rem;
+}
+/* Bad name on id same as element nav not good*/ 
+#nav 
+{
+    text-align: center;
+}
+
+#nav ul 
+{
+    margin: 0;
+    padding: 0px;
+    list-style: none;
+    padding-bottom: 10px;
+}
+
+#nav li 
+{
+    display: inline-block;
+    margin-left: 70px;
+    padding-top: 10px;
+    position: relative;
+}
+
+#nav a 
+{
+   text-decoration: none;
+   color: black;  
+   margin-top: 10px;
+}
+#nav a:hover 
+{
+    color: black;
+}
+
+#nav a::after 
+{
+    content: '';
+    display: block;
+    height: 3px;
+    width: 0%;
+    background-color: black;
+    position: absolute;
+    transition: all ease-in-out 300ms;
+    position: absolute;
+    bottom: -8px;
+}
+#nav a:hover::after
+{
+    width: 100%;
+}
+/* Navbar */
