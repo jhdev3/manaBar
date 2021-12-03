@@ -1,28 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mana Bar restaurant/Bokning</title>
     <link rel="stylesheet" href="../css/mbMain.css">
-    <!--Script för att kunna hämta iconen-->
-    <script src="https://kit.fontawesome.com/a9a37b16d4.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <header class="navbar">
         <div class="container">
-                <!--i class="fas" är för att referera till iconen-->
-            <a href="../index.html" class="logo"><i class="fas fa-flask"></i></a> 
-                <nav id="nav">
-                 <ul>
-                     <li><a href="../index.html">Hem</a></li>
-                     <li><a href="BokaBord.html">Boka bord</a></li>
-                     <li><a href="Bokadator.html">Boka dator</a></li>
-                     <li><a href="meny.html">Meny</a></li>
-                     <li><a href="kontaktaoss.html">Kontakt</a></li>
-                 </ul>
+            <!--i class="fas" är för att referera till iconen-->
+            <a href="../index.html" class="logo"><i class="fas fa-flask"></i></a>
+            <nav id="nav">
+                <ul>
+                    <li><a href="../index.html">Hem</a></li>
+                    <li><a href="BokaBord.html">Boka bord</a></li>
+                    <li><a href="Bokadator.html">Boka dator</a></li>
+                    <li><a href="meny.html">Meny</a></li>
+                    <li><a href="kontaktaoss.html">Kontakt</a></li>
+                </ul>
             </nav>
         </div>
     </header>
@@ -40,90 +39,86 @@
         <div class="grid-col-pc-left">
             <img class="booking-pc-img" src="../images/pc.jpeg" alt="computer image">
         </div>
-           
-            <div class="grid-col-pc-right">
-               <h2 style="color: white;"> Boka en dator</h2><br><br> 
-               <form action="Bokningapproval.html" method="get">
-                <div>
-                    <h3 style="color: white;">Här ni kan boka dator eller VR rumet</h3><br>
-                    <label for="bokningtyp">Välj bokning typ</label>
-                    <select name="bokningtyp" id="bokningtyp">
-                        <option value="bokadator">Boka dator</option>
-                        <option value="boka-vr">Boka VR rum</option>
-                    </select>
-                </div>
-                    <label for="namn">Namn:</label>
-                    <input type="text" required id="namn">
-                    
-                    <label for="email">Email:</label>
-                    <input type="email" required id="email">
 
-                    <label for="mnumer">Mobilnummer:</label>
-                    <input type="number" required id="mnumer">    
-                                
-                    <label for="datum">Datum:</label>
-                    <input type="date" required id="datum">  
-                        
-                    <label for="tid">Tid:</label>
-                    <input type="time" required id="tid">     
+        <div class="grid-col-pc-right">
+            <h2 style="color: white;"> Boka en dator</h2><br><br>
+            <div>
+                <h3 style="color: white;">Här ni kan boka dator</h3><br>
 
-                    <button class="button" type="submit">Submit</button>
-                    <button class="button" type="reset">Reset</button>
-                    </form>
-                </div>  
-            
-                <div class="grid-col-pc-images">
-                    <h2 class="text-pc">Vår dator och gaming rum</h2>
-                    <img class="booking-images" src="../images/gaming1.jpeg" alt="A Person playing on PC1">
-                    <img class="booking-images" src="../images/gaming2.jpeg" alt="A Person playing on PC2">
-                    <img class="booking-images" src="../images/gaming3.jpeg" alt="A Person playing on PC3">
-                    
-                    <h2 class="text-pc">Vår VR rum</h2>
-                    <img class="booking-images" src="../images/vr1.jpeg" alt="A Person playing on VR1">
-                    <img class="booking-images" src="../images/vr2.jpeg" alt="A Person playing on VR2">                
-                </div>
+            </div>
+            <form id="bookPc">
+                <label for="namn">Namn:
+                <!-- allows only letters and space  -->
+                    <input id="namePc" onkeypress="return /^([a-ö A-Ö])/i.test(event.key)">
+                </label>
+                <label for="email">Email:
+                    <input type="email" required id="emailPc">
+                </label>
+                <label for="mnumer">Mobilnummer:
+                    <input type="number" required id="numberPc">
+                </label>
+                <label for="datum">Datum:
+                    <input type="date" required id="datePc">
+                </label>
+                <label for="tid">Tid:
+                    <input type="time" required id="timePc" step="3600">
+                </label>
+            </form>
+                <button class="button" type="submit" id="pcBookedButton" onclick="validateForm()">Submit</button>                 
+                <button class="button" type="reset">Reset</button>
+        </div>
+
+        <div class="grid-col-pc-images">
+            <h2 class="text-pc">Vår dator och gaming rum</h2>
+            <img class="booking-images" src="../images/gaming1.jpeg" alt="A Person playing on PC1">
+            <img class="booking-images" src="../images/gaming2.jpeg" alt="A Person playing on PC2">
+            <img class="booking-images" src="../images/gaming3.jpeg" alt="A Person playing on PC3">
+
+            <h2 class="text-pc">Vår VR rum</h2>
+            <img class="booking-images" src="../images/vr1.jpeg" alt="A Person playing on VR1">
+            <img class="booking-images" src="../images/vr2.jpeg" alt="A Person playing on VR2">
+        </div>
     </div>
-
-            
     <!-- Footer-->
-
     <footer class="footer">
-
-        <div class ="box-footer-1">
+        <div class="box-footer-1">
             <!-- Bild borta ser inte snyggt ut, krävs lite bättre bild+placering
              <img class= "logofooter" src="images/logotransperent.png" alt="manabar logo" > 
              -->
-             <ul class="textlist">
-                    <li>  Öppettider: </li>
-                    <li>Mån-Fri: 12:00 - 23:30</li>
-                    <li>Lör: 10:00 - 01:00</li>
-                     <li>Sön: 10:00 - 23:30</li>  
-                </ul> 
-            
+            <ul class="textlist">
+                <li> Öppettider: </li>
+                <li>Mån-Fri: 12:00 - 23:30</li>
+                <li>Lör: 10:00 - 01:00</li>
+                <li>Sön: 10:00 - 23:30</li>
+            </ul>
         </div>
-    
-        <div class = "box-footer-2">
+        <div class="box-footer-2">
             <h4>Follow us</h4>
             <ul class="icons">
                 <li><a href="https://www.facebook.com/"><img src="../images/facebook.png" alt="logo facebook"></a></li>
                 <li><a href="https://www.twitter.com/"><img src="../images/twitter.png" alt="logo twitter"></a></li>
-                <li><a href="https://www.instagram.com/"><img src="../images/instagram.png" alt="logo instagram"></a></li>
-                <li><a href="https://www.tripadvisor.com/"><img src="../images/trip.png" alt="logo tripadvisor"></a></li>
-            </ul> 
+                <li><a href="https://www.instagram.com/"><img src="../images/instagram.png" alt="logo instagram"></a>
+                </li>
+                <li><a href="https://www.tripadvisor.com/"><img src="../images/trip.png" alt="logo tripadvisor"></a>
+                </li>
+            </ul>
             <h5 class="copyright">Mana Bar © 2021</h5>
-    
         </div>
-        
-        <div class = "box-footer-3">
+        <div class="box-footer-3">
             <ul class="textlist">
                 <li>E-mail: <a href="mailto:support@manabar.fun">support@manabar.fun</a></li>
                 <li>Telefonnummer: 010-12 34 56</li>
                 <li>Adress: Skolgatan 177</li>
                 <li>602 22 Norrköping</li>
-            </ul> 
-    
-        </div> 
+            </ul>
+
+        </div>
     </footer>
+    <!--Script för att kunna hämta iconen-->
+    <!-- script should be put at the buttom since you want the script to be loaded last since it will take up much internet -->
+    <script src="https://kit.fontawesome.com/a9a37b16d4.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="../script/bokadator.js"></script>
 </body>
 
 
