@@ -58,7 +58,7 @@ router.post("/api/bokabord", (req, res) => {
   if (req.body[0] != null) {
     res.status(201).send("lyckad bookning");
   } else {
-    res.status(4006).send("vad försöker du göra?");
+    res.status(406).send("vad försöker du göra?");
   }
 });
 
@@ -66,7 +66,7 @@ router.post("/api/bokadator", (req, res) => {
   if (req.body[0] != null) {
     res.status(201).send("lyckad bookning");
   } else {
-    res.status(4006).send("vad försöker du göra?");
+    res.status(406).send("vad försöker du göra?");
   }
 });
 
