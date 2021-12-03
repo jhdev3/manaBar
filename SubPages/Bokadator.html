@@ -41,15 +41,15 @@
         </div>
 
         <div class="grid-col-pc-right">
-            <h2 style="color: white;"> Boka en dator</h2><br><br>
+            <h2 style="color: white;" id="bookPcText"> Boka en dator</h2><br><br>
             <div>
-                <h3 style="color: white;">Här ni kan boka dator</h3><br>
+                <h3 style="color: white;" id="BookPcPlace">Här ni kan boka dator</h3><br>
 
             </div>
-            <form id="bookPc">
+            <form id="bookPc" onsubmit="validateForm(this)">
                 <label for="namn">Namn:
                 <!-- allows only letters and space  -->
-                    <input id="namePc" onkeypress="return /^([a-ö A-Ö])/i.test(event.key)">
+                    <input id="namePc" required onkeypress="return /^([a-ö A-Ö])/i.test(event.key)">
                 </label>
                 <label for="email">Email:
                     <input type="email" required id="emailPc">
@@ -63,9 +63,10 @@
                 <label for="tid">Tid:
                     <input type="time" required id="timePc" step="3600">
                 </label>
-            </form>
-                <button class="button" type="submit" id="pcBookedButton" onclick="validateForm()">Submit</button>                 
+                <button class="button" type="submit" id="pcBookedButton">Submit</button>                 
                 <button class="button" type="reset">Reset</button>
+            </form>
+                
         </div>
 
         <div class="grid-col-pc-images">
