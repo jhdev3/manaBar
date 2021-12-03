@@ -55,21 +55,15 @@ router.get("/booking/", (req, res) => {
 
 //post req.body."name" fungerar i post inte i get xD
 router.post("/api/bokabord", (req, res) => {
-  if (req.body[0] != null) {
-    res.status(201).send("lyckad bookning");
-  } else {
-    res.status(406).send("vad försöker du göra?");
-  }
+  res.send("lyckad bookning");
 });
-
 router.post("/api/bokadator", (req, res) => {
-  if (req.body[0] != null) {
+  if (req.body[0] != "") {
     res.status(201).send("lyckad bookning");
   } else {
     res.status(406).send("vad försöker du göra?");
   }
 });
-
 module.exports = router;
 
 //
