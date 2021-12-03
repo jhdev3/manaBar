@@ -46,7 +46,7 @@
                 <h3 style="color: white;" id="BookPcPlace">Här ni kan boka dator</h3><br>
 
             </div>
-            <form id="bookPc" onsubmit="validateForm(this)">
+            <form id="bookPc" onsubmit="validateForm(this)" onload="validateForm()">
                 <label for="namn">Namn:
                 <!-- allows only letters and space  -->
                     <input id="namePc" required onkeypress="return /^([a-ö A-Ö])/i.test(event.key)">
