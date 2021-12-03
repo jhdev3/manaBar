@@ -433,6 +433,7 @@ form{
     padding: 10px;
     width: 50%;
     border-radius: 50%;
+    cursor: pointer;
 }
 
 .grid-col-2{ /* middle*/
@@ -450,7 +451,11 @@ form{
     width: 100%;
 }
 /*Footer  */
-
+#bookingFooter
+{
+    background-color: white;
+    margin-top: 31.5%;
+}
 .footer {
     background-color: white; /*Lite Wcag */
 }
