@@ -46,27 +46,27 @@
                 <h3 style="color: white;" id="BookPcPlace">Här ni kan boka dator</h3><br>
 
             </div>
-            <form id="bookPc" onsubmit="validateForm(this)" onload="validateForm()">
+            <form id="bookPc" onload="validateForm()">
                 <label for="namn">Namn:
                 <!-- allows only letters and space  -->
-                    <input id="namePc" required onkeypress="return /^([a-ö A-Ö])/i.test(event.key)">
+                    <input required name="name" id="namePc" onkeypress="return /^([a-ö A-Ö])/i.test(event.key)">
                 </label>
                 <label for="email">Email:
-                    <input type="email" required id="emailPc">
+                    <input type="email" required name="email" id="emailPc">
                 </label>
                 <label for="mnumer">Mobilnummer:
-                    <input type="number" required id="numberPc">
+                    <input type="text" required name="number" id="numberPc" onkeypress="return /^([1-9+])/i.test(event.key)">
                 </label>
                 <label for="datum">Datum:
-                    <input type="date" required id="datePc">
+                    <input type="date" required name="date" id="datePc">
                 </label>
                 <label for="tid">Tid:
-                    <input type="time" required id="timePc" step="3600">
+                    <input type="time" required name="time" id="timePc" step="3600">
                 </label>
-                <button class="button" type="submit" id="pcBookedButton">Submit</button>                 
-                <button class="button" type="reset">Reset</button>
-            </form>
                 
+            </form>
+            <button class="button" type="submit" id="pcBookedButton" onclick=" return validateForm(this)">Submit</button>      
+            <button class="button" type="reset" onclick="newBooking()">Reset</button>
         </div>
 
         <div class="grid-col-pc-images">
@@ -120,6 +120,7 @@
     <script src="https://kit.fontawesome.com/a9a37b16d4.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="../script/bokadator.js"></script>
+    <script type="application/json" src="../countryCode.json"></script>
 </body>
 
 
