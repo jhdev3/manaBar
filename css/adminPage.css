@@ -1,0 +1,67 @@
+body{
+    background-color: rgba(169, 169, 169, 0.096);
+
+}
+
+#loggin_cont{
+    position: absolute;
+    overflow: hidden;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); /* x och y kord */
+    border: 0.2em solid red;   
+}
+
+.inputBox{
+    position: relative;
+}
+
+.inputBox > input{
+   
+    font-size: 17px;
+    height: 3rem;
+    border-radius: 12px;
+    border-width: 1px;
+    border-style: solid;
+    box-sizing: border-box;   /* Ska inte overflowa föräldern behvior på boxen  */
+    margin-bottom: 1rem;
+    padding: 1rem 1rem 0 1rem;
+    text-align: left;
+  
+}
+#adminLoggin{
+    position: relative;
+    width:100%; /*sätt önskad bred samt align om man vill */
+    padding: 1em;
+    box-sizing: border-box;   /* Ska inte overflowa föräldern behvior på boxen  */
+
+}
+
+/* 
+Leker med css för transition utan js ;)
+.inputText{
+    position: absolute;
+    transition:all 0.3s ease-out;
+    top: 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: calc(100% - 32px);
+    left: 1rem;
+    font-size: 17px;
+  
+    font-family: SF Pro Text,SF Pro Icons,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+
+
+#adminPassword.active .inputText{
+    font-size: 5px;
+
+}
+
+*/
+.buttom{
+    height: 3rem;
+    background-color: rgb(0, 162, 255);
+    text-align: right;
+
+}

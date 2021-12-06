@@ -4,11 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/adminPage.css">
     <title>Document</title>
+
 </head>
 <body>
-   
-    
+
+    <div id="loggin_cont"> <!--http://localhost:4000 om jag inte köre från localhost körutifrånservern-->
+        <form action="/admin/login" id="adminLoggin" method="get">    
+            <div class="inputBox">
+                <span class="inputText">Admin namn:</span>
+                <br>
+                <input type="text" id="AdminUserName" name="userAdmin">   
+            </div>
+            <div class="inputBox">
+                <span class="inputText">Password:</span>
+                <br>
+                <input type="password" id="adminPassword" required name="password">   
+            </div>
+            <div style="text-align: right;">            
+                <input class="buttom" type="submit" value="Logga in">
+            </div>
+        </form>
+    </div>
+
+    <div class="resultat" style="display: none;"> 
+
+        <h1> Skriver ut massa skit</h1>
+
+    </div>
+
+
  <script src="../script/admin_page.js"></script>   
 </body>
 </html>
+
+<!--<input type="password" id="adminPassword" name="password">   
+                <span class="inputText">Password:</span> -->

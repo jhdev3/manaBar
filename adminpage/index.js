@@ -1,1 +1,0 @@
-//ServerScript för manaBar
