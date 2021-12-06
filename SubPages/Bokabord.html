@@ -48,21 +48,21 @@
         </div>
             <div class="grid-col-nytable-form">
                
-                <form action="Bokningapproval.html" method="get">
+                <form action="/submitInfo" method="get">
                     <label for="namn">Namn:</label>
-                    <input type="text" required id="namn">
+                    <input type="text" required id="namn" name="namn" class="form-control">
                     
                     <label for="email">Email:</label>
-                    <input type="email" required id="email">
+                    <input type="email" required id="email" name="email" class="form-control">
     
                     <label for="mnumer">Mobilnummer:</label>
-                    <input type="number" required id="mnumer">    
+                    <input type="number" required id="mnumer" name="mnumer" class="form-control">    
                                 
                     <label for="datum">Datum:</label>
-                    <input type="date" required id="datum">  
+                    <input type="date" required id="datum" name="datum" class="form-control">  
                         
                     <label for="tid">Tid:</label>
-                    <input type="time" required id="tid">     
+                    <input type="time" required id="tid" name="tid" class="form-control">     
     
                     <button class="button" type="submit">Submit</button>
                     <button class="button" type="reset">Reset</button>
@@ -70,6 +70,7 @@
                 </div>
          
     </div>
+
       
     <footer class="footer">
 
@@ -105,12 +106,7 @@
                 <li>Adress: Skolgatan 177</li>
                 <li>602 22 Norrköping</li>
             </ul> 
-    
         </div> 
     </footer>
-
-   </body>
-
-
-
+</body>
 </html>

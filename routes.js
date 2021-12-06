@@ -2,6 +2,7 @@ let express = require("express");
 
 let router = express.Router(); //Alla routes lagras i router
 
+
 router.get("/", (req, res) => {
   //Res är
   res.sendFile(__dirname + "/index.html"); //Inte svenska bokstäver med res.end men med res.send kmr köra express resten av kursen
@@ -11,7 +12,41 @@ router.get("/admin", (req, res) => {
   res.sendFile(__dirname + "/adminpage/admin.html"); //Inte svenska bokstäver med res.end men med res.send kmr köra express resten av kursen
 });
 
+//Qabas start
+router.get('/form', (req, res) => {
+  res.sendFile(__dirname + "/SubPages/Bokabord.html");
+  //res.sendFile(path.join(__dirname, 'SubPages', "Bokabord.html"));
+});
+
+
+let fs = require('fs');
+router.get('/submitInfo', (req, res) => {
+
+    let formInfo = {
+        namn: req.query.namn,
+        email: req.query.email,
+        mnumer: req.query.mnumer,
+        datum: req.query.datum,
+        tid: req.query.tid
+    }
+
+    let data = JSON.stringify(formInfo);
+
+    fs.appendFile("text.json", data, (err) => { 
+        if (err) throw err;
+        console.log('Info is saved to text file.');
+
+        //res.send(`The user info: ${data}`);
+});
+
+res.redirect('/form');
+});
+
+//Qabas end
+
+
 //app.use(express.urlencoded());  samma som express.json gissar jag för body och post
+
 /*
 
 */
