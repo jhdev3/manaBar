@@ -1,7 +1,9 @@
 let express = require("express");
 
 let router = express.Router(); //Alla routes lagras i router
+const { check, validationResult } = require('express-validator'); // iportera express validator
 
+//router.use(express.static("public")); // to access client script
 
 router.get("/", (req, res) => {
   //Res är
@@ -13,14 +15,23 @@ router.get("/admin", (req, res) => {
 });
 
 //Qabas start
+//npm install express nodemon fs express-validator
+//Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 router.get('/form', (req, res) => {
   res.sendFile(__dirname + "/SubPages/Bokabord.html");
   //res.sendFile(path.join(__dirname, 'SubPages', "Bokabord.html"));
 });
 
-
 let fs = require('fs');
-router.get('/submitInfo', (req, res) => {
+
+router.get('/submitInfo', [
+  check ('namn').notEmpty().withMessage('Ange ditt namn'),
+  check ('email').notEmpty().withMessage('Ange din email').isEmail(),
+  check ('mnumer').notEmpty().withMessage('Ange ditt mobil nummer'),
+  check ('datum').notEmpty().withMessage('Ange bokningsdatum').isDate(),
+  check ('tid').notEmpty().withMessage('Ange bokningstid'),
+],
+(req, res) => {
 
     let formInfo = {
         namn: req.query.namn,
@@ -35,11 +46,16 @@ router.get('/submitInfo', (req, res) => {
     fs.appendFile("text.json", data, (err) => { 
         if (err) throw err;
         console.log('Info is saved to text file.');
-
-        //res.send(`The user info: ${data}`);
 });
 
-res.redirect('/form');
+const errors = validationResult(req); //save errors in json
+    console.log(errors);
+    if (!errors.isEmpty()) {
+      return res.status(400).json({ errors: errors.array( )}); // send errors till json
+    }
+
+res.send('/form');
+
 });
 
 //Qabas end
