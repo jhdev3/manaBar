@@ -2,7 +2,7 @@ let filmer = [];
 const filmInput = document.querySelector("#film");
 const filmList = document.querySelector("#films");
 const formFilm = document.querySelector("#chooseFilm");
-const outputCont = document.querySelector("#filmChoice");
+const imgOut = document.querySelector("#imgOut");
 
 window.onload = (event) => {
   console.log("page is fully loaded");
@@ -67,7 +67,7 @@ function creatImage(link, titel) {
   let image = document.createElement("img");
   image.src = link;
   image.alt = titel + " movie pooster";
-  outputCont.appendChild(image);
+  imgOut.appendChild(image);
 }
 
 function appendAllFilms() {

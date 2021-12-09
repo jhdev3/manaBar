@@ -8,15 +8,24 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <form action="" id="chooseFilm">
-      <input list="films" name="films" id="film" minlength="2" />
-      <datalist id="films" style="height: 5.1em; overflow: hidden"></datalist>
-      <input type="submit" />
-    </form>
-    <p id="errormsg"></p>
-    <div id="filmChoice">
-      <h1 id="title"></h1>
-      <div id="description" class="item"></div>
+    <div id="chooseFilmCont">
+      <form action="" id="chooseFilm">
+        <input list="films" name="films" id="film" minlength="2" />
+        <datalist id="films" style="height: 5.1em; overflow: hidden"></datalist>
+        <input type="submit" />
+        <p id="errormsg"></p>
+      </form>
+    </div>
+    <div id="filmChoice" class="outCont">
+      <section>
+        <h1 id="title"></h1>
+        <div class="split">
+          <div id="text">
+            <p id="description" class="item"></p>
+          </div>
+          <div id="imgOut"></div>
+        </div>
+      </section>
     </div>
     <script src="api.js"></script>
   </body>

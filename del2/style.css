@@ -1,4 +1,42 @@
+body,
+h1,
+p {
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+section {
+  padding: 3rem;
+}
 #errormsg {
   margin: 0;
   color: red;
+}
+/* enklast med flex :) block måste jag sätta form till någon width */
+#chooseFilmCont {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.outCont {
+  margin-inline: auto; /*x and y sidorna ny css */
+  width: min(90%, 70.5rem);
+}
+.split {
+  display: flex;
+  flex-direction: row;
+}
+
+.split > * {
+  flex-basis: 100%;
+}
+.split > * + * {
+  margin-left: 3rem;
 }
