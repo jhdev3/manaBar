@@ -25,11 +25,11 @@ router.get('/form', (req, res) => {
 let fs = require('fs');
 
 router.get('/submitInfo', [
-  check ('namn').notEmpty().withMessage('Ange ditt namn'),
-  check ('email').notEmpty().withMessage('Ange din email').isEmail(),
-  check ('mnumer').notEmpty().withMessage('Ange ditt mobil nummer'),
-  check ('datum').notEmpty().withMessage('Ange bokningsdatum').isDate(),
-  check ('tid').notEmpty().withMessage('Ange bokningstid'),
+  check ('namn', 'Ange namn').notEmpty(),
+  check ('email', 'Ange namn').notEmpty().isEmail().normalizeEmail,
+  check ('mnumer', 'Ange namn').notEmpty(),
+  check ('datum', 'Ange namn').notEmpty().isDate(),
+  check ('tid', 'Ange namn').notEmpty(),
 ],
 (req, res) => {
 
@@ -57,6 +57,8 @@ const errors = validationResult(req); //save errors in json
 res.send('/form');
 
 });
+
+
 
 //Qabas end
 
