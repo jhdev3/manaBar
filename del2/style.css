@@ -18,15 +18,12 @@ h1 {
   font-weight: 900;
   line-height: 1;
 }
+
 img {
   display: block;
   max-width: 100%;
 }
-section {
-  padding: 3rem;
-  background-color: rgb(75, 32, 1);
-  color: white;
-}
+/* list  form   */
 #errormsg {
   margin: 0;
   color: red;
@@ -36,6 +33,13 @@ section {
   display: flex;
   justify-content: center;
   margin-top: 2rem;
+}
+
+/*Output */
+section {
+  padding: 3rem;
+  background-color: rgb(75, 32, 1);
+  color: white;
 }
 
 .outCont {
