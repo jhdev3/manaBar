@@ -38,13 +38,19 @@ img {
 /*Output */
 section {
   padding: 3rem;
+}
+.bg-1 {
   background-color: rgb(75, 32, 1);
   color: white;
 }
-
+.bg-2 {
+  background-color: rgb(27, 22, 19);
+  color: white;
+}
 .outCont {
   margin-inline: auto; /*x and y sidorna ny css */
-  width: min(90%, 70.5rem);
+  /* 75rem ungefär 1200px dvs max bredd är 1200px ungefär sedan är det 90% av skärmen dvs lite marginaler */
+  width: min(90%, 75rem);
 }
 .split {
   display: flex;

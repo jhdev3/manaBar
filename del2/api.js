@@ -2,9 +2,8 @@ let filmer = [];
 const filmInput = document.querySelector("#film");
 const filmList = document.querySelector("#films");
 const formFilm = document.querySelector("#chooseFilm");
-const imgOut = document.querySelector("#imgOut");
 
-window.onload = (event) => {
+window.onload = () => {
   console.log("page is fully loaded");
 
   /*Hämtar alla filmer och sparar i filmer array */
@@ -42,7 +41,7 @@ formFilm.addEventListener("submit", (e) => {
   /* Rensar lite i det gammla outputs bör också skapa en funktion eller show/hide section */
   imageDeletion();
   document.querySelector("#errormsg").textContent = "";
-  console.log(filmInput.value);
+  //console.log(filmInput.value);
 
   const filmChoice = filmer.find((item) => {
     return item.id === filmInput.value;
@@ -56,16 +55,42 @@ formFilm.addEventListener("submit", (e) => {
     return;
   }
   /*Bör skapa någon funktion som hanterar alla outputs */
-  document.querySelector("#title").textContent = filmChoice.title;
-  document.querySelector("#description").textContent = filmChoice.description;
+  forEachMovieAttr(filmChoice);
+  //document.querySelector("#title").textContent = filmChoice.title;
+  //document.querySelector("#description").textContent = filmChoice.description;
   filmInput.value = "";
-  creatImage(filmChoice.image, filmChoice.title);
 });
 
-function creatImage(link, titel) {
+function forEachMovieAttr(movie) {
+  console.log(Object.keys(movie));
+  const keyArray = Object.keys(movie);
+  for (item of keyArray) {
+    /* unit test
+    console.log(typeof movie[item]);
+    console.log(item);*/
+
+    if (typeof movie[item] === "object" || item === "url" || item == "id") {
+      console.log(item);
+    } else if (item == "image" || item == "movie_banner") {
+      //console.log(item);
+      creatImage(movie[item], movie.title, item);
+    } else {
+      document.querySelector(`#${item}`).textContent =
+        item + " : " + movie[item];
+      /* unit testing 
+
+      console.log(document.querySelector(`#${item}`));
+      console.log(movie[item]); 
+      */
+    }
+  }
+}
+function creatImage(link, titel, dest) {
   let image = document.createElement("img");
+  const imgOut = document.querySelector("#out-" + dest);
+  //console.log("#out-" + dest);
   image.src = link;
-  image.alt = titel + " movie pooster";
+  image.alt = titel + " " + dest;
   imgOut.appendChild(image);
 }
 
