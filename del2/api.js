@@ -40,10 +40,20 @@ formFilm.addEventListener("submit", (e) => {
   e.preventDefault();
   imageDeletion();
   console.log(filmInput.value);
+  //if (filmInput.value) {
+  // return;
+  //}
   const filmChoice = filmer.find((item) => {
     return item.id === filmInput.value;
   });
   console.log(filmChoice);
+  //Felhantering av inputs kollar undefiend
+  if (!filmChoice) {
+    document.querySelector(
+      "#errormsg"
+    ).textContent = `Filmen ${filmInput.value} finns inte`;
+    return;
+  }
   document.querySelector("#title").textContent = filmChoice.title;
   document.querySelector("#description").textContent = filmChoice.description;
   filmInput.value = "";
@@ -61,8 +71,9 @@ function appendAllFilms() {
   //skapar dem i ordning så går att sätta id som plats i arrayen ;)
   for (film of filmer) {
     /* unit testing 
+        console.log(film.title);
+
     console.log(film);
-    console.log(film.id);
     console.log(film.title); */
     createOption(film.id, film.title);
   }

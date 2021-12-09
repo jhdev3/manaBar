@@ -9,10 +9,11 @@
   </head>
   <body>
     <form action="" id="chooseFilm">
-      <input list="films" name="films" id="film" />
-      <datalist id="films"></datalist>
+      <input list="films" name="films" id="film" minlength="2" />
+      <datalist id="films" style="height: 5.1em; overflow: hidden"></datalist>
       <input type="submit" />
     </form>
+    <p id="errormsg"></p>
     <div id="filmChoice">
       <h1 id="title"></h1>
       <div id="description" class="item"></div>
