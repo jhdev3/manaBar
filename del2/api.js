@@ -39,13 +39,11 @@ function imageDeletion() {
 }
 formFilm.addEventListener("submit", (e) => {
   e.preventDefault();
-  /* Rensar lite i det gammla */
+  /* Rensar lite i det gammla outputs bör också skapa en funktion eller show/hide section */
   imageDeletion();
   document.querySelector("#errormsg").textContent = "";
   console.log(filmInput.value);
-  //if (filmInput.value) {
-  // return;
-  //}
+
   const filmChoice = filmer.find((item) => {
     return item.id === filmInput.value;
   });
@@ -57,6 +55,7 @@ formFilm.addEventListener("submit", (e) => {
     ).textContent = `Filmen ${filmInput.value} finns inte`;
     return;
   }
+  /*Bör skapa någon funktion som hanterar alla outputs */
   document.querySelector("#title").textContent = filmChoice.title;
   document.querySelector("#description").textContent = filmChoice.description;
   filmInput.value = "";
