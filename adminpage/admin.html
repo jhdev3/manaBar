@@ -18,6 +18,7 @@
           <br />
           <input type="text" id="AdminUserName" name="userAdmin" />
         </div>
+        <p id="error-text" style="color: red"></p>
         <div class="inputBox">
           <span class="inputText">Password:</span>
           <br />
@@ -29,9 +30,11 @@
       </form>
     </div>
 
-    <div class="resultat" style="display: none">
+    <div id="outPut" style="display: none">
       <h1>Skriver ut massa skit</h1>
+      <button id="loadBokabord">BokaBordData</button>
     </div>
+    <div id="loadData"></div>
 
     <script src="/script/admin_page.js"></script>
   </body>
