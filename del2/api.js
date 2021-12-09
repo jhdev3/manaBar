@@ -20,6 +20,7 @@ window.onload = (event) => {
   };
   forfragan.send();
 };
+
 function imageDeletion() {
   const allImage = document.querySelectorAll("img");
   /* unit testing 
@@ -38,7 +39,9 @@ function imageDeletion() {
 }
 formFilm.addEventListener("submit", (e) => {
   e.preventDefault();
+  /* Rensar lite i det gammla */
   imageDeletion();
+  document.querySelector("#errormsg").textContent = "";
   console.log(filmInput.value);
   //if (filmInput.value) {
   // return;
