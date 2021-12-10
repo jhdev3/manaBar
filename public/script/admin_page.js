@@ -8,7 +8,7 @@ $("#adminLoggin").submit((e) => {
   $.ajax({
     type: "GET",
     url: "/admin/login",
-    data: $("#adminLoggin").serialize(),
+    data: $("#adminLoggin").serialize(), //GET request Trevligt med ajax att det blir Query formaterat :)
     success: function (res) {
       console.log(typeof res);
       adminToken = res;
