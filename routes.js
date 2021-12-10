@@ -27,19 +27,35 @@ router.get("/form", (req, res) => {
   //res.sendFile(path.join(__dirname, 'SubPages', "Bokabord.html"));
 });
 
+router.post("/form/submitBokaBord", (req, res) => {
+  console.log(req.body);
+  //Ondskefull input allow här skriver till innerHtml på admin sidan vilket inte är bra
+  if (req.body[0] != "") {
+    const writeToFile = new WriteFile();
+    //Viktigt att req.body är JSON object vet inte än Simon får testa
+    writeToFile.appendData(
+      JSON.stringify(req.body),
+      __dirname + "/db/bokabord.txt"
+    );
+    res.status(201).send("lyckad bookning");
+  } else {
+    res.status(406);
+  }
+});
+
 let fs = require("fs");
 
-router.get(
-  "/submitInfo",
-  [
-    check("namn", "Ange namn").notEmpty(),
-    check("email", "Ange namn").notEmpty().isEmail().normalizeEmail,
-    check("mnumer", "Ange namn").notEmpty(),
-    check("datum", "Ange namn").notEmpty().isDate(),
-    check("tid", "Ange namn").notEmpty(),
-  ],
-  (req, res) => {
-    let formInfo = {
+router.post("/form/submitInfo", (req, res) => {
+  console.log(req.body);
+  let data = JSON.stringify(req.body);
+
+  /* Unit test   */
+
+  fs.appendFile("text.json", data, (err) => {
+    if (err) throw err;
+    console.log("Info is saved to text file.");
+  });
+  /* let formInfo = {
       namn: req.query.namn,
       email: req.query.email,
       mnumer: req.query.mnumer,
@@ -47,22 +63,20 @@ router.get(
       tid: req.query.tid,
     };
 
-    let data = JSON.stringify(formInfo);
-
+    
     fs.appendFile("text.json", data, (err) => {
       if (err) throw err;
       console.log("Info is saved to text file.");
     });
-
-    const errors = validationResult(req); //save errors in json
-    console.log(errors);
-    if (!errors.isEmpty()) {
-      return res.status(400).json({ errors: errors.array() }); // send errors till json
-    }
-
-    res.send("/form");
+  */
+  /* const errors = validationResult(req); //save errors in json
+  console.log(errors);
+  if (!errors.isEmpty()) {
+    return res.status(400).json({ errors: errors.array() }); // send errors till json
   }
-);
+*/
+  res.send("bookning Lyckades");
+});
 
 //Qabas end
 
@@ -111,6 +125,7 @@ router.get("/api/bokabord/", (req, res) => {
 //Enbart den här som körs på admin sidan
 router.get("/api/bokadator/", (req, res) => {
   console.log(req.query);
+
   if (req.query.token == "12312312378126asd1237123hajsdkj81238") {
     const data = new ReadFile(__dirname + "/db/bokabord.txt");
     //behöver någon form av kontroll vid tom datasträng fil dvs ""

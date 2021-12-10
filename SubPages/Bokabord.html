@@ -60,10 +60,16 @@
         </h4>
       </div>
       <div class="grid-col-nytable-form">
-        <form action="/submitInfo" method="get" id="myForm">
+        <form action="/form/submitBokaBord" method="post" id="myForm">
           <label for="namn">Namn:</label>
           <p style="font-size: smaller" id="namn-errormsg"></p>
-          <input type="text" id="namn" name="namn" class="form-control" />
+          <input
+            type="text"
+            id="namn"
+            name="namn"
+            class="form-control"
+            pattern="/[A-Öa-ö ]+/"
+          />
 
           <label for="email">Email:</label>
           <p style="font-size: smaller" id="email-errormsg"></p>

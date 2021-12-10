@@ -17,12 +17,13 @@ window.onload = function () {
       e.preventDefault();
       setErrorFor("namn");
     }
+    /*
     if (emailValue === "") {
       e.preventDefault();
       setErrorFor("email");
     } else if (!isEmail(emailValue)) {
       setErrorFor("email");
-    }
+    }*/
     if (mnumerValue === "") {
       e.preventDefault();
       setErrorFor("mnumer");
