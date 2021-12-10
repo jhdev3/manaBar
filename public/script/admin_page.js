@@ -35,10 +35,13 @@ $("#loadBokabord").on("click", () => {
   // console.log(adminToken);
   $.ajax({
     type: "GET",
-    url: "/admin/booking",
+    url: "/api/bokabord",
     data: { token: adminToken },
     success: function (res) {
-      $("#loadData").text(res);
+      let json = JSON.parse(res);
+      console.log(json);
+      //$("#printData").text(writeAllJsonObj(json));
+      document.querySelector("#printData").innerHTML = writeAllJsonObj(json);
     },
     error: function (res) {
       console.log(res);
@@ -51,3 +54,21 @@ $("#loadBokabord").on("click", () => {
     },
   });
 });
+
+//\r\n <-- newline
+function writeAllJsonObj(json) {
+  let createTable = "";
+  createTable += "<tr><th>Object name</th><th>Value</th></tr>";
+  for (obj of json) {
+    createTable += "<tr>";
+    let keys = Object.keys(obj);
+    for (inline of keys) {
+      createTable += "<tr>";
+      createTable += "<td>" + inline + "</td>" + "<td>" + obj[inline] + "</td>";
+      createTable += "</tr>";
+    }
+    createTable += "</tr>";
+  }
+  console.log(createTable);
+  return createTable;
+}

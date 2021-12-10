@@ -1,6 +1,11 @@
 let express = require("express");
-
 let router = express.Router(); //Alla routes lagras i router
+
+const { ReadFile, WriteFile } = require("./module/readAndWrite");
+
+let bodyParser = require("body-parser");
+router.use(bodyParser.urlencoded({ extended: false }));
+router.use(bodyParser.json()); // support json encoded bodies
 
 router.get("/", (req, res) => {
   //Res är
@@ -43,22 +48,38 @@ router.get("/admin/login", (req, res) => {
   }
 });
 
-router.get("/admin/booking/", (req, res) => {
+router.get("/api/bokabord/", (req, res) => {
   console.log(req.query);
   if (req.query.token == "12312312378126asd1237123hajsdkj81238") {
+    const data = new ReadFile(__dirname + "/db/bokabord.txt");
     //Kollar behöverighet säker nät
-    res.send("Hämta data så sicka data eller något"); //Inte svenska bokstäver med res.end  men med res.send kmr köra express resten av kursen
+    res.json(data.getJsonObj()); //Inte svenska bokstäver med res.end  men med res.send kmr köra express resten av kursen
   }
 });
 
+router.get("/api/bokadator/", (req, res) => {
+  console.log(req.query);
+  if (req.query.token == "12312312378126asd1237123hajsdkj81238") {
+    const data = new ReadFile(__dirname + "/db/bokabord.txt");
+    //Kollar behöverighet säker nät
+    res.json(data.getJsonObj()); //Inte svenska bokstäver med res.end  men med res.send kmr köra express resten av kursen
+  }
+});
 //app.use(express.urlencoded());  samma som express.json gissar jag för body och post
 
 //post req.body."name" fungerar i post inte i get xD
 router.post("/api/bokabord", (req, res) => {
   res.send("lyckad bookning");
 });
+
 router.post("/api/bokadator", (req, res) => {
+  console.log(req.body);
   if (req.body[0] != "") {
+    const writeToFile = new WriteFile();
+    writeToFile.appendData(
+      JSON.stringify(req.body),
+      __dirname + "/db/bokadator.txt"
+    );
     res.status(201).send("lyckad bookning");
   } else {
     res.status(406).send("vad försöker du göra?");

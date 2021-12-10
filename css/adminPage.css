@@ -1,42 +1,46 @@
-body{
-    background-color: rgba(169, 169, 169, 0.096);
-
+body {
+  background-color: rgba(169, 169, 169, 0.096);
 }
 
-#loggin_cont{
-    position: absolute;
-    overflow: hidden;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%); /* x och y kord */
-    border: 0.2em solid red;   
+#loggin_cont {
+  position: absolute;
+  overflow: hidden;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); /* x och y kord */
+  border: 0.2em solid red;
 }
 
-.inputBox{
-    position: relative;
+.inputBox {
+  position: relative;
 }
 
-.inputBox > input{
-   
-    font-size: 17px;
-    height: 3rem;
-    border-radius: 12px;
-    border-width: 1px;
-    border-style: solid;
-    box-sizing: border-box;   /* Ska inte overflowa föräldern behvior på boxen  */
-    margin-bottom: 1rem;
-    padding: 1rem 1rem 0 1rem;
-    text-align: left;
-  
+.inputBox > input {
+  font-size: 17px;
+  height: 3rem;
+  border-radius: 12px;
+  border-width: 1px;
+  border-style: solid;
+  box-sizing: border-box; /* Ska inte overflowa föräldern behvior på boxen  */
+  margin-bottom: 1rem;
+  padding: 1rem 1rem 0 1rem;
+  text-align: left;
 }
-#adminLoggin{
-    position: relative;
-    width:100%; /*sätt önskad bred samt align om man vill */
-    padding: 1em;
-    box-sizing: border-box;   /* Ska inte overflowa föräldern behvior på boxen  */
-
+#adminLoggin {
+  position: relative;
+  width: 100%; /*sätt önskad bred samt align om man vill */
+  padding: 1em;
+  box-sizing: border-box; /* Ska inte overflowa föräldern behvior på boxen  */
+}
+/* text färg etc*/
+#printData {
+  text-align: left;
 }
 
+th,
+td {
+  border: 1px solid black;
+}
 /* 
 Leker med css för transition utan js ;)
 .inputText{
@@ -59,9 +63,8 @@ Leker med css för transition utan js ;)
 }
 
 */
-.buttom{
-    height: 3rem;
-    background-color: rgb(0, 162, 255);
-    text-align: right;
-
+.buttom {
+  height: 3rem;
+  background-color: rgb(0, 162, 255);
+  text-align: right;
 }
