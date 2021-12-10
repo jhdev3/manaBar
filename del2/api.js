@@ -20,23 +20,29 @@ window.onload = () => {
   };
   forfragan.send();
 };
+/* Onload functions*/
+function appendAllFilms() {
+  //skapar dem i ordning så går att sätta id som plats i arrayen ;)
+  for (film of filmer) {
+    /* unit testing 
+        console.log(film.title);
 
-function imageDeletion() {
-  const allImage = document.querySelectorAll("img");
-  /* unit testing 
-  console.log(allImage);
-  console.log(allImage.length);
- */
-  //incase u want to add more image otherwise just remove allImage[0]
-  if (allImage.length > 0) {
-    {
-      for (i of allImage) {
-        // console.log("Removing: " + i);
-        i.remove();
-      }
-    }
+    console.log(film);
+    console.log(film.title); */
+    createOption(film.id, film.title);
   }
 }
+
+function createOption(id, title) {
+  let option = document.createElement("OPTION");
+  //console.log(option);
+  option.value = id;
+  option.text = title;
+  filmList.appendChild(option);
+}
+/* end onload functions*/
+
+/* list submiter */
 formFilm.addEventListener("submit", (e) => {
   e.preventDefault();
   /* Rensar lite i det gammla outputs bör också skapa en funktion eller show/hide section */
@@ -97,26 +103,23 @@ function creatImage(link, titel, dest) {
   image.alt = titel + " " + dest;
   imgOut.appendChild(image);
 }
-
-function appendAllFilms() {
-  //skapar dem i ordning så går att sätta id som plats i arrayen ;)
-  for (film of filmer) {
-    /* unit testing 
-        console.log(film.title);
-
-    console.log(film);
-    console.log(film.title); */
-    createOption(film.id, film.title);
+function imageDeletion() {
+  const allImage = document.querySelectorAll("img");
+  /* unit testing 
+  console.log(allImage);
+  console.log(allImage.length);
+ */
+  //incase u want to add more image otherwise just remove allImage[0]
+  if (allImage.length > 0) {
+    {
+      for (i of allImage) {
+        // console.log("Removing: " + i);
+        i.remove();
+      }
+    }
   }
 }
-
-function createOption(id, title) {
-  let option = document.createElement("OPTION");
-  //console.log(option);
-  option.value = id;
-  option.text = title;
-  filmList.appendChild(option);
-}
+/* end ---- list submiter */
 
 /* Tanken var att skapa några options efter man söker men känss bättre att ladda alla direkt 
     Gör inget för tillfället men låter den vara kvar :)
