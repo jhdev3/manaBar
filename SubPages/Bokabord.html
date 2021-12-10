@@ -1,116 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mana Bar restaurant/Bokning</title>
-    <link rel="stylesheet" href="../css/mbMain.css">
+    <link rel="stylesheet" href="../css/mbMain.css" />
     <!--Script för att kunna hämta iconen-->
-    <script src="https://kit.fontawesome.com/a9a37b16d4.js" crossorigin="anonymous"></script>
-</head>
+    <script
+      src="https://kit.fontawesome.com/a9a37b16d4.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/script/client.js"></script>
+    <!--klient skript-->
+  </head>
 
-<body>
+  <body>
     <header class="navbar">
-        <div class="container">
-                <!--i class="fas" är för att referera till iconen-->
-            <a href="../index.html" class="logo"><i class="fas fa-flask"></i></a>
-                <nav id="nav">
-                 <ul>
-                     <li><a href="../index.html">Hem</a></li>
-                     <li><a href="BokaBord.html">Boka bord</a></li>
-                     <li><a href="Bokadator.html">Boka dator</a></li>
-                     <li><a href="meny.html">Meny</a></li>
-                     <li><a href="kontaktaoss.html">Kontakt</a></li>
-                 </ul>
-            </nav>
-        </div>
+      <div class="container">
+        <!--i class="fas" är för att referera till iconen-->
+        <a href="../index.html" class="logo"><i class="fas fa-flask"></i></a>
+        <nav id="nav">
+          <ul>
+            <li><a href="../index.html">Hem</a></li>
+            <li><a href="BokaBord.html">Boka bord</a></li>
+            <li><a href="Bokadator.html">Boka dator</a></li>
+            <li><a href="meny.html">Meny</a></li>
+            <li><a href="kontaktaoss.html">Kontakt</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
     <div class="grid_container">
-        
-        <div class="grid-col-nytable grid-overlap">
-                <img class="booking-table-img" src="../images/bord2.jpg" alt="table image"> 
-        </div>
-                 
-               
-        <div class="grid-col-nytable grid-overlap align-self-center"> <!-- overlap the text and the pic, and it will place the text center-->
-             
-        <h3 class="big-text">Boka Bord
-        <br>Boka ditt bord i vår restaurang nedan. Välkommen!</h3></div>
-         
-        <div class="grid-col-xxl justify-center">
-            <h1 class="bord-title" style="color: white;">Boka Bord</h1>
-            <h4 style="color: white;">Om ni vill boka för fler än 8 personer så ring på 010- 12 34 56 eller mejla till bokning@manabar.fun så hjälper vi er!</h4>
-            <br>
-            <h4 style="color: white;"> Vänligen ring om det gäller bokningar samma dag. Ring oss 010-12 34 56</h4> 
-            
-            
-        </div>
-            <div class="grid-col-nytable-form">
-               
-                <form action="Bokningapproval.html" method="get">
-                    <label for="namn">Namn:</label>
-                    <input type="text" required id="namn">
-                    
-                    <label for="email">Email:</label>
-                    <input type="email" required id="email">
-    
-                    <label for="mnumer">Mobilnummer:</label>
-                    <input type="number" required id="mnumer">    
-                                
-                    <label for="datum">Datum:</label>
-                    <input type="date" required id="datum">  
-                        
-                    <label for="tid">Tid:</label>
-                    <input type="time" required id="tid">     
-    
-                    <button class="button" type="submit">Submit</button>
-                    <button class="button" type="reset">Reset</button>
-                    </form>
-                </div>
-         
-    </div>
-      
-    <footer class="footer">
+      <div class="grid-col-nytable grid-overlap">
+        <img
+          class="booking-table-img"
+          src="../images/bord2.jpg"
+          alt="table image"
+        />
+      </div>
 
-        <div class ="box-footer-1">
-            <!-- Bild borta ser inte snyggt ut, krävs lite bättre bild+placering
+      <div class="grid-col-nytable grid-overlap align-self-center">
+        <!-- overlap the text and the pic, and it will place the text center-->
+
+        <h3 class="big-text">
+          Boka Bord <br />Boka ditt bord i vår restaurang nedan. Välkommen!
+        </h3>
+      </div>
+
+      <div class="grid-col-xxl justify-center">
+        <h1 class="bord-title" style="color: white">Boka Bord</h1>
+        <h4 style="color: white">
+          Om ni vill boka för fler än 8 personer så ring på 010- 12 34 56 eller
+          mejla till bokning@manabar.fun så hjälper vi er!
+        </h4>
+        <br />
+        <h4 style="color: white">
+          Vänligen ring om det gäller bokningar samma dag. Ring oss 010-12 34 56
+        </h4>
+      </div>
+      <div class="grid-col-nytable-form">
+        <form action="/submitInfo" method="get" id="myForm">
+          <label for="namn">Namn:</label>
+          <p style="font-size: smaller" id="namn-errormsg"></p>
+          <input type="text" id="namn" name="namn" class="form-control" />
+
+          <label for="email">Email:</label>
+          <p style="font-size: smaller" id="email-errormsg"></p>
+          <input type="email" id="email" name="email" class="form-control" />
+
+          <label for="mnumer">Mobilnummer:</label>
+          <p style="font-size: smaller" id="mnumer-errormsg"></p>
+          <input type="number" id="mnumer" name="mnumer" class="form-control" />
+
+          <label for="datum">Datum:</label>
+          <p style="font-size: smaller" id="datum-errormsg"></p>
+          <input type="date" id="datum" name="datum" class="form-control" />
+
+          <label for="tid">Tid:</label>
+          <p style="font-size: smaller" id="tid-errormsg"></p>
+          <input
+            type="time"
+            id="tid"
+            name="tid"
+            class="form-control"
+            min="10:00"
+            max="23:30"
+            pattern="[0-9]{2}:[0-9]{2}"
+          />
+
+          <button class="button" type="submit">Submit</button>
+          <button class="button" type="reset">Reset</button>
+        </form>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="box-footer-1">
+        <!-- Bild borta ser inte snyggt ut, krävs lite bättre bild+placering
              <img class= "logofooter" src="images/logotransperent.png" alt="manabar logo" > 
              -->
-             <ul class="textlist">
-                    <li>  Öppettider: </li>
-                    <li>Mån-Fri: 12:00 - 23:30</li>
-                    <li>Lör: 10:00 - 01:00</li>
-                     <li>Sön: 10:00 - 23:30</li>  
-                </ul> 
-            
-        </div>
-    
-        <div class = "box-footer-2">
-            <h4>Follow us</h4>
-            <ul class="icons">
-                <li><a href="https://www.facebook.com/"><img src="../images/facebook.png" alt="logo facebook"></a></li>
-                <li><a href="https://www.twitter.com/"><img src="../images/twitter.png" alt="logo twitter"></a></li>
-                <li><a href="https://www.instagram.com/"><img src="../images/instagram.png" alt="logo instagram"></a></li>
-                <li><a href="https://www.tripadvisor.com/"><img src="../images/trip.png" alt="logo tripadvisor"></a></li>
-            </ul> 
-            <h5 class="copyright">Mana Bar © 2021</h5>
-    
-        </div>
-        
-        <div class = "box-footer-3">
-            <ul class="textlist">
-                <li>E-mail: <a href="mailto:support@manabar.fun">support@manabar.fun</a></li>
-                <li>Telefonnummer: 010-12 34 56</li>
-                <li>Adress: Skolgatan 177</li>
-                <li>602 22 Norrköping</li>
-            </ul> 
-    
-        </div> 
+        <ul class="textlist">
+          <li>Öppettider:</li>
+          <li>Mån-Fri: 12:00 - 23:30</li>
+          <li>Lör: 10:00 - 01:00</li>
+          <li>Sön: 10:00 - 23:30</li>
+        </ul>
+      </div>
+
+      <div class="box-footer-2">
+        <h4>Follow us</h4>
+        <ul class="icons">
+          <li>
+            <a href="https://www.facebook.com/"
+              ><img src="../images/facebook.png" alt="logo facebook"
+            /></a>
+          </li>
+          <li>
+            <a href="https://www.twitter.com/"
+              ><img src="../images/twitter.png" alt="logo twitter"
+            /></a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/"
+              ><img src="../images/instagram.png" alt="logo instagram"
+            /></a>
+          </li>
+          <li>
+            <a href="https://www.tripadvisor.com/"
+              ><img src="../images/trip.png" alt="logo tripadvisor"
+            /></a>
+          </li>
+        </ul>
+        <h5 class="copyright">Mana Bar © 2021</h5>
+      </div>
+
+      <div class="box-footer-3">
+        <ul class="textlist">
+          <li>
+            E-mail: <a href="mailto:support@manabar.fun">support@manabar.fun</a>
+          </li>
+          <li>Telefonnummer: 010-12 34 56</li>
+          <li>Adress: Skolgatan 177</li>
+          <li>602 22 Norrköping</li>
+        </ul>
+      </div>
     </footer>
-
-   </body>
-
-
-
+  </body>
 </html>

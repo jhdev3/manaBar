@@ -1,5 +1,8 @@
 let express = require("express");
 let router = express.Router(); //Alla routes lagras i router
+const { check, validationResult } = require("express-validator"); // iportera express validator
+
+//router.use(express.static("public")); // to access client script
 
 const { ReadFile, WriteFile } = require("./module/readAndWrite");
 
@@ -16,7 +19,55 @@ router.get("/admin", (req, res) => {
   res.sendFile(__dirname + "/adminpage/admin.html"); //Inte svenska bokstäver med res.end men med res.send kmr köra express resten av kursen
 });
 
+//Qabas start
+//npm install express nodemon fs express-validator
+//Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+router.get("/form", (req, res) => {
+  res.sendFile(__dirname + "/SubPages/Bokabord.html");
+  //res.sendFile(path.join(__dirname, 'SubPages', "Bokabord.html"));
+});
+
+let fs = require("fs");
+
+router.get(
+  "/submitInfo",
+  [
+    check("namn", "Ange namn").notEmpty(),
+    check("email", "Ange namn").notEmpty().isEmail().normalizeEmail,
+    check("mnumer", "Ange namn").notEmpty(),
+    check("datum", "Ange namn").notEmpty().isDate(),
+    check("tid", "Ange namn").notEmpty(),
+  ],
+  (req, res) => {
+    let formInfo = {
+      namn: req.query.namn,
+      email: req.query.email,
+      mnumer: req.query.mnumer,
+      datum: req.query.datum,
+      tid: req.query.tid,
+    };
+
+    let data = JSON.stringify(formInfo);
+
+    fs.appendFile("text.json", data, (err) => {
+      if (err) throw err;
+      console.log("Info is saved to text file.");
+    });
+
+    const errors = validationResult(req); //save errors in json
+    console.log(errors);
+    if (!errors.isEmpty()) {
+      return res.status(400).json({ errors: errors.array() }); // send errors till json
+    }
+
+    res.send("/form");
+  }
+);
+
+//Qabas end
+
 //app.use(express.urlencoded());  samma som express.json gissar jag för body och post
+
 /*
 
 */
@@ -88,7 +139,7 @@ router.post("/api/bokadator", (req, res) => {
     );
     res.status(201).send("lyckad bookning");
   } else {
-    res.status(406).send("vad försöker du göra?");
+    res.status(406);
   }
 });
 module.exports = router;
