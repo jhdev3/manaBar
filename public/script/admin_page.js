@@ -1,4 +1,4 @@
-let adminToken = "";
+let adminToken = ""; //Blir en global variabel men enbart efter succsefull login
 
 /* Admin loggin*/
 $("#adminLoggin").submit((e) => {
@@ -41,6 +41,7 @@ $("#loadBokabord").on("click", () => {
       let json = JSON.parse(res);
       console.log(json);
       //$("#printData").text(writeAllJsonObj(json));
+      //Eftersom jag hämtar från server vet jag att allt ska vara okej att skrivat till innerHtml
       document.querySelector("#printData").innerHTML = writeAllJsonObj(json);
     },
     error: function (res) {
@@ -56,21 +57,23 @@ $("#loadBokabord").on("click", () => {
 });
 
 //Skriver snabbt innerHtml bättre att appenda saker osv för att sätta klasser rätt :)
+//Borde köra discription list istället för tabell enklare att formatera färger etc
+
 function writeAllJsonObj(json) {
   let createTable = "";
   createTable += "<tr><th>Object name</th><th>Value</th></tr>";
   let counter = 1;
   for (obj of json) {
-    console.log("start obj");
+    //console.log("start obj");
 
     let keys = Object.keys(obj);
     for (inline of keys) {
-      console.log("iter inside");
+      // console.log("iter inside");
       createTable += "<tr>";
       createTable += "<td>" + inline + "</td>" + "<td>" + obj[inline] + "</td>";
       createTable += "</tr>";
     }
-    console.log("finsihed inside");
+    //console.log("finsihed inside");
 
     // createTable += "</section>";
     ++counter;

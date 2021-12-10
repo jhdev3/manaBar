@@ -4,7 +4,7 @@ let router = express.Router(); //Alla routes lagras i router
 const { ReadFile, WriteFile } = require("./module/readAndWrite");
 
 let bodyParser = require("body-parser");
-router.use(bodyParser.urlencoded({ extended: false }));
+router.use(bodyParser.urlencoded({ extended: true }));
 router.use(bodyParser.json()); // support json encoded bodies
 
 router.get("/", (req, res) => {
@@ -57,12 +57,17 @@ router.get("/api/bokabord/", (req, res) => {
   }
 });
 
+//Enbart den här som körs på admin sidan
 router.get("/api/bokadator/", (req, res) => {
   console.log(req.query);
   if (req.query.token == "12312312378126asd1237123hajsdkj81238") {
     const data = new ReadFile(__dirname + "/db/bokabord.txt");
+    //behöver någon form av kontroll vid tom datasträng fil dvs ""
+    //nu ser jag till att filen finns + att data finns i filen
     //Kollar behöverighet säker nät
     res.json(data.getJsonObj()); //Inte svenska bokstäver med res.end  men med res.send kmr köra express resten av kursen
+  } else {
+    res.status(403);
   }
 });
 //app.use(express.urlencoded());  samma som express.json gissar jag för body och post
@@ -76,6 +81,7 @@ router.post("/api/bokadator", (req, res) => {
   console.log(req.body);
   if (req.body[0] != "") {
     const writeToFile = new WriteFile();
+    //Viktigt att req.body är JSON object vet inte än Simon får testa
     writeToFile.appendData(
       JSON.stringify(req.body),
       __dirname + "/db/bokadator.txt"

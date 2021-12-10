@@ -10,7 +10,7 @@ let fileSystem = require("fs");
 
 class ReadFile {
   constructor(file) {
-    const data = fileSystem.readFileSync(file, "utf8");
+    const data = fileSystem.readFileSync(file, "utf8"); //går inte vidare förens allt är klart
 
     this.getJsonObj = function () {
       //Kolla EmptyDocument :)
@@ -37,7 +37,7 @@ class WriteFile {
         console.log("Appened Succesfully data");
       });
     };
-
+    //Bra funktion man man senare vill utveckla delete post smat utveckla denna för rätt format
     this.clearFileNewData = function (data, path) {
       const jsonobj = "," + data; //behöver komma innan för att läsa en json array från en jävla textfil
       fileSystem.writeFile(path, jsonobj, { flag: "w+" }, (err) => {
