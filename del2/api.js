@@ -5,8 +5,9 @@ const formFilm = document.querySelector("#chooseFilm");
 
 window.onload = () => {
   console.log("page is fully loaded");
+  document.querySelector("#filmChoice").style.visibility = "hidden";
 
-  /*Hämtar alla filmer och sparar i filmer array */
+  /*Hämtar alla filmer och sparar i filmer array stor db långsam sid laddning*/
   forfragan = new XMLHttpRequest();
   forfragan.open("GET", "https://ghibliapi.herokuapp.com/films");
   forfragan.setRequestHeader("Content-Type", "application/json"); //Enligt deras hemsida :)
@@ -40,6 +41,8 @@ formFilm.addEventListener("submit", (e) => {
   e.preventDefault();
   /* Rensar lite i det gammla outputs bör också skapa en funktion eller show/hide section */
   imageDeletion();
+  document.querySelector("#filmChoice").style.visibility = "hidden";
+
   document.querySelector("#errormsg").textContent = "";
   //console.log(filmInput.value);
 
@@ -55,6 +58,8 @@ formFilm.addEventListener("submit", (e) => {
     return;
   }
   /*Bör skapa någon funktion som hanterar alla outputs */
+  document.querySelector("#filmChoice").style.visibility = "visible";
+
   forEachMovieAttr(filmChoice);
   //document.querySelector("#title").textContent = filmChoice.title;
   //document.querySelector("#description").textContent = filmChoice.description;
@@ -75,8 +80,7 @@ function forEachMovieAttr(movie) {
       //console.log(item);
       creatImage(movie[item], movie.title, item);
     } else {
-      document.querySelector(`#${item}`).textContent =
-        item + " : " + movie[item];
+      document.querySelector(`#${item}`).textContent += " " + movie[item];
       /* unit testing 
 
       console.log(document.querySelector(`#${item}`));

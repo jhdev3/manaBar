@@ -10,13 +10,13 @@
   <body>
     <div id="chooseFilmCont">
       <form action="" id="chooseFilm">
+        <label for="films"
+          >Search and browes movies from ghibliapi.herokuapp
+        </label>
         <!--Vet att input list inte riktigt har fullsupport och är olika i olika browsers xD
         Går att använda search/selcet och göra något liknande men ville testa och det fungerar okej
         tips kör helst i firefox
         ska det bli kompatibelt med alla browser får man ha lite alternativ -->
-        <label for="films"
-          >Search and browes movies from ghibliapi.herokuapp
-        </label>
         <input
           list="films"
           name="films"
@@ -24,6 +24,7 @@
           minlength="3"
           autocomplete="off"
         />
+
         <datalist id="films" style="height: 5.1em; overflow: hidden"></datalist>
         <input type="submit" />
         <p id="errormsg"></p>
@@ -36,8 +37,9 @@
           <div id="text">
             <p id="description" class="item"></p>
             <h3>
-              <span id="director"></span><br /><span id="producer"></span
-              ><br /><span id="release_date"></span>
+              <span id="director">Director:</span><br /><span id="producer"
+                >Producer:</span
+              ><br /><span id="release_date">Release_date:</span>
             </h3>
           </div>
           <div id="out-image"></div>
@@ -47,12 +49,26 @@
         <div class="split">
           <div id="out-movie_banner"></div>
           <div id="text2">
-            <h1 id="original_title"></h1>
-            <h2 id="original_title_romanised"></h2>
-            <p><span id="rt_score"></span><span id="running_time"></span></p>
+            <h1 id="original_title">Original_title:</h1>
+            <h4 id="original_title_romanised">Original_title_romanised:</h4>
+            <p>
+              <span id="rt_score">Rt_score: </span><br /><span id="running_time"
+                >Running_time:</span
+              >
+            </p>
           </div>
         </div>
       </section>
+      <selection>
+        <div id="species">
+          <div class="split">
+            <div>
+              <p><span id="name"></span></p>
+            </div>
+            <div></div>
+          </div>
+        </div>
+      </selection>
     </div>
     <script src="api.js"></script>
   </body>
