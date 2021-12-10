@@ -55,20 +55,36 @@ $("#loadBokabord").on("click", () => {
   });
 });
 
-//\r\n <-- newline
+//Skriver snabbt innerHtml bättre att appenda saker osv för att sätta klasser rätt :)
 function writeAllJsonObj(json) {
   let createTable = "";
   createTable += "<tr><th>Object name</th><th>Value</th></tr>";
+  let counter = 1;
   for (obj of json) {
-    createTable += "<tr>";
+    console.log("start obj");
+
     let keys = Object.keys(obj);
     for (inline of keys) {
+      console.log("iter inside");
       createTable += "<tr>";
       createTable += "<td>" + inline + "</td>" + "<td>" + obj[inline] + "</td>";
       createTable += "</tr>";
     }
-    createTable += "</tr>";
+    console.log("finsihed inside");
+
+    // createTable += "</section>";
+    ++counter;
+    console.log("Counter " + counter);
   }
+
   console.log(createTable);
   return createTable;
+}
+//Tänkte sätta varanan omslutande tr men tabeler funkar inte så ;)
+function OddOrEven(number) {
+  if (counter % 2 === 0) {
+    return "<tr class='even'>";
+  } else {
+    return "<tr class='odd'>";
+  }
 }

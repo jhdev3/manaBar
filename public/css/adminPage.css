@@ -42,6 +42,13 @@ td {
   border: 1px solid black;
 }
 
+.odd > td {
+  background-color: darkkhaki;
+}
+
+.even > td {
+  background-color: hotpink;
+}
 /* 
 Leker med css för transition utan js ;)
 .inputText{
