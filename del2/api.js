@@ -86,7 +86,7 @@ function forEachMovieAttr(movie) {
       //console.log(item);
       creatImage(movie[item], movie.title, item);
     } else {
-      document.querySelector(`#${item}`).textContent += " " + movie[item];
+      document.querySelector(`#${item}`).textContent = " " + movie[item];
       /* unit testing 
 
       console.log(document.querySelector(`#${item}`));
