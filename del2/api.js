@@ -20,6 +20,51 @@ window.onload = () => {
   };
   forfragan.send();
 };
+
+/* Simon funktion fungerar lite data som visas kanske och hatner inte innerhtml= ""*/
+function vehicleInput() {
+  if (filmInput.value == "2baf70d1-42bb-4437-b551-e5fed5a87abe") {
+    req = new XMLHttpRequest();
+    req.open("GET", "https://ghibliapi.herokuapp.com/vehicles");
+    req.setRequestHeader("Content-Type", "application/json");
+    req.setRequestHeader("Accept", "application/json");
+    req.onload = function () {
+      var responseData = JSON.parse(this.response);
+      console.log(responseData[0].name);
+      document.getElementById("displayVehicle").innerHTML =
+        responseData[0].name;
+      // If description of the vehicle just add document.getElementById("displayVehicle").innerHTML = responseData[0].name + responseData[0].description
+    };
+    req.send();
+  }
+  if (filmInput.value == "ebbb6b7c-945c-41ee-a792-de0e43191bd8") {
+    req = new XMLHttpRequest();
+    req.open("GET", "https://ghibliapi.herokuapp.com/vehicles");
+    req.setRequestHeader("Content-Type", "application/json");
+    req.setRequestHeader("Accept", "application/json");
+    req.onload = function () {
+      var responseData = JSON.parse(this.response);
+      console.log(responseData[1].name);
+      document.getElementById("displayVehicle").innerHTML =
+        responseData[1].name;
+    };
+    req.send();
+  }
+  if (filmInput.value == "758bf02e-3122-46e0-884e-67cf83df1786") {
+    req = new XMLHttpRequest();
+    req.open("GET", "https://ghibliapi.herokuapp.com/vehicles");
+    req.setRequestHeader("Content-Type", "application/json");
+    req.setRequestHeader("Accept", "application/json");
+    req.onload = function () {
+      var responseData = JSON.parse(this.response);
+      console.log(responseData[2].name);
+      document.getElementById("displayVehicle").innerHTML =
+        responseData[2].name;
+    };
+    req.send();
+  }
+}
+
 /* Onload functions*/
 function appendAllFilms() {
   //skapar dem i ordning så går att sätta id som plats i arrayen ;)

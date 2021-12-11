@@ -26,7 +26,7 @@
         />
 
         <datalist id="films" style="height: 5.1em; overflow: hidden"></datalist>
-        <input type="submit" />
+        <input type="submit" onclick="vehicleInput()" />
         <p id="errormsg"></p>
       </form>
     </div>
@@ -41,6 +41,8 @@
                 id="producer"
               ></span
               ><br />Release_date:<span id="release_date"></span>
+
+              <p><span id="displayVehicle"></span></p>
             </h3>
           </div>
           <div id="out-image"></div>
