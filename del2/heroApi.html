@@ -17,13 +17,7 @@
         Går att använda search/selcet och göra något liknande men ville testa och det fungerar okej
         tips kör helst i firefox
         ska det bli kompatibelt med alla browser får man ha lite alternativ -->
-        <input
-          list="films"
-          name="films"
-          id="film"
-          minlength="3"
-          autocomplete="off"
-        />
+        <input list="films" name="films" id="film" autocomplete="off" />
 
         <datalist id="films" style="height: 5.1em; overflow: hidden"></datalist>
         <input type="submit" onclick="vehicleInput()" />
@@ -41,9 +35,24 @@
                 id="producer"
               ></span
               ><br />Release_date:<span id="release_date"></span>
-
-              <p><span id="displayVehicle"></span></p>
             </h3>
+            <label for="people">People:</label>
+
+            <select name="people" id="choosePeople">
+              <option value="">--Please choose an option--</option>
+            </select>
+
+            <div id="hideSelctOutput">
+              <p>Gender: <span id="gender"></span></p>
+              <p>Age: <span id="age"></span></p>
+              <p>Hair color: <span id="hair_color"></span></p>
+              <p>Eye color: <span id="eye_color"></span></p>
+              <br />
+              <p>
+                En trevlig feature är att läga en länk/knapp om personen är med
+                i flera filmer här
+              </p>
+            </div>
           </div>
           <div id="out-image"></div>
         </div>
@@ -60,6 +69,8 @@
             <p>Running_time:<span id="running_time"> </span></p>
 
             <p>Rt_score: <span id="rt_score"></span></p>
+
+            <p>Vehicle: <span id="displayVehicle"></span></p>
           </div>
         </div>
       </section>
@@ -67,23 +78,14 @@
         <div id="species">
           <div class="split">
             <div>
-              <p><span id="name"></span></p>
-            </div>
-            <div></div>
-          </div>
-        </div>
-      </selection>
-      <selection>
-        <div id="people">
-          <div class="split">
-            <div>
-              <p><span id="name"></span></p>
+              <p><span id=""></span></p>
             </div>
             <div></div>
           </div>
         </div>
       </selection>
     </div>
+
     <script src="api.js"></script>
   </body>
 </html>

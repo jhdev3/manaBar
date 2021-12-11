@@ -8,7 +8,7 @@ $("#adminLoggin").submit((e) => {
   $.ajax({
     type: "GET",
     url: "/admin/login",
-    data: $("#adminLoggin").serialize(),
+    data: $("#adminLoggin").serialize(), //Lite trevligt att ajax fixar queryn :) slipper sätta själv i xmhlhttp ;)
     success: function (res) {
       console.log(typeof res);
       adminToken = res;
