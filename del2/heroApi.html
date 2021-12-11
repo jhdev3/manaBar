@@ -26,7 +26,7 @@
         />
 
         <datalist id="films" style="height: 5.1em; overflow: hidden"></datalist>
-        <input type="submit" />
+        <input type="submit" onclick="vehicleInput()"/>
         <p id="errormsg"></p>
       </form>
     </div>
@@ -83,6 +83,16 @@
           </div>
         </div>
       </selection>
+        <!-- No selection since there are only three vehicles that will be showed when a specific movie is selected -->
+        <div id="people">
+          <div class="split">
+            <div>
+              <p><span id="displayVehicle"></span></p>
+            </div>
+            <div></div>
+          </div>
+        </div>
+
     </div>
     <script src="api.js"></script>
   </body>
