@@ -18,11 +18,18 @@ window.onload = () => {
     filmer = JSON.parse(this.response);
     //console.log(filmer.length);
     appendAllFilms();
+    getAllSpecies();
   };
   forfragan.send();
 };
 /* Onload functions*/
-
+function getAllSpecies(){
+  species = "";
+  for(let i = 0; i < filmer.length; i++){
+    species += filmer[i].species;
+  };
+  console.log(species);
+};
 function appendAllFilms() {
   //skapar dem i ordning så går att sätta id som plats i arrayen ;)
   for (film of filmer) {
@@ -32,9 +39,7 @@ function appendAllFilms() {
     console.log(film);
     console.log(film.title); */
     //console.log(film.species);
-    let speciesName = "";
-    speciesName += filmer.species;
-    document.getElementById("name_species").innerHTML = speciesName;
+
     createOption(film.id, film.title);
   }
 }
@@ -62,6 +67,7 @@ formFilm.addEventListener("submit", (e) => {
     return item.id === filmInput.value;
   });
   console.log(filmChoice);
+  const
   //Felhantering av inputs kollar undefiend
   if (!filmChoice) {
     document.querySelector(
