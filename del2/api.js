@@ -2,6 +2,7 @@ let filmer = [];
 const filmInput = document.querySelector("#film");
 const filmList = document.querySelector("#films");
 const formFilm = document.querySelector("#chooseFilm");
+const species = document.querySelector("species"); // Sofia
 
 window.onload = () => {
   console.log("page is fully loaded");
@@ -21,6 +22,7 @@ window.onload = () => {
   forfragan.send();
 };
 /* Onload functions*/
+
 function appendAllFilms() {
   //skapar dem i ordning så går att sätta id som plats i arrayen ;)
   for (film of filmer) {
@@ -29,6 +31,10 @@ function appendAllFilms() {
 
     console.log(film);
     console.log(film.title); */
+    //console.log(film.species);
+    let speciesName = "";
+    speciesName += filmer.species;
+    document.getElementById("name_species").innerHTML = speciesName;
     createOption(film.id, film.title);
   }
 }
@@ -64,7 +70,7 @@ formFilm.addEventListener("submit", (e) => {
     return;
   }
   /*Bör skapa någon funktion som hanterar alla outputs */
-  document.querySelector("#filmChoice").style.visibility = "visible";
+  document.querySelector("#filmChoice").style.visibility = "visible";  
 
   forEachMovieAttr(filmChoice);
   //document.querySelector("#title").textContent = filmChoice.title;
@@ -88,10 +94,11 @@ function forEachMovieAttr(movie) {
     } else {
       document.querySelector(`#${item}`).textContent = " " + movie[item];
       /* unit testing 
-
+      
       console.log(document.querySelector(`#${item}`));
       console.log(movie[item]); 
       */
+     
     }
   }
 }
