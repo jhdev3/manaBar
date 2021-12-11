@@ -114,6 +114,8 @@ formFilm.addEventListener("submit", (e) => {
   /* Rensar lite i det gammla outputs bör också skapa en funktion eller show/hide section */
   imageDeletion();
   clearSelect();
+  document.querySelector("#hideSelctOutput").style.visibility = "hidden";
+
   document.querySelector("#filmChoice").style.visibility = "hidden";
 
   document.querySelector("#errormsg").textContent = "";
@@ -208,13 +210,18 @@ pplSelect.addEventListener("change", function (e) {
   });
   if (!pplChoice) {
     //Please choose and option grejen eller när det inte finns ppl inlagda i databasen
+    //tror inte det behövs men får ligga kvar
     document.querySelector("#gender").textContent = "";
     document.querySelector("#age").textContent = "";
     document.querySelector("#hair_color").textContent = "";
     document.querySelector("#eye_color").textContent = "";
+    document.querySelector("#hideSelctOutput").style.visibility = "hidden";
+
     return;
   }
-  console.log(pplChoice);
+  document.querySelector("#hideSelctOutput").style.visibility = "visible";
+
+  // console.log(pplChoice);
   document.querySelector("#gender").textContent = pplChoice.gender;
   document.querySelector("#age").textContent = pplChoice.age;
   document.querySelector("#hair_color").textContent = pplChoice.hair_color;
